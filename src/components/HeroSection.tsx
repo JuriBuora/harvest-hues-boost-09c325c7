@@ -26,7 +26,7 @@ const HeroSection = () => (
         <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>
           <a href="/prodotti">Scopri i Prodotti</a>
         </Button>
-        <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-sans text-base px-8" asChild>
+        <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-sans text-base px-8" asChild>
           <a href="tel:+390532814411">
             <Phone className="w-4 h-4 mr-2" /> Chiama Ora
           </a>
