@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-farm.jpg";
+import heroImg from "@/assets/meloni-angurie.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 
@@ -6,7 +6,7 @@ const HeroSection = () => (
   <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
     <img
       src={heroImg}
-      alt="Campi dell'Azienda Agricola Farina a Portomaggiore"
+      alt="Prodotti dell'Azienda Agricola Farina - meloni e angurie"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}
       height={1080}
