@@ -4,16 +4,20 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import angurieImg from "@/assets/angurie-originale.jpg";
 import zuccheImg from "@/assets/zucche-originale2.jpg";
-import meloniImg from "@/assets/meloni-originale.jpg";
+import meloniImg from "@/assets/meloni-cantalupo.jpg";
 import anguriaPesoImg from "@/assets/anguria-peso.jpg";
 import meloniOrigImg from "@/assets/meloni-originale2.jpg";
 import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
 import angurieCassoneImg from "@/assets/angurie-cassone.jpg";
 import anguriaGiganteImg from "@/assets/anguria-gigante.jpg";
 import meloniRetatiImg from "@/assets/meloni-retati.jpg";
+import meloniLisciImg from "@/assets/meloni-lisci-cassetta.jpg";
+import meloniRetatiCassettaImg from "@/assets/meloni-retati-cassetta.jpg";
 import zuccheMantovaneImg from "@/assets/zucche-mantovane.jpg";
 import zuccheArancioniImg from "@/assets/zucche-arancioni.jpg";
 import zuccheCassettaVerdeImg from "@/assets/zucche-cassetta-verde.jpg";
+import zuccheHalloweenImg from "@/assets/zucche-halloween.jpg";
+import zuccheMantovaneScatolaImg from "@/assets/zucche-mantovane-scatola.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone, Leaf, Sun, Droplets, ThermometerSun, Scale, Truck } from "lucide-react";
 
@@ -58,7 +62,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg, meloniRetatiImg],
+    gallery: [meloniOrigImg, meloniRetatiImg, meloniLisciImg, meloniRetatiCassettaImg],
   },
   {
     id: "zucche",
@@ -79,7 +83,7 @@ const products = [
       { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
-    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheCassettaVerdeImg],
+    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheCassettaVerdeImg, zuccheHalloweenImg, zuccheMantovaneScatolaImg],
   },
 ];
 
