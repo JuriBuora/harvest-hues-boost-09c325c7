@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -216,6 +217,7 @@ const Prodotti = () => {
     <FooterSection />
     <WhatsAppButton />
   </>
-);
+  );
+};
 
 export default Prodotti;
