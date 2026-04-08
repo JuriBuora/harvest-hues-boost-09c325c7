@@ -8,7 +8,7 @@ interface PageSEOProps {
   jsonLd?: Record<string, unknown>;
 }
 
-const BASE_URL = "https://www.agricolafarina.it";
+const BASE_URL = "https://www.cucurbitacee.com";
 const SITE_NAME = "Società Agricola Farina 2.0";
 
 const PageSEO = ({ title, description, path, type = "website", jsonLd }: PageSEOProps) => {
