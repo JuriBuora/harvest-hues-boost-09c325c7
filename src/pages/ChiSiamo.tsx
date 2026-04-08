@@ -62,13 +62,13 @@ const ChiSiamo = () => {
                 <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
                   <p>
                     La <strong className="text-foreground">Società Agricola Farina 2.0</strong> non è solo un'impresa: è il racconto di una vita
-                    dedicata alla terra. Fondata ufficialmente nel 1982 a Bando di Portomaggiore, la nostra attività
+                    dedicata alla terra. Nata a metà degli anni Settanta a Bando di Portomaggiore, la nostra attività
                     ha preso slancio grazie alla visione di <strong className="text-foreground">Roberto Farina</strong>, imprenditore agricolo che ha saputo
                     trasformare la vocazione del territorio ferrarese in un'eccellenza produttiva.
                   </p>
                   <p>
                     A partire dagli anni 2000, con l'ingresso del figlio <strong className="text-foreground">Marcello Farina</strong>, l'azienda si è evoluta
-                    nella <strong className="text-foreground">Farina 2.0</strong>. Questo passaggio generazionale ha portato un nuovo impulso tecnologico e una
+                    nella <strong className="text-foreground">Società Agricola Farina 2.0</strong>. Questo passaggio generazionale ha portato un nuovo impulso tecnologico e una
                     gestione moderna, senza mai intaccare i valori di genuinità e professionalità che ci
                     contraddistinguono fin dalle origini.
                   </p>
