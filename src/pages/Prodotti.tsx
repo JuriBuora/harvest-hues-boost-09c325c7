@@ -8,6 +8,12 @@ import meloniImg from "@/assets/meloni-originale.jpg";
 import anguriaPesoImg from "@/assets/anguria-peso.jpg";
 import meloniOrigImg from "@/assets/meloni-originale2.jpg";
 import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
+import angurieCassoneImg from "@/assets/angurie-cassone.jpg";
+import anguriaGiganteImg from "@/assets/anguria-gigante.jpg";
+import meloniRetatiImg from "@/assets/meloni-retati.jpg";
+import zuccheMantovaneImg from "@/assets/zucche-mantovane.jpg";
+import zuccheArancioniImg from "@/assets/zucche-arancioni.jpg";
+import zuccheCassettaVerdeImg from "@/assets/zucche-cassetta-verde.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone, Leaf, Sun, Droplets, ThermometerSun, Scale, Truck } from "lucide-react";
 
