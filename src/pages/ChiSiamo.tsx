@@ -1,3 +1,4 @@
+import React from "react";
 import { Leaf, Heart, Award, Sprout, Truck, RotateCcw } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
