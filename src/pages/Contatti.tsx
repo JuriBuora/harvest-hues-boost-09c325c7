@@ -1,0 +1,153 @@
+import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import FooterSection from "@/components/FooterSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollReveal from "@/components/ScrollReveal";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+
+const Contatti = () => {
+  const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({ nome: "", email: "", telefono: "", messaggio: "" });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.nome.trim() || !form.email.trim() || !form.messaggio.trim()) {
+      toast({ title: "Compila tutti i campi obbligatori", variant: "destructive" });
+      return;
+    }
+
+    setLoading(true);
+
+    const subject = encodeURIComponent(`Messaggio dal sito - ${form.nome}`);
+    const body = encodeURIComponent(
+      `Nome: ${form.nome}\nEmail: ${form.email}\nTelefono: ${form.telefono || "Non specificato"}\n\nMessaggio:\n${form.messaggio}`
+    );
+    window.location.href = `mailto:soc.agr.farina@gmail.com?subject=${subject}&body=${body}`;
+
+    setTimeout(() => {
+      setLoading(false);
+      toast({ title: "Client email aperto!", description: "Invia il messaggio dal tuo programma di posta." });
+      setForm({ nome: "", email: "", telefono: "", messaggio: "" });
+    }, 1000);
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="pt-24 pb-12 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <ScrollReveal>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Contattaci</h1>
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
+              Siamo a tua disposizione per qualsiasi informazione sui nostri prodotti, preventivi per legna da ardere o collaborazioni commerciali.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+            {/* Contact Info */}
+            <ScrollReveal>
+              <div className="space-y-8">
+                <div>
+                  <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">Informazioni di Contatto</h2>
+                  <div className="space-y-5">
+                    {[
+                      { icon: MapPin, label: "Indirizzo", value: "Via Rangona, 54/A - 44015 Portomaggiore (FE)", href: "https://maps.google.com/?q=Via+Rangona+54A+Portomaggiore+FE" },
+                      { icon: Phone, label: "Telefono", value: "+39 0532 814411", href: "tel:+390532814411" },
+                      { icon: Phone, label: "Cellulare", value: "+39 338 1571439", href: "tel:+393381571439" },
+                      { icon: Mail, label: "Email", value: "soc.agr.farina@gmail.com", href: "mailto:soc.agr.farina@gmail.com" },
+                    ].map((item) => (
+                      <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                          <item.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground">{item.label}</p>
+                          <p className="text-foreground font-medium group-hover:text-primary transition-colors">{item.value}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-secondary" /> Orari di Apertura
+                  </h3>
+                  <div className="bg-card rounded-xl p-5 border border-border space-y-2 text-sm">
+                    <div className="flex justify-between"><span className="text-muted-foreground">Lunedì - Venerdì</span><span className="font-medium text-foreground">08:30 – 12:00 / 13:30 – 18:00</span></div>
+                    <div className="flex justify-between"><span className="text-muted-foreground">Sabato</span><span className="font-medium text-foreground">08:00 – 12:00</span></div>
+                    <div className="flex justify-between"><span className="text-muted-foreground">Domenica</span><span className="font-medium text-accent">Chiuso</span></div>
+                  </div>
+                </div>
+
+                {/* Map embed */}
+                <div className="rounded-xl overflow-hidden border border-border h-64">
+                  <iframe
+                    title="Mappa Azienda Agricola Farina"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.5!2d11.791!3d44.699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQxJzU2LjQiTiAxMcKwNDcnMjcuNiJF!5e0!3m2!1sit!2sit!4v1"
+                    className="w-full h-full"
+                    loading="lazy"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Form */}
+            <ScrollReveal delay={200}>
+              <div className="bg-card rounded-2xl p-8 border border-border shadow-sm">
+                <h2 className="font-serif text-2xl font-semibold text-foreground mb-2">Inviaci un Messaggio</h2>
+                <p className="text-muted-foreground text-sm mb-6">Compila il modulo e ti risponderemo il prima possibile.</p>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label htmlFor="nome" className="block text-sm font-medium text-foreground mb-1.5">Nome e Cognome *</label>
+                    <Input id="nome" name="nome" value={form.nome} onChange={handleChange} placeholder="Mario Rossi" maxLength={100} required />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email *</label>
+                    <Input id="email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="mario@esempio.it" maxLength={255} required />
+                  </div>
+                  <div>
+                    <label htmlFor="telefono" className="block text-sm font-medium text-foreground mb-1.5">Telefono</label>
+                    <Input id="telefono" name="telefono" type="tel" value={form.telefono} onChange={handleChange} placeholder="+39 333 1234567" maxLength={20} />
+                  </div>
+                  <div>
+                    <label htmlFor="messaggio" className="block text-sm font-medium text-foreground mb-1.5">Messaggio *</label>
+                    <Textarea id="messaggio" name="messaggio" value={form.messaggio} onChange={handleChange} placeholder="Scrivi qui il tuo messaggio..." rows={5} maxLength={1000} required />
+                  </div>
+                  <Button type="submit" disabled={loading} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Send className="w-4 h-4 mr-2" />
+                    {loading ? "Invio in corso..." : "Invia Messaggio"}
+                  </Button>
+                </form>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <FooterSection />
+      <WhatsAppButton />
+    </div>
+  );
+};
+
+export default Contatti;
