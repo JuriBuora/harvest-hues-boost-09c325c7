@@ -56,7 +56,7 @@ const Legna = () => {
                   Ordina Ora
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-sans" asChild>
+              <Button size="lg" variant="secondary" className="font-sans" asChild>
                 <a href="https://wa.me/+393667701214" target="_blank" rel="noopener noreferrer">
                   WhatsApp
                 </a>
