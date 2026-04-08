@@ -37,7 +37,7 @@ const products = [
       { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
       { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, perfetta per la vendita all'ingrosso." },
     ],
-    gallery: [anguriaPesoImg, meloniAngurieImg],
+    gallery: [anguriaPesoImg, meloniAngurieImg, angurieCassoneImg, anguriaGiganteImg],
   },
   {
     id: "meloni",
@@ -58,7 +58,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg],
+    gallery: [meloniOrigImg, meloniRetatiImg],
   },
   {
     id: "zucche",
@@ -79,7 +79,7 @@ const products = [
       { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
-    gallery: [],
+    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheCassettaVerdeImg],
   },
 ];
 
