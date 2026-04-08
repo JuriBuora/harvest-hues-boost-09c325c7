@@ -43,7 +43,7 @@ const ChiSiamo = () => {
                 Radici autentiche, visione contemporanea.
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Da oltre quarant'anni, l'arte della coltivazione nel cuore delle Valli di Comacchio.
+                Da oltre quarant'anni, l'arte della coltivazione nelle fertili terre tra Argenta e Portomaggiore.
               </p>
             </div>
           </ScrollReveal>
