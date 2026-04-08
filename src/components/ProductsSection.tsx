@@ -1,6 +1,6 @@
-import angurieImg from "@/assets/angurie.jpg";
-import zuccheImg from "@/assets/zucche.jpg";
-import meloniImg from "@/assets/meloni.jpg";
+import angurieImg from "@/assets/angurie-originale.jpg";
+import zuccheImg from "@/assets/zucche-originale.jpg";
+import meloniImg from "@/assets/meloni-originale.jpg";
 import ScrollReveal from "./ScrollReveal";
 
 const products = [
@@ -8,13 +8,13 @@ const products = [
     title: "Angurie",
     desc: "Angurie dolci e succose, coltivate con cura seguendo metodi tradizionali e sostenibili per garantire il massimo della freschezza.",
     img: angurieImg,
-    alt: "Angurie fresche dell'Azienda Agricola Farina",
+    alt: "Coltivazione angurie - Azienda Agricola Farina",
   },
   {
     title: "Zucche",
     desc: "Zucche selezionate di diverse varietà, perfette per la cucina tradizionale e ideali per i mercati ortofrutticoli.",
     img: zuccheImg,
-    alt: "Zucche coltivate dall'Azienda Agricola Farina",
+    alt: "Zucche dell'Azienda Agricola Farina",
   },
   {
     title: "Meloni",

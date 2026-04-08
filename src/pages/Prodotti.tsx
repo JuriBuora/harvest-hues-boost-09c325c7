@@ -1,9 +1,13 @@
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import angurieImg from "@/assets/angurie.jpg";
-import zuccheImg from "@/assets/zucche.jpg";
-import meloniImg from "@/assets/meloni.jpg";
+import ScrollReveal from "@/components/ScrollReveal";
+import angurieImg from "@/assets/angurie-originale.jpg";
+import zuccheImg from "@/assets/zucche-originale2.jpg";
+import meloniImg from "@/assets/meloni-originale.jpg";
+import anguriaPesoImg from "@/assets/anguria-peso.jpg";
+import meloniOrigImg from "@/assets/meloni-originale2.jpg";
+import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone, Leaf, Sun, Droplets, ThermometerSun, Scale, Truck } from "lucide-react";
 
@@ -13,7 +17,7 @@ const products = [
     title: "Angurie",
     subtitle: "Dolcezza e freschezza dal campo",
     img: angurieImg,
-    alt: "Angurie fresche dell'Azienda Agricola Farina",
+    alt: "Coltivazione angurie - Azienda Agricola Farina",
     description:
       "Le nostre angurie sono il frutto di una coltivazione attenta e appassionata, che unisce tradizione e innovazione. Cresciute nei fertili terreni di Portomaggiore, vengono raccolte al punto perfetto di maturazione per garantire dolcezza, croccantezza e succosità.",
     details: [
@@ -27,6 +31,7 @@ const products = [
       { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
       { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, perfetta per la vendita all'ingrosso." },
     ],
+    gallery: [anguriaPesoImg, meloniAngurieImg],
   },
   {
     id: "meloni",
@@ -47,6 +52,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
+    gallery: [meloniOrigImg],
   },
   {
     id: "zucche",
@@ -67,6 +73,7 @@ const products = [
       { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
+    gallery: [],
   },
 ];
 
@@ -77,36 +84,57 @@ const Prodotti = () => (
       {/* Hero */}
       <section className="py-16 md:py-24 text-center" style={{ background: "var(--section-gradient)" }}>
         <div className="container mx-auto px-4">
-          <p className="text-secondary font-sans text-sm tracking-[0.2em] uppercase mb-3">I Nostri Prodotti</p>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Freschi dal campo alla tavola
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Coltiviamo con passione angurie, meloni e zucche di alta qualità, selezionati con cura 
-            per i mercati ortofrutticoli e la vendita diretta.
-          </p>
+          <ScrollReveal>
+            <p className="text-secondary font-sans text-sm tracking-[0.2em] uppercase mb-3">I Nostri Prodotti</p>
+            <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
+              Freschi dal campo alla tavola
+            </h1>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Coltiviamo con passione angurie, meloni e zucche di alta qualità, selezionati con cura 
+              per i mercati ortofrutticoli e la vendita diretta.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Product sections */}
       {products.map((p, idx) => (
-        <section key={p.id} id={p.id} className={`py-20 md:py-28 ${idx % 2 === 1 ? "" : ""}`} style={idx % 2 === 1 ? { background: "var(--section-gradient)" } : undefined}>
+        <section key={p.id} id={p.id} className="py-20 md:py-28" style={idx % 2 === 1 ? { background: "var(--section-gradient)" } : undefined}>
           <div className="container mx-auto px-4">
-            <div className={`grid lg:grid-cols-2 gap-12 items-center ${idx % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-              {/* Image - alternate sides */}
-              <div className={`rounded-xl overflow-hidden shadow-lg ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
-                <img
-                  src={p.img}
-                  alt={p.alt}
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover aspect-square"
-                />
-              </div>
+            <div className={`grid lg:grid-cols-2 gap-12 items-start ${idx % 2 === 1 ? "" : ""}`}>
+              {/* Image */}
+              <ScrollReveal className={idx % 2 === 1 ? "lg:order-2" : ""}>
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src={p.img}
+                    alt={p.alt}
+                    loading="lazy"
+                    width={800}
+                    height={800}
+                    className="w-full object-cover aspect-[4/3]"
+                  />
+                </div>
+                {/* Gallery */}
+                {p.gallery.length > 0 && (
+                  <div className="grid grid-cols-2 gap-3 mt-3">
+                    {p.gallery.map((g, i) => (
+                      <div key={i} className="rounded-lg overflow-hidden">
+                        <img
+                          src={g}
+                          alt={`${p.title} - foto ${i + 2}`}
+                          loading="lazy"
+                          width={400}
+                          height={300}
+                          className="w-full h-40 object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </ScrollReveal>
 
               {/* Content */}
-              <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
+              <ScrollReveal delay={200} className={idx % 2 === 1 ? "lg:order-1" : ""}>
                 <p className="text-secondary font-sans text-sm tracking-[0.2em] uppercase mb-2">{p.subtitle}</p>
                 <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">{p.title}</h2>
                 <p className="text-muted-foreground text-base leading-relaxed mb-8">{p.description}</p>
@@ -134,7 +162,7 @@ const Prodotti = () => (
                     </div>
                   ))}
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -143,20 +171,22 @@ const Prodotti = () => (
       {/* CTA */}
       <section className="py-16 md:py-24 bg-primary text-center">
         <div className="container mx-auto px-4">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Interessato ai nostri prodotti?
-          </h2>
-          <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">
-            Contattaci per maggiori informazioni, preventivi e ordini all'ingrosso.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>
-              <a href="tel:+390532814411"><Phone className="w-4 h-4 mr-2" /> Chiama Ora</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-sans text-base px-8" asChild>
-              <a href="/#contatti">Contattaci</a>
-            </Button>
-          </div>
+          <ScrollReveal>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Interessato ai nostri prodotti?
+            </h2>
+            <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">
+              Contattaci per maggiori informazioni, preventivi e ordini all'ingrosso.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>
+                <a href="tel:+390532814411"><Phone className="w-4 h-4 mr-2" /> Chiama Ora</a>
+              </Button>
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-sans text-base px-8" asChild>
+                <a href="/#contatti">Contattaci</a>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>
