@@ -68,7 +68,7 @@ const Contatti = () => {
                   <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">Informazioni di Contatto</h2>
                   <div className="space-y-5">
                     {[
-                      { icon: MapPin, label: "Indirizzo", value: "Via Rangona, 54 - Bando di Argenta (FE)", href: "https://maps.google.com/?q=Via+Rangona+54+Bando+di+Argenta+FE" },
+                      { icon: MapPin, label: "Indirizzo", value: "Via Rangona, 54/A — 44015 Bando di Argenta (FE)", href: "https://maps.google.com/?q=Via+Rangona+54+44015+Bando+di+Argenta+FE+Italy" },
                       { icon: Phone, label: "Telefono", value: "+39 0532 814411", href: "tel:+390532814411" },
                       { icon: Phone, label: "Cellulare", value: "+39 338 1571439", href: "tel:+393381571439" },
                       { icon: Mail, label: "Email", value: "soc.agr.farina@gmail.com", href: "mailto:soc.agr.farina@gmail.com" },
@@ -101,7 +101,7 @@ const Contatti = () => {
                 <div className="rounded-xl overflow-hidden border border-border h-64">
                   <iframe
                     title="Mappa Azienda Agricola Farina"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.5!2d11.791!3d44.699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQxJzU2LjQiTiAxMcKwNDcnMjcuNiJF!5e0!3m2!1sit!2sit!4v1"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Via+Rangona+54,+44015+Bando+di+Argenta,+FE,+Italy&zoom=14"
                     className="w-full h-full"
                     loading="lazy"
                     allowFullScreen
