@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import Prodotti from "./pages/Prodotti.tsx";
 import Contatti from "./pages/Contatti.tsx";
 import Galleria from "./pages/Galleria.tsx";
+import ChiSiamo from "./pages/ChiSiamo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
