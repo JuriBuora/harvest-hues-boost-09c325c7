@@ -9,7 +9,7 @@ import zuccheImg from "@/assets/zucche-originale2.jpg";
 import meloniImg from "@/assets/meloni-cantalupo.jpg";
 import anguriaBilanciaImg from "@/assets/anguria-bilancia.jpg";
 import meloniOrigImg from "@/assets/meloni-originale2.jpg";
-import meloniLisciImg2 from "@/assets/meloni.jpg";
+import meloniOriginaleImg from "@/assets/meloni-originale.jpg";
 import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
 import angurieCassoneImg from "@/assets/angurie-cassone.jpg";
 import anguriaGiganteImg from "@/assets/anguria-gigante.jpg";
@@ -65,7 +65,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg, meloniLisciImg2, meloniLisciImg, meloniRetatiCassettaImg],
+    gallery: [meloniOrigImg, meloniOriginaleImg, meloniLisciImg, meloniRetatiCassettaImg],
   },
   {
     id: "zucche",
