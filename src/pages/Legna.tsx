@@ -38,6 +38,11 @@ const Legna = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO
+        title="Legna da Ardere"
+        description="Legna da ardere selezionata e stagionata con consegna a domicilio entro 50 km da Bando di Argenta. Essenze miste, taglio su misura. Ordine minimo €200-250."
+        path="/legna"
+      />
       <Navbar />
 
       {/* Hero */}

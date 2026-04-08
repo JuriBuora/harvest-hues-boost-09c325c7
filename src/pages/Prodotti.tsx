@@ -104,6 +104,11 @@ const Prodotti = () => {
 
   return (
   <>
+    <PageSEO
+      title="Prodotti"
+      description="I prodotti della Società Agricola Farina 2.0: angurie Crimson Sweet e Dumara, meloni retati e lisci, zucche mantovane, butternut e Halloween. Freschi dal campo alla tavola."
+      path="/prodotti"
+    />
     <Navbar />
     <main className="pt-16">
       {/* Hero */}
