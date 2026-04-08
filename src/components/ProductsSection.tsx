@@ -43,22 +43,24 @@ const ProductsSection = () => (
       <div className="grid md:grid-cols-3 gap-8">
         {products.map((p, i) => (
           <ScrollReveal key={p.title} delay={i * 150}>
-            <div className="group rounded-xl overflow-hidden bg-background border border-border/50 hover:shadow-xl transition-all duration-300 h-full">
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.alt}
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+            <Link to={p.link} className="block h-full">
+              <div className="group rounded-xl overflow-hidden bg-background border border-border/50 hover:shadow-xl transition-all duration-300 h-full">
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.alt}
+                    loading="lazy"
+                    width={800}
+                    height={800}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">{p.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">{p.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-              </div>
-            </div>
+            </Link>
           </ScrollReveal>
         ))}
       </div>
