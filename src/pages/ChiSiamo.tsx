@@ -157,6 +157,7 @@ const ChiSiamo = () => {
     <FooterSection />
     <WhatsAppButton />
   </>
-);
+  );
+};
 
 export default ChiSiamo;
