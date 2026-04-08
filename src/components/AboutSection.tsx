@@ -28,7 +28,7 @@ const AboutSection = () => (
       <div className="grid md:grid-cols-3 gap-8">
         {features.map((f, i) => (
           <ScrollReveal key={f.title} delay={i * 150}>
-            <div className="text-center p-8 rounded-xl bg-card border border-border/50 hover:shadow-lg transition-shadow">
+            <div className="text-center p-8 rounded-xl bg-card border border-border/50 hover:shadow-lg transition-shadow h-full flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
                 <f.icon className="w-6 h-6 text-primary" />
               </div>
