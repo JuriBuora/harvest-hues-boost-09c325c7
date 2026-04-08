@@ -7,7 +7,6 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 // Angurie
 import angurieOriginale from "@/assets/angurie-originale.jpg";
-import anguriaPeso from "@/assets/anguria-peso.jpg";
 import meloniAngurie from "@/assets/meloni-angurie.jpg";
 import angurieCassette from "@/assets/angurie-cassette.jpg";
 import angurieMagazzino from "@/assets/angurie-magazzino.jpg";
@@ -17,15 +16,11 @@ import angurieCassoneRosso from "@/assets/angurie-cassone-rosso.jpg";
 import angurieStriate from "@/assets/angurie-striate.jpg";
 import anguriaBilancia from "@/assets/anguria-bilancia.jpg";
 import angurieNastro from "@/assets/angurie-nastro.jpg";
-import angurieStoccaggio from "@/assets/angurie-stoccaggio.jpg";
-import angurieMagazzinoInterno from "@/assets/angurie-magazzino-interno.jpg";
 
 // Meloni
 import meloniOriginale from "@/assets/meloni-originale.jpg";
-import meloniOriginale2 from "@/assets/meloni-originale2.jpg";
 import meloniRetati from "@/assets/meloni-retati.jpg";
 import meloniLisciCassetta from "@/assets/meloni-lisci-cassetta.jpg";
-import meloniCantalupo from "@/assets/meloni-cantalupo.jpg";
 import meloniRetatiCassetta from "@/assets/meloni-retati-cassetta.jpg";
 
 // Zucche
@@ -40,7 +35,6 @@ import zuccheArancioni from "@/assets/zucche-arancioni.jpg";
 import zuccheCassettaVerde from "@/assets/zucche-cassetta-verde.jpg";
 import zuccheMantovaneScatola from "@/assets/zucche-mantovane-scatola.jpg";
 import zuccheHalloween from "@/assets/zucche-halloween.jpg";
-import zuccheHalloween2 from "@/assets/zucche-halloween2.jpg";
 import zuccheHalloweenPallet from "@/assets/zucche-halloween-pallet.jpg";
 import zuccheHalloweenEspositore from "@/assets/zucche-halloween-espositore.jpg";
 
@@ -51,7 +45,6 @@ import legnaCumuli from "@/assets/legna-cumuli.jpg";
 import legnaTronchi from "@/assets/legna-tronchi.jpg";
 
 // Azienda
-import heroFarm from "@/assets/hero-farm.jpg";
 import premioQualita from "@/assets/premio-qualita.jpg";
 import premioFiera from "@/assets/premio-fiera.jpg";
 import camionFarina from "@/assets/camion-farina.jpg";
@@ -71,23 +64,18 @@ interface GalleryImage {
 const images: GalleryImage[] = [
   // Angurie
   { src: angurieOriginale, alt: "Angurie fresche nel campo", category: "Angurie" },
-  { src: anguriaPeso, alt: "Anguria sulla bilancia - controllo qualità", category: "Angurie" },
+  { src: anguriaBilancia, alt: "Anguria gigante sulla bilancia Berkel", category: "Angurie" },
   { src: angurieCassone, alt: "Angurie con marchio Farina nelle cassette", category: "Angurie" },
   { src: anguriaGigante, alt: "Anguria gigante - orgoglio aziendale", category: "Angurie" },
   { src: angurieCassette, alt: "Angurie nelle cassette rosse", category: "Angurie" },
   { src: angurieMagazzino, alt: "Angurie in magazzino pronte per la spedizione", category: "Angurie" },
   { src: angurieCassoneRosso, alt: "Angurie nel cassone rosso Farina", category: "Angurie" },
   { src: angurieStriate, alt: "Angurie striate con etichetta Farina", category: "Angurie" },
-  { src: anguriaBilancia, alt: "Anguria gigante sulla bilancia Berkel", category: "Angurie" },
   { src: angurieNastro, alt: "Nastro trasportatore per la selezione angurie", category: "Angurie" },
-  { src: angurieStoccaggio, alt: "Stoccaggio angurie in magazzino", category: "Angurie" },
-  { src: angurieMagazzinoInterno, alt: "Magazzino interno con cassoni di angurie", category: "Angurie" },
   { src: meloniAngurie, alt: "Meloni e angurie pronti per la vendita", category: "Angurie" },
   // Meloni
   { src: meloniOriginale, alt: "Meloni lisci appena raccolti", category: "Meloni" },
-  { src: meloniOriginale2, alt: "Selezione dei meloni migliori", category: "Meloni" },
   { src: meloniRetati, alt: "Meloni retati pronti per la vendita", category: "Meloni" },
-  { src: meloniCantalupo, alt: "Meloni cantalupo retati da vicino", category: "Meloni" },
   { src: meloniLisciCassetta, alt: "Meloni lisci nella cassetta verde", category: "Meloni" },
   { src: meloniRetatiCassetta, alt: "Meloni retati in cassetta", category: "Meloni" },
   // Zucche
@@ -102,7 +90,6 @@ const images: GalleryImage[] = [
   { src: zuccheViolina, alt: "Zucche violina", category: "Zucche" },
   { src: zuccheCassone, alt: "Zucche in cassone di legno", category: "Zucche" },
   { src: zuccheHalloween, alt: "Zucche Halloween in rete", category: "Zucche" },
-  { src: zuccheHalloween2, alt: "Zucche Halloween da vicino", category: "Zucche" },
   { src: zuccheHalloweenPallet, alt: "Zucche Halloween su pallet pronte per la spedizione", category: "Zucche" },
   { src: zuccheHalloweenEspositore, alt: "Espositore zucche Halloween", category: "Zucche" },
   // Legna
@@ -112,7 +99,6 @@ const images: GalleryImage[] = [
   { src: legnaTronchi, alt: "Tronchi e legna da lavorare", category: "Legna" },
   // Azienda
   { src: aziendaAerea, alt: "Vista aerea dell'azienda agricola Farina", category: "Azienda" },
-  { src: heroFarm, alt: "Vista dell'azienda agricola", category: "Azienda" },
   { src: camionFarina, alt: "Camion aziendale Farina R.", category: "Azienda" },
   { src: magazzinoEsterno, alt: "Magazzino e piazzale aziendale", category: "Azienda" },
   { src: logoFarina, alt: "Logo ufficiale Az. Agricola Farina R.", category: "Azienda" },
