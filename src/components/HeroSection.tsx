@@ -14,7 +14,7 @@ const HeroSection = () => (
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
     <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
       <p className="text-primary-foreground/80 font-sans text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in">
-        Portomaggiore · Ferrara
+        Bando di Argenta · Ferrara
       </p>
       <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
         Azienda Agricola Farina
