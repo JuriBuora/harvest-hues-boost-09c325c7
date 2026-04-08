@@ -68,7 +68,7 @@ const Contatti = () => {
                   <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">Informazioni di Contatto</h2>
                   <div className="space-y-5">
                     {[
-                      { icon: MapPin, label: "Indirizzo", value: "Via Rangona, 54/A - 44015 Portomaggiore (FE)", href: "https://maps.google.com/?q=Via+Rangona+54A+Portomaggiore+FE" },
+                      { icon: MapPin, label: "Indirizzo", value: "Via Rangona, 54 - Bando di Argenta (FE)", href: "https://maps.google.com/?q=Via+Rangona+54+Bando+di+Argenta+FE" },
                       { icon: Phone, label: "Telefono", value: "+39 0532 814411", href: "tel:+390532814411" },
                       { icon: Phone, label: "Cellulare", value: "+39 338 1571439", href: "tel:+393381571439" },
                       { icon: Mail, label: "Email", value: "soc.agr.farina@gmail.com", href: "mailto:soc.agr.farina@gmail.com" },

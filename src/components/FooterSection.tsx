@@ -31,7 +31,7 @@ const FooterSection = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/70">
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-secondary" />
-              Via Rangona, 54/A - 44015 Portomaggiore (FE)
+              Via Rangona, 54 - Bando di Argenta (FE)
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-4 h-4 shrink-0 text-secondary" />

@@ -17,7 +17,7 @@ const AboutSection = () => (
             Dal 1975, con passione
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            <strong className="text-foreground">Azienda Agricola Farina</strong>, con sede a Bando di Portomaggiore in provincia di Ferrara, 
+            <strong className="text-foreground">Azienda Agricola Farina</strong>, con sede a Bando di Argenta in provincia di Ferrara, 
             nasce a metà degli anni '70 grazie a Roberto Farina. Specializzata nella coltivazione di angurie e meloni, 
             si è evoluta nei primi anni 2000 con l'ingresso del figlio Marcello, ampliando la produzione alla zucca e 
             alla legna da ardere.
