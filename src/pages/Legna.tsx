@@ -6,6 +6,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import PageSEO from "@/components/PageSEO";
 
 import legnaOriginale from "@/assets/legna-originale.jpg";
 import legnaCumuli from "@/assets/legna-cumuli.jpg";

@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import PageSEO from "@/components/PageSEO";
 import angurieImg from "@/assets/angurie-originale.jpg";
 import zuccheImg from "@/assets/zucche-originale2.jpg";
 import meloniImg from "@/assets/meloni-cantalupo.jpg";
