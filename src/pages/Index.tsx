@@ -6,6 +6,7 @@ import FirewoodSection from "@/components/FirewoodSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
 import MapSection from "@/components/MapSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => (
   <>
