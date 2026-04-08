@@ -19,8 +19,8 @@ const AboutSection = () => (
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
             Da oltre quarant'anni, la <strong className="text-foreground">Società Agricola Farina 2.0</strong> dedica
-            passione e competenza alla coltivazione nel cuore delle Valli di Comacchio. Una storia di famiglia
-            che unisce tradizione e innovazione.
+            passione e competenza alla coltivazione nelle fertili terre tra Argenta e Portomaggiore,
+            nel cuore del territorio ferrarese. Una storia di famiglia che unisce tradizione e innovazione.
           </p>
           <Link
             to="/chi-siamo"

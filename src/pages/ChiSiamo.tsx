@@ -1,3 +1,4 @@
+import React from "react";
 import { Leaf, Heart, Award, Sprout, Truck, RotateCcw } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -17,9 +18,13 @@ const methods = [
   { icon: Truck, title: "Filiera Corta", desc: "Dalla semina alla distribuzione, ogni fase è seguita direttamente dalla nostra famiglia per garantire freschezza assoluta." },
 ];
 
-const ChiSiamo = () => (
+const ChiSiamo = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
   <>
-    <Navbar />
     <main className="pt-16">
       {/* Hero */}
       <section className="py-20 md:py-28 bg-[image:var(--section-gradient)]">
@@ -152,6 +157,7 @@ const ChiSiamo = () => (
     <FooterSection />
     <WhatsAppButton />
   </>
-);
+  );
+};
 
 export default ChiSiamo;
