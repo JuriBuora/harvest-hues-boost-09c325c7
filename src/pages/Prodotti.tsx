@@ -8,6 +8,12 @@ import meloniImg from "@/assets/meloni-originale.jpg";
 import anguriaPesoImg from "@/assets/anguria-peso.jpg";
 import meloniOrigImg from "@/assets/meloni-originale2.jpg";
 import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
+import angurieCassoneImg from "@/assets/angurie-cassone.jpg";
+import anguriaGiganteImg from "@/assets/anguria-gigante.jpg";
+import meloniRetatiImg from "@/assets/meloni-retati.jpg";
+import zuccheMantovaneImg from "@/assets/zucche-mantovane.jpg";
+import zuccheArancioniImg from "@/assets/zucche-arancioni.jpg";
+import zuccheCassettaVerdeImg from "@/assets/zucche-cassetta-verde.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone, Leaf, Sun, Droplets, ThermometerSun, Scale, Truck } from "lucide-react";
 
@@ -31,7 +37,7 @@ const products = [
       { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
       { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, perfetta per la vendita all'ingrosso." },
     ],
-    gallery: [anguriaPesoImg, meloniAngurieImg],
+    gallery: [anguriaPesoImg, meloniAngurieImg, angurieCassoneImg, anguriaGiganteImg],
   },
   {
     id: "meloni",
@@ -52,7 +58,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg],
+    gallery: [meloniOrigImg, meloniRetatiImg],
   },
   {
     id: "zucche",
@@ -73,7 +79,7 @@ const products = [
       { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
-    gallery: [],
+    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheCassettaVerdeImg],
   },
 ];
 

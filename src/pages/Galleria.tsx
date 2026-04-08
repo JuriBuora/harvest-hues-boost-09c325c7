@@ -14,6 +14,26 @@ import zuccheOriginale from "@/assets/zucche-originale.jpg";
 import zuccheOriginale2 from "@/assets/zucche-originale2.jpg";
 import legnaOriginale from "@/assets/legna-originale.jpg";
 import heroFarm from "@/assets/hero-farm.jpg";
+import premioQualita from "@/assets/premio-qualita.jpg";
+import premioFiera from "@/assets/premio-fiera.jpg";
+import legnaCatasta from "@/assets/legna-catasta.jpg";
+import angurieCassette from "@/assets/angurie-cassette.jpg";
+import angurieMagazzino from "@/assets/angurie-magazzino.jpg";
+import zuccheButternut from "@/assets/zucche-butternut.jpg";
+import zuccheTonde from "@/assets/zucche-tonde.jpg";
+import zuccheViolina from "@/assets/zucche-violina.jpg";
+import zuccheCassone from "@/assets/zucche-cassone.jpg";
+import meloniRetati from "@/assets/meloni-retati.jpg";
+import zuccheMantovane from "@/assets/zucche-mantovane.jpg";
+import camionFarina from "@/assets/camion-farina.jpg";
+import magazzinoEsterno from "@/assets/magazzino-esterno.jpg";
+import aziendaAerea from "@/assets/azienda-aerea.jpg";
+import legnaCumuli from "@/assets/legna-cumuli.jpg";
+import legnaTronchi from "@/assets/legna-tronchi.jpg";
+import angurieCassone from "@/assets/angurie-cassone.jpg";
+import zuccheArancioni from "@/assets/zucche-arancioni.jpg";
+import zuccheCassettaVerde from "@/assets/zucche-cassetta-verde.jpg";
+import anguriaGigante from "@/assets/anguria-gigante.jpg";
 
 const categories = ["Tutte", "Angurie", "Meloni", "Zucche", "Legna", "Azienda"] as const;
 type Category = (typeof categories)[number];
@@ -25,15 +45,40 @@ interface GalleryImage {
 }
 
 const images: GalleryImage[] = [
+  // Angurie
   { src: angurieOriginale, alt: "Angurie fresche nel campo", category: "Angurie" },
   { src: anguriaPeso, alt: "Anguria sulla bilancia - controllo qualità", category: "Angurie" },
   { src: meloniAngurie, alt: "Meloni e angurie pronti per la vendita", category: "Angurie" },
+  { src: angurieCassette, alt: "Angurie nelle cassette rosse", category: "Angurie" },
+  { src: angurieMagazzino, alt: "Angurie in magazzino pronte per la spedizione", category: "Angurie" },
+  { src: angurieCassone, alt: "Angurie con marchio Farina nelle cassette", category: "Angurie" },
+  { src: anguriaGigante, alt: "Anguria gigante - orgoglio aziendale", category: "Angurie" },
+  // Meloni
   { src: meloniOriginale, alt: "Meloni lisci appena raccolti", category: "Meloni" },
   { src: meloniOriginale2, alt: "Selezione dei meloni migliori", category: "Meloni" },
+  { src: meloniRetati, alt: "Meloni retati pronti per la vendita", category: "Meloni" },
+  // Zucche
   { src: zuccheOriginale, alt: "Zucche di diverse varietà", category: "Zucche" },
   { src: zuccheOriginale2, alt: "Zucche pronte per la distribuzione", category: "Zucche" },
+  { src: zuccheButternut, alt: "Zucche butternut", category: "Zucche" },
+  { src: zuccheTonde, alt: "Zucche tonde selezionate", category: "Zucche" },
+  { src: zuccheViolina, alt: "Zucche violina", category: "Zucche" },
+  { src: zuccheCassone, alt: "Zucche in cassone di legno", category: "Zucche" },
+  { src: zuccheMantovane, alt: "Zucche mantovane con marchio Farina", category: "Zucche" },
+  { src: zuccheArancioni, alt: "Zucche arancioni con etichetta aziendale", category: "Zucche" },
+  { src: zuccheCassettaVerde, alt: "Zucche nella cassetta verde Farina", category: "Zucche" },
+  // Legna
   { src: legnaOriginale, alt: "Legna da ardere tagliata e pronta", category: "Legna" },
+  { src: legnaCatasta, alt: "Catasta di legna da ardere", category: "Legna" },
+  { src: legnaCumuli, alt: "Cumuli di legna nel piazzale aziendale", category: "Legna" },
+  { src: legnaTronchi, alt: "Tronchi e legna da lavorare", category: "Legna" },
+  // Azienda
+  { src: aziendaAerea, alt: "Vista aerea dell'azienda agricola Farina", category: "Azienda" },
   { src: heroFarm, alt: "Vista dell'azienda agricola", category: "Azienda" },
+  { src: camionFarina, alt: "Camion aziendale Farina R.", category: "Azienda" },
+  { src: magazzinoEsterno, alt: "Magazzino e piazzale aziendale", category: "Azienda" },
+  { src: premioQualita, alt: "Premio qualità ricevuto dall'azienda", category: "Azienda" },
+  { src: premioFiera, alt: "Riconoscimento in fiera", category: "Azienda" },
 ];
 
 const Galleria = () => {
