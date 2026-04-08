@@ -7,7 +7,7 @@ const FooterSection = () => (
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
-          <img src={logo} alt="Logo Azienda Agricola Farina" className="h-16 w-auto mb-4 brightness-0 invert" />
+          <img src={logo} alt="Logo Azienda Agricola Farina" className="h-16 w-auto mb-4" />
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
             Coltiviamo con passione angurie, meloni e zucche dal 1975. 
             Vendita all'ingrosso e consegna legna da ardere a domicilio.
