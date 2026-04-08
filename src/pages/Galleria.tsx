@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
 // Angurie
-import angurieOriginale from "@/assets/angurie-originale.jpg";
+
 import meloniAngurie from "@/assets/meloni-angurie.jpg";
 import angurieCassette from "@/assets/angurie-cassette.jpg";
 import angurieMagazzino from "@/assets/angurie-magazzino.jpg";
@@ -31,7 +31,7 @@ import zuccheTonde from "@/assets/zucche-tonde.jpg";
 import zuccheViolina from "@/assets/zucche-violina.jpg";
 import zuccheCassone from "@/assets/zucche-cassone.jpg";
 import zuccheMantovane from "@/assets/zucche-mantovane.jpg";
-import zuccheArancioni from "@/assets/zucche-arancioni.jpg";
+
 import zuccheCassettaVerde from "@/assets/zucche-cassetta-verde.jpg";
 import zuccheMantovaneScatola from "@/assets/zucche-mantovane-scatola.jpg";
 import zuccheHalloween from "@/assets/zucche-halloween.jpg";
@@ -40,7 +40,7 @@ import zuccheHalloweenEspositore from "@/assets/zucche-halloween-espositore.jpg"
 
 // Legna
 import legnaOriginale from "@/assets/legna-originale.jpg";
-import legnaCatasta from "@/assets/legna-catasta.jpg";
+
 import legnaCumuli from "@/assets/legna-cumuli.jpg";
 import legnaTronchi from "@/assets/legna-tronchi.jpg";
 
@@ -63,7 +63,7 @@ interface GalleryImage {
 
 const images: GalleryImage[] = [
   // Angurie
-  { src: angurieOriginale, alt: "Angurie fresche nel campo", category: "Angurie" },
+  
   { src: anguriaBilancia, alt: "Anguria gigante sulla bilancia Berkel", category: "Angurie" },
   { src: angurieCassone, alt: "Angurie con marchio Farina nelle cassette", category: "Angurie" },
   { src: anguriaGigante, alt: "Anguria gigante - orgoglio aziendale", category: "Angurie" },
@@ -81,7 +81,7 @@ const images: GalleryImage[] = [
   // Zucche
   { src: zuccheOriginale, alt: "Zucche di diverse varietà", category: "Zucche" },
   { src: zuccheOriginale2, alt: "Zucche pronte per la distribuzione", category: "Zucche" },
-  { src: zuccheArancioni, alt: "Zucche arancioni con etichetta aziendale", category: "Zucche" },
+  
   { src: zuccheCassettaVerde, alt: "Zucche nella cassetta verde Farina", category: "Zucche" },
   { src: zuccheMantovane, alt: "Zucche mantovane con marchio Farina", category: "Zucche" },
   { src: zuccheMantovaneScatola, alt: "Zucche mantovane confezionate in scatola", category: "Zucche" },
@@ -94,7 +94,7 @@ const images: GalleryImage[] = [
   { src: zuccheHalloweenEspositore, alt: "Espositore zucche Halloween", category: "Zucche" },
   // Legna
   { src: legnaOriginale, alt: "Legna da ardere tagliata e pronta", category: "Legna" },
-  { src: legnaCatasta, alt: "Catasta di legna da ardere", category: "Legna" },
+  
   { src: legnaCumuli, alt: "Cumuli di legna nel piazzale aziendale", category: "Legna" },
   { src: legnaTronchi, alt: "Tronchi e legna da lavorare", category: "Legna" },
   // Azienda
