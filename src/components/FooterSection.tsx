@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo-farina.png";
 
 const FooterSection = () => (
   <footer id="contatti" className="bg-primary text-primary-foreground py-16">
@@ -6,7 +7,7 @@ const FooterSection = () => (
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
-          <h3 className="font-serif text-2xl font-bold mb-4">Az. Agricola Farina</h3>
+          <img src={logo} alt="Logo Azienda Agricola Farina" className="h-16 w-auto mb-4 brightness-0 invert" />
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
             Coltiviamo con passione angurie, meloni e zucche dal 1975. 
             Vendita all'ingrosso e consegna legna da ardere a domicilio.
