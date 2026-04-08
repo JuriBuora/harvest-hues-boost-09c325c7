@@ -2,11 +2,11 @@ import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Chi Siamo", href: "#chi-siamo" },
-  { label: "Prodotti", href: "#prodotti" },
-  { label: "Legna", href: "#legna" },
-  { label: "Contatti", href: "#contatti" },
+  { label: "Home", href: "/" },
+  { label: "Chi Siamo", href: "/#chi-siamo" },
+  { label: "Prodotti", href: "/prodotti" },
+  { label: "Legna", href: "/#legna" },
+  { label: "Contatti", href: "/#contatti" },
 ];
 
 const Navbar = () => {
