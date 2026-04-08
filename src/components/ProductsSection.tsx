@@ -1,0 +1,60 @@
+import angurieImg from "@/assets/angurie.jpg";
+import zuccheImg from "@/assets/zucche.jpg";
+import meloniImg from "@/assets/meloni.jpg";
+
+const products = [
+  {
+    title: "Angurie",
+    desc: "Angurie dolci e succose, coltivate con cura seguendo metodi tradizionali e sostenibili per garantire il massimo della freschezza.",
+    img: angurieImg,
+    alt: "Angurie fresche dell'Azienda Agricola Farina",
+  },
+  {
+    title: "Zucche",
+    desc: "Zucche selezionate di diverse varietà, perfette per la cucina tradizionale e ideali per i mercati ortofrutticoli.",
+    img: zuccheImg,
+    alt: "Zucche coltivate dall'Azienda Agricola Farina",
+  },
+  {
+    title: "Meloni",
+    desc: "Meloni profumati e maturi al punto giusto, risultato di un'attenta lavorazione in campo e selezione accurata.",
+    img: meloniImg,
+    alt: "Meloni freschi dell'Azienda Agricola Farina",
+  },
+];
+
+const ProductsSection = () => (
+  <section id="prodotti" className="py-20 md:py-28" style={{ background: "var(--section-gradient)" }}>
+    <div className="container mx-auto px-4">
+      <div className="text-center mb-16">
+        <p className="text-secondary font-sans text-sm tracking-[0.2em] uppercase mb-3">I Nostri Prodotti</p>
+        <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground">
+          Freschi dal campo
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {products.map((p) => (
+          <div key={p.title} className="group rounded-xl overflow-hidden bg-background border border-border/50 hover:shadow-xl transition-all duration-300">
+            <div className="aspect-square overflow-hidden">
+              <img
+                src={p.img}
+                alt={p.alt}
+                loading="lazy"
+                width={800}
+                height={800}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">{p.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+export default ProductsSection;
