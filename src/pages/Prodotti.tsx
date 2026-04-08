@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import angurieImg from "@/assets/angurie-originale.jpg";
 import zuccheImg from "@/assets/zucche-originale2.jpg";
 import meloniImg from "@/assets/meloni-cantalupo.jpg";
-import anguriaPesoImg from "@/assets/anguria-peso.jpg";
+import anguriaBilanciaImg from "@/assets/anguria-bilancia.jpg";
 import meloniOrigImg from "@/assets/meloni-originale2.jpg";
 import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
 import angurieCassoneImg from "@/assets/angurie-cassone.jpg";
@@ -41,7 +41,7 @@ const products = [
       { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
       { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, perfetta per la vendita all'ingrosso." },
     ],
-    gallery: [anguriaPesoImg, meloniAngurieImg, angurieCassoneImg, anguriaGiganteImg],
+    gallery: [anguriaBilanciaImg, meloniAngurieImg, angurieCassoneImg, anguriaGiganteImg],
   },
   {
     id: "meloni",
@@ -62,7 +62,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg, meloniRetatiImg, meloniLisciImg, meloniRetatiCassettaImg],
+    gallery: [meloniOrigImg, meloniAngurieImg, meloniLisciImg, meloniRetatiCassettaImg],
   },
   {
     id: "zucche",
