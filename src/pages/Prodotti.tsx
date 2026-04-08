@@ -84,7 +84,7 @@ const products = [
       { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
-    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheCassettaVerdeImg, zuccheHalloweenImg, zuccheMantovaneScatolaImg],
+    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheHalloweenImg, zuccheMantovaneScatolaImg],
   },
 ];
 
