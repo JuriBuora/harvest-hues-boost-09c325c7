@@ -25,6 +25,7 @@ const ChiSiamo = () => {
 
   return (
   <>
+    <Navbar />
     <main className="pt-16">
       {/* Hero */}
       <section className="py-20 md:py-28 bg-[image:var(--section-gradient)]">
