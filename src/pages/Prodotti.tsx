@@ -87,7 +87,20 @@ const products = [
   },
 ];
 
-const Prodotti = () => (
+const Prodotti = () => {
+  React.useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+    }
+  }, []);
+
+  return (
   <>
     <Navbar />
     <main className="pt-16">
