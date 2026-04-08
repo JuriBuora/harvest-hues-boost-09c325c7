@@ -5,6 +5,7 @@ import ProductsSection from "@/components/ProductsSection";
 import FirewoodSection from "@/components/FirewoodSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
+import MapSection from "@/components/MapSection";
 
 const Index = () => (
   <>
@@ -14,6 +15,7 @@ const Index = () => (
     <ProductsSection />
     <FirewoodSection />
     <TestimonialsSection />
+    <MapSection />
     <FooterSection />
   </>
 );
