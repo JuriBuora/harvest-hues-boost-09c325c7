@@ -68,7 +68,7 @@ const images: GalleryImage[] = [
   { src: anguriaBilancia, alt: "Anguria gigante sulla bilancia Berkel", category: "Angurie" },
   { src: angurieCassone, alt: "Angurie con marchio Farina nelle cassette", category: "Angurie" },
   { src: anguriaGigante, alt: "Anguria gigante - orgoglio aziendale", category: "Angurie" },
-  { src: angurieCassette, alt: "Angurie nelle cassette rosse", category: "Angurie" },
+  { src: angurieCassette, alt: "Angurie nelle cassette blu", category: "Angurie" },
   { src: angurieMagazzino, alt: "Angurie in magazzino pronte per la spedizione", category: "Angurie" },
   { src: angurieCassoneRosso, alt: "Angurie nel cassone rosso Farina", category: "Angurie" },
   { src: angurieStriate, alt: "Angurie striate con etichetta Farina", category: "Angurie" },
