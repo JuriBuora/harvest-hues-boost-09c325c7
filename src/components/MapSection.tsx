@@ -9,14 +9,14 @@ const MapSection = () => (
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
             Vieni a trovarci
           </h2>
-          <p className="text-muted-foreground text-lg">Via Rangona, 54 — Bando di Argenta (FE)</p>
+          <p className="text-muted-foreground text-lg">Via Rangona, 54/A — 44015 Bando di Argenta (FE)</p>
         </div>
       </ScrollReveal>
       <ScrollReveal delay={200}>
         <div className="rounded-xl overflow-hidden border border-border/50 shadow-lg">
           <iframe
             title="Posizione Azienda Agricola Farina"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Via+Rangona+54,+Bando+di+Argenta,+FE,+Italy&zoom=14"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Via+Rangona+54,+44015+Bando+di+Argenta,+FE,+Italy&zoom=14"
             width="100%"
             height="450"
             style={{ border: 0 }}
