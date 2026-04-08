@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import PageSEO from "@/components/PageSEO";
 import angurieImg from "@/assets/angurie-originale.jpg";
 import zuccheImg from "@/assets/zucche-originale2.jpg";
 import meloniImg from "@/assets/meloni-cantalupo.jpg";
@@ -103,6 +104,11 @@ const Prodotti = () => {
 
   return (
   <>
+    <PageSEO
+      title="Prodotti"
+      description="I prodotti della Società Agricola Farina 2.0: angurie Crimson Sweet e Dumara, meloni retati e lisci, zucche mantovane, butternut e Halloween. Freschi dal campo alla tavola."
+      path="/prodotti"
+    />
     <Navbar />
     <main className="pt-16">
       {/* Hero */}

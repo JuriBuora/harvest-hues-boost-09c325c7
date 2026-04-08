@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import PageSEO from "@/components/PageSEO";
 
 const Contatti = () => {
   const { toast } = useToast();
@@ -42,6 +43,11 @@ const Contatti = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO
+        title="Contatti"
+        description="Contatta la Società Agricola Farina 2.0 a Bando di Argenta (FE). Telefono, email, orari di apertura e modulo di contatto per informazioni su prodotti e legna da ardere."
+        path="/contatti"
+      />
       <Navbar />
 
       {/* Hero */}

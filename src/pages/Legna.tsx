@@ -6,6 +6,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import PageSEO from "@/components/PageSEO";
 
 import legnaOriginale from "@/assets/legna-originale.jpg";
 import legnaCumuli from "@/assets/legna-cumuli.jpg";
@@ -37,6 +38,11 @@ const Legna = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO
+        title="Legna da Ardere"
+        description="Legna da ardere selezionata e stagionata con consegna a domicilio entro 50 km da Bando di Argenta. Essenze miste, taglio su misura. Ordine minimo €200-250."
+        path="/legna"
+      />
       <Navbar />
 
       {/* Hero */}

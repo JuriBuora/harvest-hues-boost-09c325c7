@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import PageSEO from "@/components/PageSEO";
 
 const values = [
   { icon: Heart, title: "Passione", desc: "Una dedizione tramandata da generazioni per la terra e i suoi frutti." },
@@ -25,6 +26,11 @@ const ChiSiamo = () => {
 
   return (
   <>
+    <PageSEO
+      title="Chi Siamo"
+      description="Scopri la storia della Società Agricola Farina 2.0: dal 1982 a Bando di Argenta, una famiglia dedicata alla coltivazione di angurie, meloni e zucche con passione e innovazione."
+      path="/chi-siamo"
+    />
     <Navbar />
     <main className="pt-16">
       {/* Hero */}
