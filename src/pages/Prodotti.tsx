@@ -193,7 +193,7 @@ const Prodotti = () => (
                 <a href="tel:+390532814411"><Phone className="w-4 h-4 mr-2" /> Chiama Ora</a>
               </Button>
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-sans text-base px-8" asChild>
-                <a href="/#contatti">Contattaci</a>
+                <a href="/contatti">Contattaci</a>
               </Button>
             </div>
           </ScrollReveal>
