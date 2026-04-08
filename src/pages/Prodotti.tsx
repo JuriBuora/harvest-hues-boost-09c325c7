@@ -62,7 +62,7 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg, meloniRetatiImg],
+    gallery: [meloniOrigImg, meloniRetatiImg, meloniLisciImg, meloniRetatiCassettaImg],
   },
   {
     id: "zucche",
