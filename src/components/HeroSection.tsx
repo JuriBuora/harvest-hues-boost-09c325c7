@@ -10,6 +10,9 @@ const HeroSection = () => (
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}
       height={1080}
+      loading="eager"
+      fetchPriority="high"
+      decoding="async"
     />
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
     <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
