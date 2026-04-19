@@ -1,6 +1,7 @@
 import heroImg from "@/assets/meloni-angurie.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => (
   <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -27,7 +28,7 @@ const HeroSection = () => (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
         <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>
-          <a href="/prodotti">Scopri i Prodotti</a>
+          <Link to="/prodotti">Scopri i Prodotti</Link>
         </Button>
         <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-sans text-base px-8" asChild>
           <a href="tel:+390532814411">

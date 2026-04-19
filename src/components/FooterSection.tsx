@@ -9,7 +9,14 @@ const FooterSection = () => (
         {/* Brand */}
         <div>
           <div className="bg-white rounded-lg p-2 w-fit mb-4">
-            <img src={logo} alt="Logo Azienda Agricola Farina" className="h-14 w-auto" />
+            <img
+              src={logo}
+              alt="Logo Azienda Agricola Farina"
+              width={256}
+              height={185}
+              decoding="async"
+              className="h-14 w-auto"
+            />
           </div>
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
             Coltiviamo angurie, meloni e zucche all'ingrosso e forniamo legna da ardere
@@ -83,4 +90,3 @@ const FooterSection = () => (
 );
 
 export default FooterSection;
-

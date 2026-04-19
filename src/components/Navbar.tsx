@@ -1,5 +1,6 @@
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-farina.png";
 
 const navLinks = [
@@ -17,17 +18,24 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="/" className="flex items-center gap-2">
-          <img src={logo} alt="Logo Azienda Agricola Farina" className="h-12 w-auto" />
-        </a>
+        <Link to="/" className="flex items-center gap-2" aria-label="Vai alla home">
+          <img
+            src={logo}
+            alt="Logo Azienda Agricola Farina"
+            width={256}
+            height={185}
+            decoding="async"
+            className="h-12 w-auto"
+          />
+        </Link>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+              <Link to={l.href} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -49,9 +57,9 @@ const Navbar = () => {
           <ul className="flex flex-col gap-3">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+                <Link to={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

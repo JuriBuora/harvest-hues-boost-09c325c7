@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -217,7 +218,7 @@ const Prodotti = () => {
                 <a href="tel:+390532814411"><Phone className="w-4 h-4 mr-2" /> Chiama Ora</a>
               </Button>
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-sans text-base px-8" asChild>
-                <a href="/contatti">Contattaci</a>
+                <Link to="/contatti">Contattaci</Link>
               </Button>
             </div>
           </ScrollReveal>
