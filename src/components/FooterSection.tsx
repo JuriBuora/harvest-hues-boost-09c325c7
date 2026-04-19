@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-farina.png";
 
 const FooterSection = () => (
@@ -11,8 +12,8 @@ const FooterSection = () => (
             <img src={logo} alt="Logo Azienda Agricola Farina" className="h-14 w-auto" />
           </div>
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-            Coltiviamo con passione angurie, meloni e zucche dal 1975. 
-            Vendita all'ingrosso e consegna legna da ardere a domicilio.
+            Coltiviamo angurie, meloni e zucche all'ingrosso e forniamo legna da ardere
+            con consegna nel ferrarese, tra Argenta e Portomaggiore. Dal 1975.
           </p>
           <div className="flex gap-3">
             <a href="https://facebook.com/Azienda-Agricola-Farina-Roberto-100057542707078" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">
@@ -61,11 +62,25 @@ const FooterSection = () => (
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/50">
-        <p>P.I. 02179460387 · © {new Date().getFullYear()} Azienda Agricola Farina</p>
+      {/* Legal block */}
+      <div className="border-t border-primary-foreground/10 pt-6 space-y-3 text-xs text-primary-foreground/60">
+        <p className="leading-relaxed">
+          <strong className="text-primary-foreground/80">Società Agricola Farina 2.0</strong> · Via Rangona 54/A, 44015 Bando di Argenta (FE) ·
+          P.IVA 02179460387 · Tel. +39 0532 814411 · Email: soc.agr.farina@gmail.com
+        </p>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/cookie-policy" className="hover:text-primary-foreground transition-colors">Cookie Policy</Link>
+            <Link to="/chi-siamo" className="hover:text-primary-foreground transition-colors">Chi Siamo</Link>
+            <Link to="/contatti" className="hover:text-primary-foreground transition-colors">Contatti</Link>
+          </div>
+          <p>© {new Date().getFullYear()} Società Agricola Farina 2.0 — Tutti i diritti riservati</p>
+        </div>
       </div>
     </div>
   </footer>
 );
 
 export default FooterSection;
+
