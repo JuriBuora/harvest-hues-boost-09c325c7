@@ -27,8 +27,8 @@ const ChiSiamo = () => {
   return (
   <>
     <PageSEO
-      title="Chi Siamo"
-      description="Scopri la storia della Società Agricola Farina 2.0: dalla metà degli anni Settanta a Bando di Argenta, una famiglia dedicata alla coltivazione di angurie, meloni e zucche con passione e innovazione."
+      title="Chi Siamo — Azienda Agricola Farina dal 1975"
+      description="La storia della famiglia Farina: agricoltura nelle terre tra Argenta e Portomaggiore (Ferrara) da metà anni Settanta. Tradizione, innovazione e filiera corta."
       path="/chi-siamo"
     />
     <Navbar />

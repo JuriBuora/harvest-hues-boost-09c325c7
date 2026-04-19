@@ -125,8 +125,8 @@ const Galleria = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
-        title="Galleria"
-        description="Galleria fotografica della Società Agricola Farina 2.0: immagini di angurie, meloni, zucche, legna da ardere e della nostra azienda a Bando di Argenta."
+        title="Galleria — Le Nostre Coltivazioni nel Ferrarese"
+        description="Galleria fotografica originale della Società Agricola Farina 2.0: campi, raccolto e prodotti tra Argenta e Portomaggiore (FE)."
         path="/galleria"
       />
       <Navbar />
