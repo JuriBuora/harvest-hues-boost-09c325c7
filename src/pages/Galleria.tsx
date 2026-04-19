@@ -5,6 +5,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageSEO from "@/components/PageSEO";
+import FacebookPageTimeline from "@/components/FacebookPageTimeline";
 
 // Angurie
 
@@ -162,33 +163,46 @@ const Galleria = () => {
         </div>
       </section>
 
-      {/* Grid */}
+      {/* Grid + Facebook */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filtered.map((img, i) => (
-              <ScrollReveal key={img.src + filter} delay={i * 60}>
-                <button
-                  onClick={() => setLightbox(images.indexOf(img))}
-                  className="group relative w-full overflow-hidden rounded-xl aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <div className="text-left">
-                      <span className="text-xs font-medium text-white/80 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full">
-                        {img.category}
-                      </span>
-                      <p className="text-white text-sm font-medium mt-1">{img.alt}</p>
-                    </div>
-                  </div>
-                </button>
-              </ScrollReveal>
-            ))}
+          <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-8">
+            <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filtered.map((img, i) => (
+                  <ScrollReveal key={img.src + filter} delay={i * 60}>
+                    <button
+                      onClick={() => setLightbox(images.indexOf(img))}
+                      className="group relative w-full overflow-hidden rounded-xl aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-primary"
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <div className="text-left">
+                          <span className="text-xs font-medium text-white/80 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full">
+                            {img.category}
+                          </span>
+                          <p className="text-white text-sm font-medium mt-1">{img.alt}</p>
+                        </div>
+                      </div>
+                    </button>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+
+            <aside className="mt-10 lg:mt-0">
+              <div className="lg:sticky lg:top-24">
+                <FacebookPageTimeline
+                  pageUrl="https://www.facebook.com/Azienda-Agricola-Farina-Roberto-100057542707078"
+                  pageName="Societa Agricola Farina 2.0"
+                />
+              </div>
+            </aside>
           </div>
         </div>
       </section>
