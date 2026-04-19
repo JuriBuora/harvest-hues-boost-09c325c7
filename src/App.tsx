@@ -9,6 +9,8 @@ import Contatti from "./pages/Contatti.tsx";
 import Galleria from "./pages/Galleria.tsx";
 import ChiSiamo from "./pages/ChiSiamo.tsx";
 import Legna from "./pages/Legna.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import CookiePolicy from "./pages/CookiePolicy.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/galleria" element={<Galleria />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/legna" element={<Legna />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -106,8 +106,8 @@ const Prodotti = () => {
   return (
   <>
     <PageSEO
-      title="Prodotti"
-      description="I prodotti della Società Agricola Farina 2.0: angurie Crimson Sweet e Dumara, meloni retati e lisci, zucche mantovane, butternut e Halloween. Freschi dal campo alla tavola."
+      title="Angurie, Meloni e Zucche all'Ingrosso — Ferrara"
+      description="Vendita all'ingrosso di angurie (cocomeri), meloni e zucche coltivati nel ferrarese. Forniture per rivenditori, GDO e mercati ortofrutticoli."
       path="/prodotti"
     />
     <Navbar />
@@ -118,12 +118,15 @@ const Prodotti = () => {
           <ScrollReveal>
             <p className="text-secondary font-sans text-sm tracking-[0.2em] uppercase mb-3">I Nostri Prodotti</p>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Freschi dal campo alla tavola
+              Angurie, Meloni e Zucche dal Ferrarese
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Coltiviamo con passione angurie, meloni e zucche di alta qualità, selezionati con cura 
-              per i mercati ortofrutticoli e la vendita diretta.
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-4">
+              Coltiviamo angurie (cocomeri), meloni e zucche nei terreni tra Argenta e Portomaggiore,
+              destinati a rivenditori, GDO e mercati ortofrutticoli.
             </p>
+            <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
+              Vendita esclusivamente all'ingrosso
+            </span>
           </ScrollReveal>
         </div>
       </section>
@@ -207,7 +210,7 @@ const Prodotti = () => {
               Interessato ai nostri prodotti?
             </h2>
             <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">
-              Contattaci per maggiori informazioni, preventivi e ordini all'ingrosso.
+              Contattaci per preventivi e forniture all'ingrosso di angurie, meloni e zucche.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>

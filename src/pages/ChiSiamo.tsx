@@ -27,8 +27,8 @@ const ChiSiamo = () => {
   return (
   <>
     <PageSEO
-      title="Chi Siamo"
-      description="Scopri la storia della Società Agricola Farina 2.0: dalla metà degli anni Settanta a Bando di Argenta, una famiglia dedicata alla coltivazione di angurie, meloni e zucche con passione e innovazione."
+      title="Chi Siamo — Azienda Agricola Farina dal 1975"
+      description="La storia della famiglia Farina: agricoltura nelle terre tra Argenta e Portomaggiore (Ferrara) da metà anni Settanta. Tradizione, innovazione e filiera corta."
       path="/chi-siamo"
     />
     <Navbar />
@@ -62,8 +62,9 @@ const ChiSiamo = () => {
                 <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
                   <p>
                     La <strong className="text-foreground">Società Agricola Farina 2.0</strong> non è solo un'impresa: è il racconto di una vita
-                    dedicata alla terra. Nata a metà degli anni Settanta a Bando di Portomaggiore, la nostra attività
-                    ha preso slancio grazie alla visione di <strong className="text-foreground">Roberto Farina</strong>, imprenditore agricolo che ha saputo
+                    dedicata alla terra. Nata a metà degli anni Settanta a Bando di Argenta, nel cuore del territorio
+                    tra Argenta e Portomaggiore, la nostra attività ha preso slancio grazie alla visione di
+                    <strong className="text-foreground"> Roberto Farina</strong>, imprenditore agricolo che ha saputo
                     trasformare la vocazione del territorio ferrarese in un'eccellenza produttiva.
                   </p>
                   <p>

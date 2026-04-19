@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
 
 const features = [
-  { icon: Flame, title: "Legna Selezionata", desc: "Asciutta e stagionata, ideale per stufe e camini. Combustione efficiente e lunga durata." },
-  { icon: Truck, title: "Consegna a Domicilio", desc: "Consegna rapida entro 50 km da Portomaggiore. Ordine minimo 200/250€." },
+  { icon: Flame, title: "Quercia, Faggio, Ulivo", desc: "Legna stagionata di quercia, faggio e ulivo: alto potere calorifico, ideale per stufe, camini e forni." },
+  { icon: Truck, title: "Consegna a Domicilio", desc: "Consegna nel ferrarese entro 50 km da Bando di Argenta. Ordine minimo indicativo 200-250 €." },
   { icon: Package, title: "Sempre Disponibile", desc: "Magazzino sempre rifornito per soddisfare le richieste in ogni stagione." },
 ];
 
@@ -32,8 +32,9 @@ const FirewoodSection = () => (
               Legna da Ardere
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Forniamo legna da ardere stagionata e pronta all'uso, con consegna a domicilio entro 50 km da Portomaggiore. 
-              Ideale per riscaldamento domestico o attività commerciali.
+              Forniamo legna da ardere stagionata di quercia, faggio e ulivo, con consegna a domicilio
+              entro 50 km da Bando di Argenta (FE) — copriamo Argenta, Portomaggiore, Ostellato,
+              Comacchio, Ferrara città e i comuni limitrofi.
             </p>
             <div className="space-y-6 mb-8">
               {features.map((f) => (

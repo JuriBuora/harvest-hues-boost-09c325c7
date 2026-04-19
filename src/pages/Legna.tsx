@@ -7,6 +7,35 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import PageSEO from "@/components/PageSEO";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
+
+const legnaFaq: FAQItem[] = [
+  {
+    q: "In quali zone consegnate la legna da ardere?",
+    a: "Consegniamo legna da ardere a domicilio entro un raggio di 50 km dalla nostra sede di Bando di Argenta (FE). Copriamo Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara città, Lugo e tutti i comuni limitrofi della provincia di Ferrara e del basso ravennate.",
+  },
+  {
+    q: "Qual è l'ordine minimo per la consegna?",
+    a: "L'ordine minimo indicativo è di 200-250 €, in base alla zona di consegna e al tipo di legna richiesto. Contattaci per un preventivo personalizzato.",
+  },
+  {
+    q: "Che tipo di legna vendete?",
+    a: "Forniamo legna stagionata di quercia, faggio e ulivo, asciutta e pronta all'uso. Tre essenze ad alto potere calorifico, ideali per stufe, camini e forni a legna.",
+  },
+  {
+    q: "La legna è già tagliata e pronta da bruciare?",
+    a: "Sì. La legna viene consegnata già tagliata e stagionata. Tagli disponibili da 25 a 50 cm, in base alle esigenze di stufa, camino o forno.",
+  },
+  {
+    q: "Quanto tempo serve per ricevere la consegna?",
+    a: "I tempi variano in base al periodo dell'anno e alla disponibilità. Generalmente riusciamo a consegnare entro pochi giorni lavorativi dall'ordine. Contattaci per verificare la disponibilità.",
+  },
+  {
+    q: "Come si paga la legna?",
+    a: "Il pagamento avviene direttamente alla consegna. Per dettagli e modalità contattaci telefonicamente o via WhatsApp.",
+  },
+];
+
 
 import legnaOriginale from "@/assets/legna-originale.jpg";
 import legnaCumuli from "@/assets/legna-cumuli.jpg";
@@ -15,12 +44,12 @@ import aziendaAerea from "@/assets/azienda-aerea.jpg";
 import magazzinoEsterno from "@/assets/magazzino-esterno.jpg";
 
 const features = [
-  { icon: Flame, title: "Legna Selezionata", desc: "Asciutta e stagionata, ideale per stufe, camini e forni. Combustione efficiente e lunga durata." },
-  { icon: Truck, title: "Consegna a Domicilio", desc: "Consegna rapida entro 50 km dalla nostra sede di Bando di Argenta. Ordine minimo 200/250€." },
+  { icon: Flame, title: "Quercia, Faggio e Ulivo", desc: "Tre essenze stagionate ad alto potere calorifico, ideali per stufe, camini e forni a legna." },
+  { icon: Truck, title: "Consegna nel Ferrarese", desc: "Consegna a domicilio entro 50 km da Bando di Argenta: Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara e dintorni." },
   { icon: Package, title: "Sempre Disponibile", desc: "Il nostro magazzino è sempre rifornito per soddisfare ogni richiesta, in ogni stagione." },
-  { icon: TreeDeciduous, title: "Essenze Miste", desc: "Proponiamo legna di diverse essenze, selezionate per garantire il miglior rendimento calorico." },
+  { icon: TreeDeciduous, title: "Essenze Selezionate", desc: "Scegliamo essenze a lunga combustione e basso residuo, perfette per il riscaldamento domestico." },
   { icon: Ruler, title: "Taglio su Misura", desc: "Legna tagliata nelle dimensioni più adatte alle vostre esigenze: da 25 a 50 cm." },
-  { icon: ThermometerSun, title: "Stagionatura Naturale", desc: "La nostra legna viene stagionata all'aria aperta per almeno 12 mesi, garantendo bassa umidità." },
+  { icon: ThermometerSun, title: "Stagionatura Naturale", desc: "La nostra legna viene stagionata all'aria aperta, garantendo bassa umidità e resa elevata." },
 ];
 
 const gallery = [
@@ -39,8 +68,8 @@ const Legna = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
-        title="Legna da Ardere"
-        description="Legna da ardere selezionata e stagionata con consegna a domicilio entro 50 km da Bando di Argenta. Essenze miste, taglio su misura. Ordine minimo €200-250."
+        title="Legna da Ardere a Ferrara — Consegna a Domicilio"
+        description="Legna da ardere stagionata di quercia, faggio e ulivo. Consegna a domicilio entro 50 km da Bando di Argenta: Ferrara, Portomaggiore, Argenta, Comacchio. Ordine minimo 200-250 €."
         path="/legna"
       />
       <Navbar />
@@ -49,11 +78,11 @@ const Legna = () => {
       <section className="pt-24 pb-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <p className="text-primary-foreground/60 font-sans text-sm tracking-[0.2em] uppercase mb-3">Servizio Invernale</p>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Legna da Ardere</h1>
+            <p className="text-primary-foreground/60 font-sans text-sm tracking-[0.2em] uppercase mb-3">Servizio tutto l'anno</p>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Legna da Ardere a Ferrara e Provincia</h1>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg mb-8">
-              Legna selezionata, stagionata e pronta all'uso. Consegna a domicilio entro 50 km
-              dalla nostra sede a Bando di Argenta.
+              Legna selezionata di quercia, faggio e ulivo, stagionata e pronta all'uso.
+              Consegna a domicilio entro 50 km da Bando di Argenta (FE).
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" className="font-sans" asChild>
@@ -194,6 +223,8 @@ const Legna = () => {
           </div>
         </div>
       </section>
+
+      <FAQSection items={legnaFaq} title="Domande frequenti sulla legna" eyebrow="FAQ Legna" withJsonLd />
 
       <FooterSection />
       <WhatsAppButton />
