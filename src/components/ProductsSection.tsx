@@ -34,9 +34,12 @@ const ProductsSection = () => (
       <ScrollReveal>
         <div className="text-center mb-16">
           <p className="text-secondary font-sans text-sm tracking-[0.2em] uppercase mb-3">I Nostri Prodotti</p>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
             Freschi dal campo
           </h2>
+          <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
+            Vendita esclusivamente all'ingrosso
+          </span>
         </div>
       </ScrollReveal>
 
