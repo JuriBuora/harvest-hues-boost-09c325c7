@@ -4,6 +4,8 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageSEO from "@/components/PageSEO";
 
+const LAST_UPDATED = "19 aprile 2026";
+
 const PrivacyPolicy = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +33,7 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="prose prose-stone max-w-none text-foreground space-y-6">
             <p className="text-sm text-muted-foreground">
-              Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT", { year: "numeric", month: "long", day: "numeric" })}
+              Ultimo aggiornamento: {LAST_UPDATED}
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Titolare del Trattamento</h2>
@@ -50,6 +52,12 @@ const PrivacyPolicy = () => {
               numero di telefono (facoltativo) e contenuto del messaggio. Il sito non utilizza strumenti di
               analytics, profilazione o tracciamento pubblicitario.
             </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Alcune pagine possono incorporare contenuti di terze parti (ad es. <strong className="text-foreground">Google Maps</strong>
+              nella pagina Contatti e, su richiesta dell'utente, il plugin <strong className="text-foreground">Facebook</strong> nella pagina Galleria).
+              In questi casi, i fornitori terzi possono ricevere dati tecnici di navigazione (es. indirizzo IP, user agent)
+              necessari a fornire il servizio incorporato.
+            </p>
 
             <h2 className="font-serif text-2xl font-semibold">Finalità e Base Giuridica</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -63,8 +71,8 @@ const PrivacyPolicy = () => {
             <h2 className="font-serif text-2xl font-semibold">Modalità di Invio</h2>
             <p className="text-muted-foreground leading-relaxed">
               Il modulo di contatto apre il client di posta predefinito dell'utente per inviare il messaggio
-              all'indirizzo aziendale. Non vi è alcuna trasmissione automatica dei dati a server di terze parti
-              tramite il sito.
+              all'indirizzo aziendale. Non vi è alcuna trasmissione automatica dei dati del modulo a server di terze parti
+              tramite il sito (fatta salva la presenza di contenuti incorporati di terze parti, come indicato sotto).
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Conservazione dei Dati</h2>
@@ -87,6 +95,9 @@ const PrivacyPolicy = () => {
               Il sito incorpora una mappa di Google Maps nella pagina Contatti. La consultazione della mappa
               comporta l'invio dell'indirizzo IP dell'utente ai server di Google secondo la
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> privacy policy di Google</a>.
+              La pagina Galleria può inoltre incorporare, su richiesta dell'utente, contenuti della pagina Facebook tramite plugin ufficiale di Meta
+              (con possibili trattamenti secondo la
+              <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> privacy policy di Meta/Facebook</a>).
               Il sito non utilizza Google Analytics, pixel di Meta, né altri strumenti di tracciamento pubblicitario.
             </p>
 

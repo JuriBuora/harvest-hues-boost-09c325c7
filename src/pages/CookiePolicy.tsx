@@ -4,6 +4,8 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageSEO from "@/components/PageSEO";
 
+const LAST_UPDATED = "19 aprile 2026";
+
 const CookiePolicy = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +33,7 @@ const CookiePolicy = () => {
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="space-y-6">
             <p className="text-sm text-muted-foreground">
-              Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT", { year: "numeric", month: "long", day: "numeric" })}
+              Ultimo aggiornamento: {LAST_UPDATED}
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Cosa sono i cookie</h2>
@@ -63,6 +65,19 @@ const CookiePolicy = () => {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               > {" "}cookie policy di Google</a>.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              La pagina <strong className="text-foreground">Galleria</strong> può mostrare (su richiesta dell'utente)
+              gli ultimi post della pagina <strong className="text-foreground">Facebook</strong> tramite il plugin
+              ufficiale di Meta. Il contenuto viene caricato solo dopo aver cliccato “Carica i post” e può
+              comportare l'uso di cookie e tecnologie di tracciamento di terze parti. Per maggiori informazioni
+              si rimanda alla
+              <a
+                href="https://www.facebook.com/policies/cookies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              > {" "}cookie policy di Meta/Facebook</a>.
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Come gestire i cookie</h2>
