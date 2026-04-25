@@ -4,7 +4,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageSEO from "@/components/PageSEO";
 
-const LAST_UPDATED = "19 aprile 2026";
+const LAST_UPDATED = "25 aprile 2026";
 
 const PrivacyPolicy = () => {
   React.useEffect(() => {
@@ -70,9 +70,9 @@ const PrivacyPolicy = () => {
 
             <h2 className="font-serif text-2xl font-semibold">Modalità di Invio</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Il modulo di contatto apre il client di posta predefinito dell'utente per inviare il messaggio
-              all'indirizzo aziendale. Non vi è alcuna trasmissione automatica dei dati del modulo a server di terze parti
-              tramite il sito (fatta salva la presenza di contenuti incorporati di terze parti, come indicato sotto).
+              Il modulo di contatto trasmette i dati inseriti dall'utente tramite un servizio esterno di inoltro moduli
+              utilizzato esclusivamente per recapitarli all'indirizzo email aziendale. I dati forniti nel modulo non vengono
+              pubblicati sul sito e sono trattati solo per dare seguito alla richiesta inviata dall'utente.
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Conservazione dei Dati</h2>
@@ -91,6 +91,11 @@ const PrivacyPolicy = () => {
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Servizi di Terze Parti</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Quando l'utente invia il modulo di contatto, i dati inseriti transitano tramite il servizio
+              <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> FormSubmit</a>,
+              utilizzato come recapito tecnico delle richieste email. Il servizio opera secondo le proprie condizioni e informative.
+            </p>
             <p className="text-muted-foreground leading-relaxed">
               Il sito incorpora una mappa di Google Maps nella pagina Contatti. La consultazione della mappa
               comporta l'invio dell'indirizzo IP dell'utente ai server di Google secondo la

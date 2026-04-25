@@ -24,6 +24,7 @@ npm run lint
 npm run test
 npm run build
 npm run sync:sitemap
+npm run sync:images
 ```
 
 ## Deployment
@@ -53,5 +54,8 @@ If the production domain changes, update:
 ## Media And External Embeds
 
 - Image assets live in `src/assets/`
+- Modern `webp` and `avif` variants are generated into `src/assets/generated/` by [scripts/generate-modern-images.mjs](./scripts/generate-modern-images.mjs) before `dev`, `test`, and `build`
+- Keep the original source photos in `src/assets/`; the site serves the optimized variants automatically through [src/components/SiteImage.tsx](./src/components/SiteImage.tsx)
 - The gallery page includes a Facebook page embed that loads only after user interaction for privacy/cookie reasons
 - The contact page uses a keyless Google Maps embed to avoid exposing an API key in the frontend
+- The contact page submits through FormSubmit, so the destination inbox must confirm the first live submission once before messages start flowing normally

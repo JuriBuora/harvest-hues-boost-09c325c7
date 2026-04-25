@@ -6,32 +6,16 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageSEO from "@/components/PageSEO";
 import FAQSection, { FAQItem } from "@/components/FAQSection";
-import angurieImg from "@/assets/angurie-originale.jpg";
-import zuccheImg from "@/assets/zucche-originale2.jpg";
-import meloniImg from "@/assets/meloni-cantalupo.jpg";
-import anguriaBilanciaImg from "@/assets/anguria-bilancia.jpg";
-import meloniOrigImg from "@/assets/meloni-originale2.jpg";
-import meloniOriginaleImg from "@/assets/meloni-originale.jpg";
-import meloniAngurieImg from "@/assets/meloni-angurie.jpg";
-import angurieCassoneImg from "@/assets/angurie-cassone.jpg";
-import anguriaGiganteImg from "@/assets/anguria-gigante.jpg";
-import meloniRetatiImg from "@/assets/meloni-retati.jpg";
-import meloniLisciImg from "@/assets/meloni-lisci-cassetta.jpg";
-import meloniRetatiCassettaImg from "@/assets/meloni-retati-cassetta.jpg";
-import zuccheMantovaneImg from "@/assets/zucche-mantovane.jpg";
-import zuccheArancioniImg from "@/assets/zucche-arancioni.jpg";
-import zuccheCassettaVerdeImg from "@/assets/zucche-cassetta-verde.jpg";
-import zuccheHalloweenImg from "@/assets/zucche-halloween.jpg";
-import zuccheMantovaneScatolaImg from "@/assets/zucche-mantovane-scatola.jpg";
 import { Button } from "@/components/ui/button";
 import { Phone, Leaf, Sun, Droplets, ThermometerSun, Scale, Truck } from "lucide-react";
+import SiteImage from "@/components/SiteImage";
 
 const products = [
   {
     id: "angurie",
     title: "Angurie",
     subtitle: "Dolcezza e freschezza dal campo",
-    img: angurieImg,
+    imageName: "angurie-originale.jpg",
     alt: "Coltivazione angurie - Azienda Agricola Farina",
     description:
       "Le nostre angurie sono il frutto di una coltivazione attenta e appassionata, che unisce tradizione e innovazione. Cresciute nei fertili terreni di Portomaggiore, vengono raccolte al punto perfetto di maturazione per garantire dolcezza, croccantezza e succosità.",
@@ -46,13 +30,13 @@ const products = [
       { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
       { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, perfetta per la vendita all'ingrosso." },
     ],
-    gallery: [anguriaBilanciaImg, meloniAngurieImg, angurieCassoneImg, anguriaGiganteImg],
+    gallery: ["anguria-bilancia.jpg", "meloni-angurie.jpg", "angurie-cassone.jpg", "anguria-gigante.jpg"],
   },
   {
     id: "meloni",
     title: "Meloni",
     subtitle: "Profumo e sapore della tradizione emiliana",
-    img: meloniImg,
+    imageName: "meloni-cantalupo.jpg",
     alt: "Meloni freschi dell'Azienda Agricola Farina",
     description:
       "I nostri meloni vengono coltivati con la massima cura, seguendo il ciclo naturale delle stagioni. La raccolta avviene solo quando il frutto raggiunge la maturazione ideale, garantendo un aroma intenso e un sapore inconfondibile che richiama la tradizione della pianura ferrarese.",
@@ -67,13 +51,13 @@ const products = [
       { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
       { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
     ],
-    gallery: [meloniOrigImg, meloniOriginaleImg, meloniLisciImg, meloniRetatiCassettaImg],
+    gallery: ["meloni-originale2.jpg", "meloni-originale.jpg", "meloni-lisci-cassetta.jpg", "meloni-retati-cassetta.jpg"],
   },
   {
     id: "zucche",
     title: "Zucche",
     subtitle: "Versatilità e gusto per ogni stagione",
-    img: zuccheImg,
+    imageName: "zucche-originale2.jpg",
     alt: "Zucche coltivate dall'Azienda Agricola Farina",
     description:
       "Le nostre zucche rappresentano l'eccellenza della produzione autunnale dell'azienda. Coltivate con passione nei campi di Portomaggiore, offrono polpa compatta e saporita, ideale per tortelli, risotti, vellutate e dolci della tradizione emiliana.",
@@ -88,7 +72,7 @@ const products = [
       { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
-    gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheHalloweenImg, zuccheMantovaneScatolaImg],
+    gallery: ["zucche-mantovane.jpg", "zucche-arancioni.jpg", "zucche-halloween.jpg", "zucche-mantovane-scatola.jpg"],
   },
 ];
 
@@ -172,8 +156,8 @@ const Prodotti = () => {
               {/* Image */}
               <ScrollReveal className={idx % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="rounded-xl overflow-hidden shadow-lg">
-                  <img
-                    src={p.img}
+                  <SiteImage
+                    imageName={p.imageName}
                     alt={p.alt}
                     loading="lazy"
                     width={800}
@@ -184,10 +168,10 @@ const Prodotti = () => {
                 {/* Gallery */}
                 {p.gallery.length > 0 && (
                   <div className="grid grid-cols-2 gap-3 mt-3">
-                    {p.gallery.map((g, i) => (
+                    {p.gallery.map((imageName, i) => (
                       <div key={i} className="rounded-lg overflow-hidden">
-                        <img
-                          src={g}
+                        <SiteImage
+                          imageName={imageName}
                           alt={`${p.title} - foto ${i + 2}`}
                           loading="lazy"
                           width={400}

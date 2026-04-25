@@ -1,4 +1,4 @@
-import legnaImg from "@/assets/legna-originale.jpg";
+import SiteImage from "@/components/SiteImage";
 import { Truck, Flame, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
@@ -15,8 +15,8 @@ const FirewoodSection = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <ScrollReveal>
           <div className="rounded-xl overflow-hidden">
-            <img
-              src={legnaImg}
+            <SiteImage
+              imageName="legna-originale.jpg"
               alt="Legna da ardere - Azienda Agricola Farina"
               loading="lazy"
               width={800}

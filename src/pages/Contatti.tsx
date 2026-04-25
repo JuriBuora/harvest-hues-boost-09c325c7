@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,6 +11,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PageSEO from "@/components/PageSEO";
 
+const formSubmitEndpoint = "https://formsubmit.co/ajax/soc.agr.farina@gmail.com";
+const formSourceUrl = "https://www.cucurbitacee.com/contatti";
+
 const Contatti = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
@@ -19,7 +23,7 @@ const Contatti = () => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.nome.trim() || !form.email.trim() || !form.messaggio.trim()) {
       toast({ title: "Compila tutti i campi obbligatori", variant: "destructive" });
@@ -28,17 +32,47 @@ const Contatti = () => {
 
     setLoading(true);
 
-    const subject = encodeURIComponent(`Messaggio dal sito - ${form.nome}`);
-    const body = encodeURIComponent(
-      `Nome: ${form.nome}\nEmail: ${form.email}\nTelefono: ${form.telefono || "Non specificato"}\n\nMessaggio:\n${form.messaggio}`
-    );
-    window.location.href = `mailto:soc.agr.farina@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      const formElement = e.currentTarget;
+      const formData = new FormData(formElement);
 
-    setTimeout(() => {
+      formData.set("nome", form.nome.trim());
+      formData.set("email", form.email.trim());
+      formData.set("telefono", form.telefono.trim());
+      formData.set("messaggio", form.messaggio.trim());
+      formData.set("_subject", `Nuovo messaggio da cucurbitacee.com - ${form.nome.trim()}`);
+      formData.set("_template", "table");
+      formData.set("_url", formSourceUrl);
+
+      const response = await fetch(formSubmitEndpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      const result = await response.json().catch(() => null) as { message?: string; success?: boolean | string } | null;
+
+      if (!response.ok || result?.success === false || result?.success === "false") {
+        throw new Error(result?.message || "Invio non riuscito");
+      }
+
+      toast({
+        title: "Messaggio inviato",
+        description: "Grazie, ti risponderemo il prima possibile.",
+      });
       setLoading(false);
-      toast({ title: "Client email aperto!", description: "Invia il messaggio dal tuo programma di posta." });
       setForm({ nome: "", email: "", telefono: "", messaggio: "" });
-    }, 1000);
+      formElement.reset();
+    } catch {
+      setLoading(false);
+      toast({
+        title: "Invio non riuscito",
+        description: "Riprova tra poco oppure contattaci telefonicamente.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -122,7 +156,16 @@ const Contatti = () => {
                 <h2 className="font-serif text-2xl font-semibold text-foreground mb-2">Inviaci un Messaggio</h2>
                 <p className="text-muted-foreground text-sm mb-6">Compila il modulo e ti risponderemo il prima possibile.</p>
 
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form
+                  action="https://formsubmit.co/soc.agr.farina@gmail.com"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="space-y-5"
+                >
+                  <input type="hidden" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_url" value={formSourceUrl} />
+                  <input type="hidden" name="_subject" value="Nuovo messaggio da cucurbitacee.com" />
                   <div>
                     <label htmlFor="nome" className="block text-sm font-medium text-foreground mb-1.5">Nome e Cognome *</label>
                     <Input id="nome" name="nome" value={form.nome} onChange={handleChange} placeholder="Mario Rossi" maxLength={100} required />
@@ -143,6 +186,10 @@ const Contatti = () => {
                     <Send className="w-4 h-4 mr-2" />
                     {loading ? "Invio in corso..." : "Invia Messaggio"}
                   </Button>
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    Inviando il modulo autorizzi l&apos;inoltro della richiesta tramite un servizio esterno di recapito email
+                    e dichiari di aver letto la <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
+                  </p>
                 </form>
               </div>
             </ScrollReveal>

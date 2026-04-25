@@ -1,12 +1,12 @@
-import heroImg from "@/assets/hero-azienda-aerea.jpg";
 import { Button } from "@/components/ui/button";
+import SiteImage from "@/components/SiteImage";
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => (
   <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-    <img
-      src={heroImg}
+    <SiteImage
+      imageName="hero-azienda-aerea.jpg"
       alt="Vista aerea dell'Azienda Agricola Farina 2.0"
       className="absolute inset-0 w-full h-full object-cover"
       width={1920}

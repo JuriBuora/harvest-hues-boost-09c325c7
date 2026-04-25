@@ -8,6 +8,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import PageSEO from "@/components/PageSEO";
 import FAQSection, { FAQItem } from "@/components/FAQSection";
+import SiteImage from "@/components/SiteImage";
 
 const legnaFaq: FAQItem[] = [
   {
@@ -35,14 +36,6 @@ const legnaFaq: FAQItem[] = [
     a: "Il pagamento avviene direttamente alla consegna. Per dettagli e modalità contattaci telefonicamente o via WhatsApp.",
   },
 ];
-
-
-import legnaOriginale from "@/assets/legna-originale.jpg";
-import legnaCumuli from "@/assets/legna-cumuli.jpg";
-import legnaTronchi from "@/assets/legna-tronchi.jpg";
-import aziendaAerea from "@/assets/azienda-aerea.jpg";
-import magazzinoEsterno from "@/assets/magazzino-esterno.jpg";
-
 const features = [
   { icon: Flame, title: "Quercia, Faggio e Ulivo", desc: "Tre essenze stagionate ad alto potere calorifico, ideali per stufe, camini e forni a legna." },
   { icon: Truck, title: "Consegna nel Ferrarese", desc: "Consegna a domicilio entro 50 km da Bando di Argenta: Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara e dintorni." },
@@ -53,11 +46,11 @@ const features = [
 ];
 
 const gallery = [
-  { src: legnaOriginale, alt: "Legna da ardere tagliata e pronta all'uso" },
-  { src: legnaCumuli, alt: "Cumuli di legna nel piazzale aziendale" },
-  { src: legnaTronchi, alt: "Tronchi e legna da lavorare" },
-  { src: aziendaAerea, alt: "Vista aerea dell'azienda agricola Farina" },
-  { src: magazzinoEsterno, alt: "Magazzino e piazzale aziendale" },
+  { imageName: "legna-originale.jpg", alt: "Legna da ardere tagliata e pronta all'uso" },
+  { imageName: "legna-cumuli.jpg", alt: "Cumuli di legna nel piazzale aziendale" },
+  { imageName: "legna-tronchi.jpg", alt: "Tronchi e legna da lavorare" },
+  { imageName: "azienda-aerea.jpg", alt: "Vista aerea dell'azienda agricola Farina" },
+  { imageName: "magazzino-esterno.jpg", alt: "Magazzino e piazzale aziendale" },
 ];
 
 const Legna = () => {
@@ -139,8 +132,8 @@ const Legna = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="rounded-xl overflow-hidden">
-                <img
-                  src={legnaOriginale}
+                <SiteImage
+                  imageName="legna-originale.jpg"
                   alt="Legna da ardere - Azienda Agricola Farina"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl aspect-[4/3]"
@@ -210,8 +203,8 @@ const Legna = () => {
             {gallery.map((img, i) => (
               <ScrollReveal key={img.alt} delay={i * 100}>
                 <div className="rounded-xl overflow-hidden aspect-[4/3]">
-                  <img
-                    src={img.src}
+                  <SiteImage
+                    imageName={img.imageName}
                     alt={img.alt}
                     loading="lazy"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"

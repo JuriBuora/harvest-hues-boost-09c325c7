@@ -6,59 +6,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageSEO from "@/components/PageSEO";
 import FacebookPageTimeline from "@/components/FacebookPageTimeline";
-
-// Angurie
-
-import meloniAngurie from "@/assets/meloni-angurie.jpg";
-import angurieCassette from "@/assets/angurie-cassette.jpg";
-import angurieMagazzino from "@/assets/angurie-magazzino.jpg";
-import angurieCassone from "@/assets/angurie-cassone.jpg";
-import anguriaGigante from "@/assets/anguria-gigante.jpg";
-import angurieCassoneRosso from "@/assets/angurie-cassone-rosso.jpg";
-import angurieStriate from "@/assets/angurie-striate.jpg";
-import anguriaBilancia from "@/assets/anguria-bilancia.jpg";
-import angurieNastro from "@/assets/angurie-nastro.jpg";
-
-// Meloni
-import meloniOriginale from "@/assets/meloni-originale.jpg";
-import meloniRetati from "@/assets/meloni-retati.jpg";
-import meloniLisciCassetta from "@/assets/meloni-lisci-cassetta.jpg";
-import meloniRetatiCassetta from "@/assets/meloni-retati-cassetta.jpg";
-
-// Zucche
-import zuccheOriginale from "@/assets/zucche-originale.jpg";
-import zuccheOriginale2 from "@/assets/zucche-originale2.jpg";
-import zuccheButternut from "@/assets/zucche-butternut.jpg";
-import zuccheTonde from "@/assets/zucche-tonde.jpg";
-import zuccheViolina from "@/assets/zucche-violina.jpg";
-import zuccheCassone from "@/assets/zucche-cassone.jpg";
-import zuccheMantovane from "@/assets/zucche-mantovane.jpg";
-
-import zuccheCassettaVerde from "@/assets/zucche-cassetta-verde.jpg";
-import zuccheMantovaneScatola from "@/assets/zucche-mantovane-scatola.jpg";
-import zuccheHalloween from "@/assets/zucche-halloween.jpg";
-import zuccheHalloweenPallet from "@/assets/zucche-halloween-pallet.jpg";
-import zuccheHalloweenEspositore from "@/assets/zucche-halloween-espositore.jpg";
-
-// Legna
-import legnaOriginale from "@/assets/legna-originale.jpg";
-
-import legnaCumuli from "@/assets/legna-cumuli.jpg";
-import legnaTronchi from "@/assets/legna-tronchi.jpg";
-
-// Azienda
-import premioQualita from "@/assets/premio-qualita.jpg";
-import premioFiera from "@/assets/premio-fiera.jpg";
-import camionFarina from "@/assets/camion-farina.jpg";
-import magazzinoEsterno from "@/assets/magazzino-esterno.jpg";
-import aziendaAerea from "@/assets/azienda-aerea.jpg";
-import logoFarina from "@/assets/logo-farina.jpg";
+import SiteImage from "@/components/SiteImage";
 
 const categories = ["Tutte", "Angurie", "Meloni", "Zucche", "Legna", "Azienda"] as const;
 type Category = (typeof categories)[number];
 
 interface GalleryImage {
-  src: string;
+  imageName: string;
   alt: string;
   category: Category;
 }
@@ -66,46 +20,46 @@ interface GalleryImage {
 const images: GalleryImage[] = [
   // Angurie
   
-  { src: anguriaBilancia, alt: "Anguria gigante sulla bilancia Berkel", category: "Angurie" },
-  { src: angurieCassone, alt: "Angurie con marchio Farina nelle cassette", category: "Angurie" },
-  { src: anguriaGigante, alt: "Anguria gigante - orgoglio aziendale", category: "Angurie" },
-  { src: angurieCassette, alt: "Angurie nelle cassette blu", category: "Angurie" },
-  { src: angurieMagazzino, alt: "Angurie in magazzino pronte per la spedizione", category: "Angurie" },
-  { src: angurieCassoneRosso, alt: "Angurie nel cassone rosso Farina", category: "Angurie" },
-  { src: angurieStriate, alt: "Angurie striate con etichetta Farina", category: "Angurie" },
-  { src: angurieNastro, alt: "Nastro trasportatore per la selezione angurie", category: "Angurie" },
-  { src: meloniAngurie, alt: "Meloni e angurie pronti per la vendita", category: "Angurie" },
+  { imageName: "anguria-bilancia.jpg", alt: "Anguria gigante sulla bilancia Berkel", category: "Angurie" },
+  { imageName: "angurie-cassone.jpg", alt: "Angurie con marchio Farina nelle cassette", category: "Angurie" },
+  { imageName: "anguria-gigante.jpg", alt: "Anguria gigante - orgoglio aziendale", category: "Angurie" },
+  { imageName: "angurie-cassette.jpg", alt: "Angurie nelle cassette blu", category: "Angurie" },
+  { imageName: "angurie-magazzino.jpg", alt: "Angurie in magazzino pronte per la spedizione", category: "Angurie" },
+  { imageName: "angurie-cassone-rosso.jpg", alt: "Angurie nel cassone rosso Farina", category: "Angurie" },
+  { imageName: "angurie-striate.jpg", alt: "Angurie striate con etichetta Farina", category: "Angurie" },
+  { imageName: "angurie-nastro.jpg", alt: "Nastro trasportatore per la selezione angurie", category: "Angurie" },
+  { imageName: "meloni-angurie.jpg", alt: "Meloni e angurie pronti per la vendita", category: "Angurie" },
   // Meloni
-  { src: meloniOriginale, alt: "Meloni lisci appena raccolti", category: "Meloni" },
-  { src: meloniRetati, alt: "Meloni retati pronti per la vendita", category: "Meloni" },
-  { src: meloniLisciCassetta, alt: "Meloni lisci nella cassetta verde", category: "Meloni" },
-  { src: meloniRetatiCassetta, alt: "Meloni retati in cassetta", category: "Meloni" },
+  { imageName: "meloni-originale.jpg", alt: "Meloni lisci appena raccolti", category: "Meloni" },
+  { imageName: "meloni-retati.jpg", alt: "Meloni retati pronti per la vendita", category: "Meloni" },
+  { imageName: "meloni-lisci-cassetta.jpg", alt: "Meloni lisci nella cassetta verde", category: "Meloni" },
+  { imageName: "meloni-retati-cassetta.jpg", alt: "Meloni retati in cassetta", category: "Meloni" },
   // Zucche
-  { src: zuccheOriginale, alt: "Zucche di diverse varietà", category: "Zucche" },
-  { src: zuccheOriginale2, alt: "Zucche pronte per la distribuzione", category: "Zucche" },
+  { imageName: "zucche-originale.jpg", alt: "Zucche di diverse varietà", category: "Zucche" },
+  { imageName: "zucche-originale2.jpg", alt: "Zucche pronte per la distribuzione", category: "Zucche" },
   
-  { src: zuccheCassettaVerde, alt: "Zucche nella cassetta verde Farina", category: "Zucche" },
-  { src: zuccheMantovane, alt: "Zucche mantovane con marchio Farina", category: "Zucche" },
-  { src: zuccheMantovaneScatola, alt: "Zucche mantovane confezionate in scatola", category: "Zucche" },
-  { src: zuccheButternut, alt: "Zucche butternut", category: "Zucche" },
-  { src: zuccheTonde, alt: "Zucche tonde selezionate", category: "Zucche" },
-  { src: zuccheViolina, alt: "Zucche violina", category: "Zucche" },
-  { src: zuccheCassone, alt: "Zucche in cassone di legno", category: "Zucche" },
-  { src: zuccheHalloween, alt: "Zucche Halloween in rete", category: "Zucche" },
-  { src: zuccheHalloweenPallet, alt: "Zucche Halloween su pallet pronte per la spedizione", category: "Zucche" },
-  { src: zuccheHalloweenEspositore, alt: "Espositore zucche Halloween", category: "Zucche" },
+  { imageName: "zucche-cassetta-verde.jpg", alt: "Zucche nella cassetta verde Farina", category: "Zucche" },
+  { imageName: "zucche-mantovane.jpg", alt: "Zucche mantovane con marchio Farina", category: "Zucche" },
+  { imageName: "zucche-mantovane-scatola.jpg", alt: "Zucche mantovane confezionate in scatola", category: "Zucche" },
+  { imageName: "zucche-butternut.jpg", alt: "Zucche butternut", category: "Zucche" },
+  { imageName: "zucche-tonde.jpg", alt: "Zucche tonde selezionate", category: "Zucche" },
+  { imageName: "zucche-violina.jpg", alt: "Zucche violina", category: "Zucche" },
+  { imageName: "zucche-cassone.jpg", alt: "Zucche in cassone di legno", category: "Zucche" },
+  { imageName: "zucche-halloween.jpg", alt: "Zucche Halloween in rete", category: "Zucche" },
+  { imageName: "zucche-halloween-pallet.jpg", alt: "Zucche Halloween su pallet pronte per la spedizione", category: "Zucche" },
+  { imageName: "zucche-halloween-espositore.jpg", alt: "Espositore zucche Halloween", category: "Zucche" },
   // Legna
-  { src: legnaOriginale, alt: "Legna da ardere tagliata e pronta", category: "Legna" },
+  { imageName: "legna-originale.jpg", alt: "Legna da ardere tagliata e pronta", category: "Legna" },
   
-  { src: legnaCumuli, alt: "Cumuli di legna nel piazzale aziendale", category: "Legna" },
-  { src: legnaTronchi, alt: "Tronchi e legna da lavorare", category: "Legna" },
+  { imageName: "legna-cumuli.jpg", alt: "Cumuli di legna nel piazzale aziendale", category: "Legna" },
+  { imageName: "legna-tronchi.jpg", alt: "Tronchi e legna da lavorare", category: "Legna" },
   // Azienda
-  { src: aziendaAerea, alt: "Vista aerea dell'azienda agricola Farina", category: "Azienda" },
-  { src: camionFarina, alt: "Camion aziendale Farina R.", category: "Azienda" },
-  { src: magazzinoEsterno, alt: "Magazzino e piazzale aziendale", category: "Azienda" },
-  { src: logoFarina, alt: "Logo ufficiale Az. Agricola Farina R.", category: "Azienda" },
-  { src: premioQualita, alt: "Premio qualità ricevuto dall'azienda", category: "Azienda" },
-  { src: premioFiera, alt: "Riconoscimento in fiera", category: "Azienda" },
+  { imageName: "azienda-aerea.jpg", alt: "Vista aerea dell'azienda agricola Farina", category: "Azienda" },
+  { imageName: "camion-farina.jpg", alt: "Camion aziendale Farina R.", category: "Azienda" },
+  { imageName: "magazzino-esterno.jpg", alt: "Magazzino e piazzale aziendale", category: "Azienda" },
+  { imageName: "logo-farina.jpg", alt: "Logo ufficiale Az. Agricola Farina R.", category: "Azienda" },
+  { imageName: "premio-qualita.jpg", alt: "Premio qualità ricevuto dall'azienda", category: "Azienda" },
+  { imageName: "premio-fiera.jpg", alt: "Riconoscimento in fiera", category: "Azienda" },
 ];
 
 const Galleria = () => {
@@ -170,13 +124,13 @@ const Galleria = () => {
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filtered.map((img, i) => (
-                  <ScrollReveal key={img.src + filter} delay={i * 60}>
+                  <ScrollReveal key={img.imageName + filter} delay={i * 60}>
                     <button
                       onClick={() => setLightbox(images.indexOf(img))}
                       className="group relative w-full overflow-hidden rounded-xl aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-primary"
                     >
-                      <img
-                        src={img.src}
+                      <SiteImage
+                        imageName={img.imageName}
                         alt={img.alt}
                         loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -234,8 +188,8 @@ const Galleria = () => {
           >
             <ChevronRight className="w-10 h-10" />
           </button>
-          <img
-            src={images[lightbox].src}
+          <SiteImage
+            imageName={images[lightbox].imageName}
             alt={images[lightbox].alt}
             className="max-w-full max-h-[85vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}

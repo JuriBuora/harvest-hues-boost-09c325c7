@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo-farina.png";
+import SiteImage from "@/components/SiteImage";
 
 const FooterSection = () => (
   <footer id="contatti" className="bg-primary text-primary-foreground py-16">
@@ -9,8 +9,8 @@ const FooterSection = () => (
         {/* Brand */}
         <div>
           <div className="bg-white rounded-lg p-2 w-fit mb-4">
-            <img
-              src={logo}
+            <SiteImage
+              imageName="logo-farina.png"
               alt="Logo Azienda Agricola Farina"
               width={256}
               height={185}

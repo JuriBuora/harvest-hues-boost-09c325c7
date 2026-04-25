@@ -1,28 +1,26 @@
 import { Link } from "react-router-dom";
-import angurieImg from "@/assets/angurie-originale.jpg";
-import zuccheImg from "@/assets/zucche-originale.jpg";
-import meloniImg from "@/assets/meloni-originale.jpg";
+import SiteImage from "@/components/SiteImage";
 import ScrollReveal from "./ScrollReveal";
 
 const products = [
   {
     title: "Angurie",
     desc: "Angurie dolci e succose, coltivate con cura seguendo metodi tradizionali e sostenibili per garantire il massimo della freschezza.",
-    img: angurieImg,
+    imageName: "angurie-originale.jpg",
     alt: "Coltivazione angurie - Azienda Agricola Farina",
     link: "/prodotti#angurie",
   },
   {
     title: "Zucche",
     desc: "Zucche selezionate di diverse varietà, perfette per la cucina tradizionale e ideali per i mercati ortofrutticoli.",
-    img: zuccheImg,
+    imageName: "zucche-originale.jpg",
     alt: "Zucche dell'Azienda Agricola Farina",
     link: "/prodotti#zucche",
   },
   {
     title: "Meloni",
     desc: "Meloni profumati e maturi al punto giusto, risultato di un'attenta lavorazione in campo e selezione accurata.",
-    img: meloniImg,
+    imageName: "meloni-originale.jpg",
     alt: "Meloni freschi dell'Azienda Agricola Farina",
     link: "/prodotti#meloni",
   },
@@ -49,8 +47,8 @@ const ProductsSection = () => (
             <Link to={p.link} className="block h-full">
               <div className="group rounded-xl overflow-hidden bg-background border border-border/50 hover:shadow-xl transition-all duration-300 h-full">
                 <div className="aspect-square overflow-hidden">
-                  <img
-                    src={p.img}
+                  <SiteImage
+                    imageName={p.imageName}
                     alt={p.alt}
                     loading="lazy"
                     width={800}
