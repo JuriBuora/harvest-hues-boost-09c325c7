@@ -5,6 +5,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageSEO from "@/components/PageSEO";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 import angurieImg from "@/assets/angurie-originale.jpg";
 import zuccheImg from "@/assets/zucche-originale2.jpg";
 import meloniImg from "@/assets/meloni-cantalupo.jpg";
@@ -88,6 +89,37 @@ const products = [
       { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
     ],
     gallery: [zuccheMantovaneImg, zuccheArancioniImg, zuccheHalloweenImg, zuccheMantovaneScatolaImg],
+  },
+];
+
+const prodottiFaq: FAQItem[] = [
+  {
+    q: "Vendete anche al dettaglio o solo all'ingrosso?",
+    a: "La Società Agricola Farina 2.0 vende esclusivamente all'ingrosso: forniamo rivenditori, GDO, mercati ortofrutticoli e operatori del settore ortofrutticolo. Non effettuiamo vendita diretta al consumatore finale.",
+  },
+  {
+    q: "Qual è la quantità minima d'ordine per angurie, meloni e zucche?",
+    a: "Lavoriamo a bancale o a cassone: l'ordine minimo è generalmente di un bancale completo. Per quantità, formati e pezzature specifiche contattaci telefonicamente: valutiamo ogni fornitura in base alla disponibilità in campo e alla destinazione.",
+  },
+  {
+    q: "In quali periodi dell'anno sono disponibili i vostri prodotti?",
+    a: "Angurie (cocomeri) da giugno a settembre, meloni da giugno ad agosto, zucche da settembre fino a febbraio. La disponibilità giornaliera dipende dalla raccolta in corso: consigliamo di contattarci in anticipo per programmare le forniture.",
+  },
+  {
+    q: "Come avviene la consegna ai rivenditori?",
+    a: "Disponiamo di mezzi propri per la consegna nel ferrarese e nelle province limitrofe. Per destinazioni più lontane organizziamo il trasporto su gomma in accordo con il cliente. La merce viene consegnata su bancali o cassoni, già pronta per la rivendita.",
+  },
+  {
+    q: "Posso ritirare direttamente in azienda a Bando di Argenta?",
+    a: "Sì, il ritiro in azienda in Via Rangona 54/A a Bando di Argenta (FE) è possibile previo accordo telefonico. Concordiamo orario e modalità di carico in base alla disponibilità del prodotto.",
+  },
+  {
+    q: "Posso ordinare varietà o calibri specifici (es. anguria Crimson Sweet, melone retato)?",
+    a: "Sì, coltiviamo diverse varietà di angurie (Crimson Sweet, Sugar Baby, Dumara), meloni (retato, cantalupo, liscio) e zucche (Delica, Mantovana, Butternut). Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
+  },
+  {
+    q: "Come si richiede un preventivo per una fornitura?",
+    a: "Per preventivi e listini ingrosso contattaci al +39 0532 814411 o via email a soc.agr.farina@gmail.com indicando prodotto, quantità approssimativa, periodo e luogo di consegna. Rispondiamo nei giorni lavorativi.",
   },
 ];
 
@@ -202,6 +234,14 @@ const Prodotti = () => {
           </div>
         </section>
       ))}
+
+      {/* FAQ ingrosso */}
+      <FAQSection
+        eyebrow="FAQ Ingrosso"
+        title="Domande frequenti su forniture e ingrosso"
+        withJsonLd
+        items={prodottiFaq}
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-24 bg-primary text-center">
