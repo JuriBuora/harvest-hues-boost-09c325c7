@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
 
 const features = [
-  { icon: Flame, title: "Quercia, Faggio, Ulivo", desc: "Legna stagionata di quercia, faggio e ulivo: alto potere calorifico, ideale per stufe, camini e forni." },
+  { icon: Flame, title: "Faggio, Cerro, Carpine", desc: "Legna stagionata di faggio, cerro e carpine: calore costante, buona durata della brace e ottima resa per stufe, camini e forni." },
   { icon: Truck, title: "Consegna a Domicilio", desc: "Consegna nel ferrarese entro 50 km da Bando di Argenta. Ordine minimo indicativo 200-250 €." },
   { icon: Package, title: "Sempre Disponibile", desc: "Magazzino sempre rifornito per soddisfare le richieste in ogni stagione." },
 ];
@@ -32,7 +32,7 @@ const FirewoodSection = () => (
               Legna da Ardere
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Forniamo legna da ardere stagionata di quercia, faggio e ulivo, con consegna a domicilio
+              Forniamo legna da ardere stagionata di faggio, cerro e carpine, con consegna a domicilio
               entro 50 km da Bando di Argenta (FE) — copriamo Argenta, Portomaggiore, Ostellato,
               Comacchio, Ferrara città e i comuni limitrofi.
             </p>
