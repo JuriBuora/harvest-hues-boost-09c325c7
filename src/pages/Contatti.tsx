@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -10,14 +10,38 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PageSEO from "@/components/PageSEO";
+import {
+  MIN_MESSAGE_LENGTH,
+  normalizeContactForm,
+  validateContactForm,
+} from "@/lib/contactValidation";
 
 const formSubmitEndpoint = "https://formsubmit.co/ajax/soc.agr.farina@gmail.com";
 const formSourceUrl = "https://www.cucurbitacee.com/contatti";
+const minSubmitDelayMs = 3000;
+const submitCooldownMs = 15000;
+const formSubmitBlacklist = [
+  "<a href=",
+  "[url=",
+  "bit.ly/",
+  "tinyurl.com/",
+  "t.me/",
+  "viagra",
+  "casino",
+  "cbd gummies",
+  "crypto giveaway",
+  "guest post",
+  "backlinks",
+  "seo service",
+  "payday loan",
+].join(", ");
 
 const Contatti = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ nome: "", email: "", telefono: "", messaggio: "" });
+  const formLoadedAtRef = useRef(Date.now());
+  const lastSubmitAtRef = useRef<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -25,8 +49,32 @@ const Contatti = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!form.nome.trim() || !form.email.trim() || !form.messaggio.trim()) {
-      toast({ title: "Compila tutti i campi obbligatori", variant: "destructive" });
+    const normalizedForm = normalizeContactForm(form);
+    const validationError = validateContactForm(normalizedForm);
+
+    if (validationError) {
+      toast({ title: validationError, variant: "destructive" });
+      return;
+    }
+
+    const now = Date.now();
+    const fillDurationMs = now - formLoadedAtRef.current;
+
+    if (fillDurationMs < minSubmitDelayMs) {
+      toast({
+        title: "Invio troppo rapido",
+        description: "Attendi qualche secondo e riprova.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (lastSubmitAtRef.current && now - lastSubmitAtRef.current < submitCooldownMs) {
+      toast({
+        title: "Attendi prima di inviare di nuovo",
+        description: "Il modulo limita gli invii ravvicinati per ridurre spam e duplicati.",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -36,13 +84,14 @@ const Contatti = () => {
       const formElement = e.currentTarget;
       const formData = new FormData(formElement);
 
-      formData.set("nome", form.nome.trim());
-      formData.set("email", form.email.trim());
-      formData.set("telefono", form.telefono.trim());
-      formData.set("messaggio", form.messaggio.trim());
-      formData.set("_subject", `Nuovo messaggio da cucurbitacee.com - ${form.nome.trim()}`);
+      formData.set("nome", normalizedForm.nome);
+      formData.set("email", normalizedForm.email);
+      formData.set("telefono", normalizedForm.telefono);
+      formData.set("messaggio", normalizedForm.messaggio);
+      formData.set("_subject", `Nuovo messaggio da cucurbitacee.com - ${normalizedForm.nome}`);
       formData.set("_template", "table");
       formData.set("_url", formSourceUrl);
+      formData.set("tempo_compilazione_secondi", String(Math.max(1, Math.round(fillDurationMs / 1000))));
 
       const response = await fetch(formSubmitEndpoint, {
         method: "POST",
@@ -62,6 +111,8 @@ const Contatti = () => {
         title: "Messaggio inviato",
         description: "Grazie, ti risponderemo il prima possibile.",
       });
+      lastSubmitAtRef.current = Date.now();
+      formLoadedAtRef.current = Date.now();
       setLoading(false);
       setForm({ nome: "", email: "", telefono: "", messaggio: "" });
       formElement.reset();
@@ -166,26 +217,30 @@ const Contatti = () => {
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_url" value={formSourceUrl} />
                   <input type="hidden" name="_subject" value="Nuovo messaggio da cucurbitacee.com" />
+                  <input type="hidden" name="_blacklist" value={formSubmitBlacklist} />
                   <div>
                     <label htmlFor="nome" className="block text-sm font-medium text-foreground mb-1.5">Nome e Cognome *</label>
-                    <Input id="nome" name="nome" value={form.nome} onChange={handleChange} placeholder="Mario Rossi" maxLength={100} required />
+                    <Input id="nome" name="nome" value={form.nome} onChange={handleChange} placeholder="Mario Rossi" maxLength={100} minLength={2} autoComplete="name" required />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email *</label>
-                    <Input id="email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="mario@esempio.it" maxLength={255} required />
+                    <Input id="email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="mario@esempio.it" maxLength={255} autoComplete="email" inputMode="email" required />
                   </div>
                   <div>
                     <label htmlFor="telefono" className="block text-sm font-medium text-foreground mb-1.5">Telefono</label>
-                    <Input id="telefono" name="telefono" type="tel" value={form.telefono} onChange={handleChange} placeholder="+39 333 1234567" maxLength={20} />
+                    <Input id="telefono" name="telefono" type="tel" value={form.telefono} onChange={handleChange} placeholder="+39 333 1234567" maxLength={25} autoComplete="tel" inputMode="tel" />
                   </div>
                   <div>
                     <label htmlFor="messaggio" className="block text-sm font-medium text-foreground mb-1.5">Messaggio *</label>
-                    <Textarea id="messaggio" name="messaggio" value={form.messaggio} onChange={handleChange} placeholder="Scrivi qui il tuo messaggio..." rows={5} maxLength={1000} required />
+                    <Textarea id="messaggio" name="messaggio" value={form.messaggio} onChange={handleChange} placeholder="Scrivi qui il tuo messaggio..." rows={5} minLength={MIN_MESSAGE_LENGTH} maxLength={1000} required />
                   </div>
                   <Button type="submit" disabled={loading} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                     <Send className="w-4 h-4 mr-2" />
                     {loading ? "Invio in corso..." : "Invia Messaggio"}
                   </Button>
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    Il modulo applica controlli antispam automatici, limiti sugli invii ravvicinati e filtri sui contenuti sospetti.
+                  </p>
                   <p className="text-xs leading-relaxed text-muted-foreground">
                     Inviando il modulo autorizzi l&apos;inoltro della richiesta tramite un servizio esterno di recapito email
                     e dichiari di aver letto la <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.

@@ -25,7 +25,7 @@ const homeFaq: FAQItem[] = [
   },
   {
     q: "Quali essenze di legna da ardere proponete?",
-    a: "Forniamo legna stagionata di faggio, cerro e carpine, asciutta e pronta all'uso per stufe, camini e forni a legna.",
+    a: "Forniamo legna stagionata di faggio, cerro e carpino, asciutta e pronta all'uso per stufe, camini e forni a legna.",
   },
 ];
 

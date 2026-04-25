@@ -21,7 +21,7 @@ const legnaFaq: FAQItem[] = [
   },
   {
     q: "Che tipo di legna vendete?",
-    a: "Forniamo legna stagionata di faggio, cerro e carpine, asciutta e pronta all'uso. Una selezione di essenze ad alto potere calorifico, adatte a stufe, camini e forni a legna.",
+    a: "Forniamo legna stagionata di faggio, cerro e carpino, asciutta e pronta all'uso. Una selezione di essenze ad alto potere calorifico, adatte a stufe, camini e forni a legna.",
   },
   {
     q: "La legna è già tagliata e pronta da bruciare?",
@@ -37,10 +37,10 @@ const legnaFaq: FAQItem[] = [
   },
 ];
 const features = [
-  { icon: Flame, title: "Faggio, Cerro e Carpine", desc: "Tre essenze stagionate selezionate per una combustione efficiente, calore costante e ottima resa in stufe, camini e forni a legna." },
+  { icon: Flame, title: "Faggio, Cerro e Carpino", desc: "Tre essenze stagionate selezionate per una combustione efficiente, calore costante e ottima resa in stufe, camini e forni a legna." },
   { icon: Truck, title: "Consegna nel Ferrarese", desc: "Consegna a domicilio entro 50 km da Bando di Argenta: Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara e dintorni." },
   { icon: Package, title: "Sempre Disponibile", desc: "Il nostro magazzino è sempre rifornito per soddisfare ogni richiesta, in ogni stagione." },
-  { icon: TreeDeciduous, title: "Essenze Selezionate", desc: "Faggio per una fiamma regolare, cerro per una resa prolungata e carpine per un fuoco vivo e consistente nel riscaldamento domestico." },
+  { icon: TreeDeciduous, title: "Essenze Selezionate", desc: "Faggio per una fiamma regolare, cerro per una resa prolungata e carpino per un fuoco vivo e consistente nel riscaldamento domestico." },
   { icon: Ruler, title: "Taglio su Misura", desc: "Legna tagliata nelle dimensioni più adatte alle vostre esigenze: da 25 a 50 cm." },
   { icon: ThermometerSun, title: "Stagionatura Naturale", desc: "La nostra legna viene stagionata all'aria aperta, garantendo bassa umidità e resa elevata." },
 ];
@@ -62,7 +62,7 @@ const Legna = () => {
     <div className="min-h-screen bg-background">
       <PageSEO
         title="Legna da Ardere a Ferrara — Consegna a Domicilio"
-        description="Legna da ardere stagionata di faggio, cerro e carpine. Consegna a domicilio entro 50 km da Bando di Argenta: Ferrara, Portomaggiore, Argenta, Comacchio. Ordine minimo 200-250 €."
+        description="Legna da ardere stagionata di faggio, cerro e carpino. Consegna a domicilio entro 50 km da Bando di Argenta: Ferrara, Portomaggiore, Argenta, Comacchio. Ordine minimo 200-250 €."
         path="/legna"
       />
       <Navbar />
@@ -74,7 +74,7 @@ const Legna = () => {
             <p className="text-primary-foreground/60 font-sans text-sm tracking-[0.2em] uppercase mb-3">Servizio tutto l'anno</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Legna da Ardere a Ferrara e Provincia</h1>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg mb-8">
-              Legna selezionata di faggio, cerro e carpine, stagionata e pronta all'uso.
+              Legna selezionata di faggio, cerro e carpino, stagionata e pronta all'uso.
               Consegna a domicilio entro 50 km da Bando di Argenta (FE).
             </p>
             <div className="flex flex-wrap justify-center gap-4">
