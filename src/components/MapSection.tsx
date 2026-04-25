@@ -16,7 +16,7 @@ const MapSection = () => (
         <div className="rounded-xl overflow-hidden border border-border/50 shadow-lg">
           <iframe
             title="Posizione Azienda Agricola Farina"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Via+Rangona+54,+44015+Bando+di+Argenta,+FE,+Italy&zoom=14"
+            src="https://www.google.com/maps?q=Via+Rangona+54,+44015+Bando+di+Argenta,+FE,+Italy&z=14&output=embed"
             width="100%"
             height="450"
             style={{ border: 0 }}

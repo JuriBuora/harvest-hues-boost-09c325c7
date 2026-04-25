@@ -107,7 +107,7 @@ const Contatti = () => {
                 <div className="rounded-xl overflow-hidden border border-border h-64">
                   <iframe
                     title="Mappa Azienda Agricola Farina"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Via+Rangona+54,+44015+Bando+di+Argenta,+FE,+Italy&zoom=14"
+                    src="https://www.google.com/maps?q=Via+Rangona+54,+44015+Bando+di+Argenta,+FE,+Italy&z=14&output=embed"
                     className="w-full h-full"
                     loading="lazy"
                     allowFullScreen

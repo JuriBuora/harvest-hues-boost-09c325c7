@@ -1,0 +1,58 @@
+export const sitePages = [
+  {
+    entryName: "main",
+    htmlFile: "index.html",
+    routePath: "/",
+    changefreq: "monthly",
+    priority: "1.0",
+  },
+  {
+    entryName: "prodotti",
+    htmlFile: "prodotti/index.html",
+    routePath: "/prodotti",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
+    entryName: "chi-siamo",
+    htmlFile: "chi-siamo/index.html",
+    routePath: "/chi-siamo",
+    changefreq: "yearly",
+    priority: "0.7",
+  },
+  {
+    entryName: "contatti",
+    htmlFile: "contatti/index.html",
+    routePath: "/contatti",
+    changefreq: "yearly",
+    priority: "0.8",
+  },
+  {
+    entryName: "galleria",
+    htmlFile: "galleria/index.html",
+    routePath: "/galleria",
+    changefreq: "monthly",
+    priority: "0.6",
+  },
+  {
+    entryName: "legna",
+    htmlFile: "legna/index.html",
+    routePath: "/legna",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
+    entryName: "privacy-policy",
+    htmlFile: "privacy-policy/index.html",
+    routePath: "/privacy-policy",
+    changefreq: "yearly",
+    priority: "0.2",
+  },
+  {
+    entryName: "cookie-policy",
+    htmlFile: "cookie-policy/index.html",
+    routePath: "/cookie-policy",
+    changefreq: "yearly",
+    priority: "0.2",
+  },
+];
