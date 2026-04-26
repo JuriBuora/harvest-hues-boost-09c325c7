@@ -1,6 +1,6 @@
 export const SITE_NAME = "Società Agricola Farina 2.0";
 
-// Keep this aligned with the primary domain configured in Lovable.
+// Keep this aligned with the primary production domain.
 export const DEFAULT_SITE_URL = "https://www.cucurbitacee.com";
 
 function stripTrailingSlashes(url: string) {
@@ -21,4 +21,3 @@ export function toAbsoluteUrl(path: string): string {
     return `${base}${normalizedPath}`;
   }
 }
-
