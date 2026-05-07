@@ -42,6 +42,13 @@ export const sitePages = [
     priority: "0.9",
   },
   {
+    entryName: "ordina-legna-da-ardere",
+    htmlFile: "ordina-legna-da-ardere/index.html",
+    routePath: "/ordina-legna-da-ardere",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
     entryName: "privacy-policy",
     htmlFile: "privacy-policy/index.html",
     routePath: "/privacy-policy",

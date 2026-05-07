@@ -10,6 +10,7 @@ const Contatti = lazy(() => import("./pages/Contatti.tsx"));
 const Galleria = lazy(() => import("./pages/Galleria.tsx"));
 const ChiSiamo = lazy(() => import("./pages/ChiSiamo.tsx"));
 const Legna = lazy(() => import("./pages/Legna.tsx"));
+const OrdinaLegna = lazy(() => import("./pages/OrdinaLegna.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/galleria" element={<Galleria />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/legna" element={<Legna />} />
+          <Route path="/ordina-legna-da-ardere" element={<OrdinaLegna />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="*" element={<NotFound />} />

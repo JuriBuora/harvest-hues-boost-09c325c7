@@ -4,7 +4,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageSEO from "@/components/PageSEO";
 
-const LAST_UPDATED = "19 aprile 2026";
+const LAST_UPDATED = "7 maggio 2026";
 
 const CookiePolicy = () => {
   React.useEffect(() => {
@@ -55,6 +55,11 @@ const CookiePolicy = () => {
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Cookie di terze parti</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Quando l'utente invia un modulo, i dati transitano tramite <strong className="text-foreground">FormSubmit</strong>,
+              servizio esterno usato per il recapito tecnico delle richieste email. Il servizio può utilizzare cookie
+              o strumenti tecnici strettamente necessari alla gestione sicura dell'invio e alla protezione antispam.
+            </p>
             <p className="text-muted-foreground leading-relaxed">
               La pagina Contatti incorpora una mappa di <strong className="text-foreground">Google Maps</strong>.
               La visualizzazione della mappa può comportare il rilascio di cookie da parte di Google. Per

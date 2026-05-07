@@ -79,10 +79,10 @@ const Legna = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" className="font-sans" asChild>
-                <a href="tel:+393381571439">
+                <Link to="/ordina-legna-da-ardere">
                   <Phone className="w-4 h-4 mr-2" />
-                  Ordina Ora
-                </a>
+                  Richiedi Consegna
+                </Link>
               </Button>
               <Button size="lg" variant="secondary" className="font-sans" asChild>
                 <a href="https://wa.me/+393667701214" target="_blank" rel="noopener noreferrer">
@@ -173,10 +173,10 @@ const Legna = () => {
                 </div>
                 <div className="flex flex-wrap gap-3 mt-6">
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-sans" asChild>
-                    <a href="tel:+393381571439">
+                    <Link to="/ordina-legna-da-ardere">
                       <Phone className="w-4 h-4 mr-2" />
-                      Chiama Ora
-                    </a>
+                      Richiedi consegna
+                    </Link>
                   </Button>
                   <Button variant="outline" className="font-sans" asChild>
                     <Link to="/contatti">Contattaci</Link>

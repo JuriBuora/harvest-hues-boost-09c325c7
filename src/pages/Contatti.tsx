@@ -36,6 +36,20 @@ const formSubmitBlacklist = [
   "payday loan",
 ].join(", ");
 
+function getFormSubmitErrorMessage(message?: string) {
+  const normalizedMessage = message?.toLowerCase() ?? "";
+
+  if (normalizedMessage.includes("activation")) {
+    return "Il servizio di invio non è ancora attivo: apri l'email di attivazione inviata da FormSubmit a soc.agr.farina@gmail.com, poi riprova.";
+  }
+
+  if (normalizedMessage.includes("web server")) {
+    return "Il modulo funziona solo dal sito pubblicato. Se stai testando una copia locale, avvia il server di sviluppo.";
+  }
+
+  return "Riprova tra poco oppure contattaci telefonicamente.";
+}
+
 const Contatti = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
@@ -101,7 +115,10 @@ const Contatti = () => {
         body: formData,
       });
 
-      const result = await response.json().catch(() => null) as { message?: string; success?: boolean | string } | null;
+      const result = (await response.json().catch(() => null)) as {
+        message?: string;
+        success?: boolean | string;
+      } | null;
 
       if (!response.ok || result?.success === false || result?.success === "false") {
         throw new Error(result?.message || "Invio non riuscito");
@@ -116,11 +133,15 @@ const Contatti = () => {
       setLoading(false);
       setForm({ nome: "", email: "", telefono: "", messaggio: "" });
       formElement.reset();
-    } catch {
+    } catch (error) {
       setLoading(false);
+      const description = error instanceof Error
+        ? getFormSubmitErrorMessage(error.message)
+        : "Riprova tra poco oppure contattaci telefonicamente.";
+
       toast({
         title: "Invio non riuscito",
-        description: "Riprova tra poco oppure contattaci telefonicamente.",
+        description,
         variant: "destructive",
       });
     }

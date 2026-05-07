@@ -4,7 +4,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageSEO from "@/components/PageSEO";
 
-const LAST_UPDATED = "25 aprile 2026";
+const LAST_UPDATED = "7 maggio 2026";
 
 const PrivacyPolicy = () => {
   React.useEffect(() => {
@@ -48,9 +48,11 @@ const PrivacyPolicy = () => {
             <h2 className="font-serif text-2xl font-semibold">Tipologie di Dati Raccolti</h2>
             <p className="text-muted-foreground leading-relaxed">
               Il sito <strong className="text-foreground">cucurbitacee.com</strong> raccoglie esclusivamente i dati che l'utente
-              fornisce volontariamente compilando il modulo di contatto: nome e cognome, indirizzo email,
-              numero di telefono (facoltativo) e contenuto del messaggio. Il sito non utilizza strumenti di
-              analytics, profilazione o tracciamento pubblicitario.
+              fornisce volontariamente compilando i moduli presenti sul sito. Il modulo di contatto può raccogliere
+              nome e cognome, indirizzo email, numero di telefono (facoltativo) e contenuto del messaggio.
+              Il modulo di richiesta consegna legna può raccogliere nome e cognome, telefono, email, indirizzo
+              di consegna, comune, CAP, provincia, quantità richiesta, data preferita di consegna e note inserite
+              liberamente dall'utente. Il sito non utilizza strumenti di analytics, profilazione o tracciamento pubblicitario.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Alcune pagine possono incorporare contenuti di terze parti (ad es. <strong className="text-foreground">Google Maps</strong>
@@ -61,17 +63,24 @@ const PrivacyPolicy = () => {
 
             <h2 className="font-serif text-2xl font-semibold">Finalità e Base Giuridica</h2>
             <p className="text-muted-foreground leading-relaxed">
-              I dati raccolti tramite il modulo di contatto vengono utilizzati esclusivamente per rispondere
-              alle richieste di informazioni e gestire eventuali rapporti commerciali (es. preventivi per legna
-              da ardere o forniture all'ingrosso di prodotti ortofrutticoli). La base giuridica del trattamento
-              è il consenso dell'interessato e l'esecuzione di misure precontrattuali su richiesta dello stesso
-              (art. 6, par. 1, lett. a) e b) GDPR).
+              I dati raccolti tramite i moduli vengono utilizzati esclusivamente per rispondere alle richieste
+              di informazioni, gestire richieste di consegna o preventivo e organizzare eventuali rapporti commerciali
+              (es. preventivi per legna da ardere o forniture all'ingrosso di prodotti ortofrutticoli). Nel caso
+              della richiesta consegna legna, l'indirizzo e le informazioni di consegna sono usati solo per valutare
+              disponibilità, costo di consegna, prezzo finale e modalità operative prima della conferma dell'ordine.
+              La base giuridica del trattamento è il consenso dell'interessato e l'esecuzione di misure precontrattuali
+              su richiesta dello stesso (art. 6, par. 1, lett. a) e b) GDPR).
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              I moduli non raccolgono dati di pagamento, numeri di carta, credenziali bancarie o altri dati finanziari.
+              Eventuali istruzioni di pagamento vengono comunicate dall'azienda solo dopo aver verificato la richiesta
+              e prima che l'ordine sia considerato definitivo.
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Modalità di Invio</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Il modulo di contatto trasmette i dati inseriti dall'utente tramite un servizio esterno di inoltro moduli
-              utilizzato esclusivamente per recapitarli all'indirizzo email aziendale. I dati forniti nel modulo non vengono
+              I moduli trasmettono i dati inseriti dall'utente tramite un servizio esterno di inoltro moduli
+              utilizzato esclusivamente per recapitarli all'indirizzo email aziendale. I dati forniti nei moduli non vengono
               pubblicati sul sito e sono trattati solo per dare seguito alla richiesta inviata dall'utente.
             </p>
 
@@ -92,7 +101,7 @@ const PrivacyPolicy = () => {
 
             <h2 className="font-serif text-2xl font-semibold">Servizi di Terze Parti</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Quando l'utente invia il modulo di contatto, i dati inseriti transitano tramite il servizio
+              Quando l'utente invia un modulo, i dati inseriti transitano tramite il servizio
               <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> FormSubmit</a>,
               utilizzato come recapito tecnico delle richieste email. Il servizio opera secondo le proprie condizioni e informative.
             </p>
