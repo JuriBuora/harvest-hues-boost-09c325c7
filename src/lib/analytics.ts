@@ -50,15 +50,13 @@ export function loadGoogleAnalytics() {
   }
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer?.push(args);
+  window.gtag = function gtag() {
+    // Google's gtag snippet pushes the Arguments object, not a rest-parameter array.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer?.push(arguments);
   };
 
   window.gtag("js", new Date());
-  window.gtag("config", GA_MEASUREMENT_ID, {
-    anonymize_ip: true,
-    send_page_view: false,
-  });
 
   const script = document.createElement("script");
   script.async = true;
