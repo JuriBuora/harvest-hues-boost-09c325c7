@@ -46,7 +46,7 @@ const HeroSection = () => (
         Azienda Agricola Farina
       </h1>
       <p className="text-primary-foreground/90 text-lg md:text-xl font-light mb-8">
-        Angurie, meloni e zucche all'ingrosso · legna da ardere con consegna nel ferrarese — dal 1975
+        Angurie, meloni e zucche all’ingrosso e al dettaglio · legna da ardere con consegna nel ferrarese — dal 1975
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link className={`${heroButtonClass} bg-secondary text-secondary-foreground hover:bg-secondary/90`} to="/prodotti">
