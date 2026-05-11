@@ -21,6 +21,7 @@ const FirewoodSection = () => (
               loading="lazy"
               width={800}
               height={800}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="w-full h-full object-cover rounded-xl"
             />
           </div>

@@ -167,6 +167,7 @@ const Prodotti = () => {
                     loading="lazy"
                     width={800}
                     height={800}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
                     className="w-full object-cover aspect-[4/3]"
                   />
                 </div>
@@ -181,6 +182,7 @@ const Prodotti = () => {
                           loading="lazy"
                           width={400}
                           height={300}
+                          sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 50vw"
                           className="w-full h-40 object-cover"
                         />
                       </div>
