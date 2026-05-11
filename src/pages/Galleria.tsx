@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
@@ -67,15 +67,47 @@ const Galleria = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   const filtered = filter === "Tutte" ? images : images.filter((img) => img.category === filter);
+  const currentFilteredIndex = lightbox === null
+    ? -1
+    : filtered.findIndex((img) => images.indexOf(img) === lightbox);
 
-  const goNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (lightbox !== null) setLightbox((lightbox + 1) % images.length);
+  const moveLightbox = (direction: 1 | -1) => {
+    if (lightbox === null || currentFilteredIndex < 0) return;
+
+    const nextFilteredIndex = (currentFilteredIndex + direction + filtered.length) % filtered.length;
+    setLightbox(images.indexOf(filtered[nextFilteredIndex]));
   };
-  const goPrev = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (lightbox !== null) setLightbox((lightbox - 1 + images.length) % images.length);
+
+  const goNext = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    moveLightbox(1);
   };
+
+  const goPrev = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    moveLightbox(-1);
+  };
+
+  useEffect(() => {
+    if (lightbox === null) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setLightbox(null);
+      } else if (event.key === "ArrowRight") {
+        if (currentFilteredIndex < 0) return;
+        const nextFilteredIndex = (currentFilteredIndex + 1) % filtered.length;
+        setLightbox(images.indexOf(filtered[nextFilteredIndex]));
+      } else if (event.key === "ArrowLeft") {
+        if (currentFilteredIndex < 0) return;
+        const prevFilteredIndex = (currentFilteredIndex - 1 + filtered.length) % filtered.length;
+        setLightbox(images.indexOf(filtered[prevFilteredIndex]));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentFilteredIndex, filtered, lightbox]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -127,6 +159,7 @@ const Galleria = () => {
                   <ScrollReveal key={img.imageName + filter} delay={i * 60}>
                     <button
                       onClick={() => setLightbox(images.indexOf(img))}
+                      aria-label={`Apri foto: ${img.alt}`}
                       className="group relative w-full overflow-hidden rounded-xl aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       <SiteImage
@@ -195,7 +228,7 @@ const Galleria = () => {
             onClick={(e) => e.stopPropagation()}
           />
           <p className="absolute bottom-6 text-white/80 text-sm text-center">
-            {images[lightbox].alt} — {lightbox + 1}/{images.length}
+            {images[lightbox].alt} — {currentFilteredIndex + 1}/{filtered.length}
           </p>
         </div>
       )}
