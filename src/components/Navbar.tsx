@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logoFarina from "@/assets/logo-farina.png";
+import SiteImage from "@/components/SiteImage";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -39,12 +39,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2" aria-label="Vai alla home">
-          <img
-            src={logoFarina}
+          <SiteImage
+            imageName="logo-farina.png"
             alt="Logo Azienda Agricola Farina"
             width={256}
             height={185}
+            sizes="64px"
             decoding="async"
+            fetchPriority="high"
             className="h-12 w-auto"
           />
         </Link>

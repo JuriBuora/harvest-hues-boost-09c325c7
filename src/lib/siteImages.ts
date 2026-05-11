@@ -26,7 +26,7 @@ function stripExtension(fileName: string) {
 }
 
 function createSourceSet(baseName: string, extension: "avif" | "webp") {
-  const variants = [480, 800, 1200, 1600]
+  const variants = [128, 480, 800, 1200, 1600]
     .map((width) => {
       const src = generatedImages[`../assets/generated/${baseName}-${width}.${extension}`];
       return src ? `${src} ${width}w` : null;

@@ -232,6 +232,7 @@ const OrdinaLegna = () => {
                 imageName="legna-catasta.jpg"
                 alt="Catasta di legna da ardere pronta per la consegna"
                 loading="eager"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full aspect-[4/3] object-cover rounded-xl shadow-xl"
               />
             </ScrollReveal>

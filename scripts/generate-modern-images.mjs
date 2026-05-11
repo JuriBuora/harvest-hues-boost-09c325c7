@@ -6,7 +6,7 @@ const sourceDir = path.resolve(process.cwd(), "src/assets");
 const outputDir = path.join(sourceDir, "generated");
 const supportedExtensions = new Set([".jpg", ".jpeg", ".png"]);
 const maxWidth = 1600;
-const responsiveWidths = [480, 800, 1200, 1600];
+const responsiveWidths = [128, 480, 800, 1200, 1600];
 const webpQuality = 74;
 const avifQuality = 44;
 const forceRegeneration = process.env.FORCE_IMAGE_SYNC === "1";

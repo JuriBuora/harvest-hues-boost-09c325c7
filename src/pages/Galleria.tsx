@@ -166,6 +166,7 @@ const Galleria = () => {
                         imageName={img.imageName}
                         alt={img.alt}
                         loading="lazy"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -224,6 +225,7 @@ const Galleria = () => {
           <SiteImage
             imageName={images[lightbox].imageName}
             alt={images[lightbox].alt}
+            sizes="90vw"
             className="max-w-full max-h-[85vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
