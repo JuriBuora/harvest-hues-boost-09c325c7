@@ -105,8 +105,8 @@ const CookiePolicy = () => {
               di profilazione commerciale.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I <strong className="text-foreground">cookie tecnici</strong> strettamente
-              necessari al funzionamento del sito, per i quali, ai sensi della normativa vigente
+              I <strong className="text-foreground">cookie tecnici</strong> sono strettamente
+              necessari al funzionamento del sito e, ai sensi della normativa vigente
               (Provvedimento del Garante Privacy del 10 giugno 2021), non è richiesto il consenso preventivo.
             </p>
             <p className="text-muted-foreground leading-relaxed">

@@ -61,8 +61,8 @@ const PrivacyPolicy = () => {
               viene utilizzato per raccogliere dati di pagamento o per inviare pubblicità personalizzata da questo sito.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Alcune pagine possono incorporare contenuti di terze parti (ad es. <strong className="text-foreground">Google Maps</strong>
-              nella pagina Contatti e, su richiesta dell'utente, il plugin <strong className="text-foreground">Facebook</strong> nella pagina Galleria).
+              Alcune pagine possono incorporare contenuti di terze parti (ad es. <strong className="text-foreground">Google Maps</strong>{" "}
+              nella pagina Contatti e, su richiesta dell'utente, il plugin <strong className="text-foreground">Facebook</strong>{" "}nella pagina Galleria).
               In questi casi, i fornitori terzi possono ricevere dati tecnici di navigazione (es. indirizzo IP, user agent)
               necessari a fornire il servizio incorporato.
             </p>

@@ -186,7 +186,7 @@ const Galleria = () => {
               <div className="lg:sticky lg:top-24">
                 <FacebookPageTimeline
                   pageUrl="https://www.facebook.com/Azienda-Agricola-Farina-Roberto-100057542707078"
-                  pageName="Societa Agricola Farina 2.0"
+                  pageName="Società Agricola Farina 2.0"
                 />
               </div>
             </aside>
