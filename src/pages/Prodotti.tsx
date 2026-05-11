@@ -28,7 +28,7 @@ const products = [
     varieties: [
       { name: "Crimson Sweet", desc: "Classica anguria a polpa rossa, molto dolce e croccante. Buccia verde chiaro con striature scure." },
       { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
-      { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, perfetta per la vendita all'ingrosso." },
+      { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, adatta sia alla fornitura all’ingrosso sia alla vendita diretta in azienda." },
     ],
     gallery: ["anguria-bilancia.jpg", "meloni-angurie.jpg", "angurie-cassone.jpg", "anguria-gigante.jpg"],
   },
@@ -78,16 +78,20 @@ const products = [
 
 const prodottiFaq: FAQItem[] = [
   {
-    q: "Vendete anche al dettaglio o solo all'ingrosso?",
-    a: "La Società Agricola Farina 2.0 vende esclusivamente all'ingrosso: forniamo rivenditori, GDO, mercati ortofrutticoli e operatori del settore ortofrutticolo. Non effettuiamo vendita diretta al consumatore finale.",
+    q: "Vendete sia all’ingrosso sia al dettaglio?",
+    a: "Sì, effettuiamo sia vendita all’ingrosso per rivenditori, GDO e mercati ortofrutticoli, sia vendita al dettaglio direttamente in azienda, in base alla disponibilità stagionale.",
+  },
+  {
+    q: "È possibile acquistare direttamente in azienda?",
+    a: "Sì, puoi acquistare angurie, meloni e zucche direttamente presso la nostra azienda a Bando di Argenta. Ti consigliamo di contattarci prima del ritiro per verificare disponibilità e orari.",
   },
   {
     q: "Qual è la quantità minima d'ordine per angurie, meloni e zucche?",
-    a: "Lavoriamo a bancale o a cassone: l'ordine minimo è generalmente di un bancale completo. Per quantità, formati e pezzature specifiche contattaci telefonicamente: valutiamo ogni fornitura in base alla disponibilità in campo e alla destinazione.",
+    a: "Per le forniture all’ingrosso lavoriamo generalmente a bancale o a cassone. Per la vendita al dettaglio direttamente in azienda le quantità dipendono dalla disponibilità del prodotto fresco di stagione.",
   },
   {
     q: "In quali periodi dell'anno sono disponibili i vostri prodotti?",
-    a: "Angurie (cocomeri) da giugno a settembre, meloni da giugno ad agosto, zucche da settembre fino a febbraio. La disponibilità giornaliera dipende dalla raccolta in corso: consigliamo di contattarci in anticipo per programmare le forniture.",
+    a: "Angurie (cocomeri) da giugno a settembre, meloni da giugno ad agosto, zucche da settembre fino a febbraio. La disponibilità giornaliera dipende dalla raccolta in corso: consigliamo di contattarci in anticipo per forniture e acquisti diretti in azienda.",
   },
   {
     q: "Come avviene la consegna ai rivenditori?",
@@ -95,7 +99,7 @@ const prodottiFaq: FAQItem[] = [
   },
   {
     q: "Posso ritirare direttamente in azienda a Bando di Argenta?",
-    a: "Sì, il ritiro in azienda in Via Rangona 54/A a Bando di Argenta (FE) è possibile previo accordo telefonico. Concordiamo orario e modalità di carico in base alla disponibilità del prodotto.",
+    a: "Sì, il ritiro e l’acquisto diretto in azienda in Via Rangona 54/A a Bando di Argenta (FE) sono possibili in base alla disponibilità stagionale. Concordiamo orario e modalità al telefono.",
   },
   {
     q: "Posso ordinare varietà o calibri specifici (es. anguria Crimson Sweet, melone retato)?",
@@ -103,7 +107,7 @@ const prodottiFaq: FAQItem[] = [
   },
   {
     q: "Come si richiede un preventivo per una fornitura?",
-    a: "Per preventivi e listini ingrosso contattaci al +39 0532 814411 o via email a soc.agr.farina@gmail.com indicando prodotto, quantità approssimativa, periodo e luogo di consegna. Rispondiamo nei giorni lavorativi.",
+    a: "Per preventivi e listini ingrosso contattaci al +39 0532 814411 o via email a soc.agr.farina@gmail.com indicando prodotto, quantità approssimativa, periodo e luogo di consegna. Per acquisti al dettaglio in azienda chiamaci per verificare la disponibilità.",
   },
 ];
 
@@ -123,8 +127,8 @@ const Prodotti = () => {
   return (
   <>
     <PageSEO
-      title="Angurie, Meloni e Zucche all'Ingrosso — Ferrara"
-      description="Vendita all'ingrosso di angurie (cocomeri), meloni e zucche coltivati nel ferrarese. Forniture per rivenditori, GDO e mercati ortofrutticoli."
+      title="Angurie, Meloni e Zucche all’Ingrosso e al Dettaglio — Ferrara"
+      description="Angurie, meloni e zucche coltivati nel ferrarese per vendita all’ingrosso e al dettaglio direttamente in azienda, tra Argenta, Portomaggiore e Ferrara."
       path="/prodotti"
     />
     <Navbar />
@@ -139,10 +143,10 @@ const Prodotti = () => {
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-4">
               Coltiviamo angurie (cocomeri), meloni e zucche nei terreni tra Argenta e Portomaggiore,
-              destinati a rivenditori, GDO e mercati ortofrutticoli.
+              per vendita all’ingrosso a rivenditori, GDO e mercati ortofrutticoli e per vendita al dettaglio direttamente in azienda.
             </p>
             <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
-              Vendita esclusivamente all'ingrosso
+              Vendita all’ingrosso e al dettaglio in azienda
             </span>
           </ScrollReveal>
         </div>
@@ -219,10 +223,10 @@ const Prodotti = () => {
         </section>
       ))}
 
-      {/* FAQ ingrosso */}
+      {/* FAQ prodotti */}
       <FAQSection
-        eyebrow="FAQ Ingrosso"
-        title="Domande frequenti su forniture e ingrosso"
+        eyebrow="FAQ Prodotti"
+        title="Domande frequenti su forniture e vendita diretta"
         withJsonLd
         items={prodottiFaq}
       />
@@ -235,7 +239,7 @@ const Prodotti = () => {
               Interessato ai nostri prodotti?
             </h2>
             <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">
-              Contattaci per preventivi e forniture all'ingrosso di angurie, meloni e zucche.
+              Contattaci per forniture all’ingrosso o per verificare la disponibilità per l’acquisto diretto in azienda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>

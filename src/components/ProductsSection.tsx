@@ -36,7 +36,7 @@ const ProductsSection = () => (
             Freschi dal campo
           </h2>
           <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
-            Vendita esclusivamente all'ingrosso
+            Vendita all’ingrosso e al dettaglio direttamente in azienda
           </span>
         </div>
       </ScrollReveal>

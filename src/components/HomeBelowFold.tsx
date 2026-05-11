@@ -17,7 +17,15 @@ const homeFaq: FAQItem[] = [
   },
   {
     q: "Vendete angurie, meloni e zucche al dettaglio?",
-    a: "I nostri prodotti ortofrutticoli (angurie, meloni, zucche) sono destinati esclusivamente alla vendita all'ingrosso per rivenditori, GDO e mercati ortofrutticoli.",
+    a: "Sì, oltre alla vendita all’ingrosso per rivenditori, GDO e mercati ortofrutticoli, effettuiamo anche vendita al dettaglio direttamente in azienda, in base alla disponibilità stagionale.",
+  },
+  {
+    q: "È possibile acquistare direttamente in azienda?",
+    a: "Sì, durante la stagione è possibile acquistare angurie, meloni e zucche direttamente presso la nostra azienda a Bando di Argenta, in base alla disponibilità del raccolto.",
+  },
+  {
+    q: "Dove acquistare zucche vicino ad Argenta, Portomaggiore e Ferrara?",
+    a: "Le nostre zucche sono disponibili sia per forniture all’ingrosso sia per vendita diretta in azienda, a Bando di Argenta, vicino a Portomaggiore e Ferrara.",
   },
   {
     q: "In che zona consegnate la legna da ardere?",
