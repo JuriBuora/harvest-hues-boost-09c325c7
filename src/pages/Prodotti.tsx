@@ -36,7 +36,7 @@ const products = [
     id: "meloni",
     title: "Meloni",
     subtitle: "Profumo e sapore della tradizione emiliana",
-    imageName: "meloni-cantalupo.jpg",
+    imageName: "meloni-originale2.jpg",
     alt: "Meloni freschi dell'Azienda Agricola Farina",
     description:
       "I nostri meloni vengono coltivati con la massima cura, seguendo il ciclo naturale delle stagioni. La raccolta avviene solo quando il frutto raggiunge la maturazione ideale, garantendo un aroma intenso e un sapore inconfondibile che richiama la tradizione della pianura ferrarese.",
@@ -47,9 +47,8 @@ const products = [
       { icon: Leaf, label: "Terreno", value: "Fertile pianura padana" },
     ],
     varieties: [
-      { name: "Retato", desc: "Il classico melone italiano con buccia reticolata e polpa arancione, dolcissimo e profumato." },
-      { name: "Cantalupo", desc: "Polpa arancio intenso, molto aromatico. Perfetto da gustare fresco nelle giornate estive." },
-      { name: "Liscio", desc: "Buccia liscia e polpa succosa. Varietà pregiata dal sapore delicato e raffinato." },
+      { name: "Melone liscio", desc: "Buccia liscia, polpa succosa e profumo delicato. Una varietà apprezzata per freschezza e dolcezza." },
+      { name: "Melone retato", desc: "Il classico melone con buccia reticolata e polpa arancione, dolce e profumato." },
     ],
     gallery: ["meloni-originale2.jpg", "meloni-originale.jpg", "meloni-lisci-cassetta.jpg", "meloni-retati-cassetta.jpg"],
   },
@@ -68,9 +67,11 @@ const products = [
       { icon: Leaf, label: "Conservazione", value: "Lunga durata naturale" },
     ],
     varieties: [
-      { name: "Delica", desc: "Polpa compatta arancione e sapore dolce intenso. La più amata per tortelli e risotti." },
-      { name: "Mantovana", desc: "Grande e costoluta, dalla polpa farinosa e profumata. Tradizione della cucina emiliana." },
-      { name: "Butternut", desc: "Forma allungata a campana, polpa burrosa e delicata. Perfetta per vellutate e al forno." },
+      { name: "Delica", desc: "Polpa compatta, sapore dolce e consistenza asciutta. Ideale per risotti, tortelli e cotture al forno." },
+      { name: "Butternut liscia", desc: "Forma allungata, buccia liscia e polpa morbida dal gusto delicato. Ottima per vellutate e preparazioni al forno." },
+      { name: "Butternut rugosa", desc: "Varietà dalla buccia più rustica e polpa dolce, adatta a ricette autunnali e cucina tradizionale." },
+      { name: "Halloween", desc: "Zucca arancione decorativa e scenografica, richiesta soprattutto nel periodo autunnale." },
+      { name: "Musquée de Provence", desc: "Zucca costoluta di origine provenzale, profumata e saporita, indicata per cucina e trasformazione." },
     ],
     gallery: ["zucche-mantovane.jpg", "zucche-arancioni.jpg", "zucche-halloween.jpg", "zucche-mantovane-scatola.jpg"],
   },
@@ -103,7 +104,7 @@ const prodottiFaq: FAQItem[] = [
   },
   {
     q: "Posso ordinare varietà o calibri specifici (es. anguria Crimson Sweet, melone retato)?",
-    a: "Sì, coltiviamo diverse varietà di angurie (Crimson Sweet, Sugar Baby, Dumara), meloni (retato, cantalupo, liscio) e zucche (Delica, Mantovana, Butternut). Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
+    a: "Sì, coltiviamo diverse varietà di angurie, melone liscio e melone retato, oltre a zucche Delica, Butternut liscia, Butternut rugosa, Halloween e Musquée de Provence. Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
   },
   {
     q: "Come si richiede un preventivo per una fornitura?",

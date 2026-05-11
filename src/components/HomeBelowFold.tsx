@@ -8,8 +8,6 @@ const FAQSection = lazy(() => import("@/components/FAQSection"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 const MapSection = lazy(() => import("@/components/MapSection"));
 const FooterSection = lazy(() => import("@/components/FooterSection"));
-const WhatsAppButton = lazy(() => import("@/components/WhatsAppButton"));
-
 const homeFaq: FAQItem[] = [
   {
     q: "Dove si trova l'Azienda Agricola Farina?",
@@ -38,13 +36,14 @@ const homeFaq: FAQItem[] = [
 ];
 
 const interactionEvents = ["scroll", "pointerdown", "keydown", "touchstart"] as const;
-const BELOW_FOLD_DELAY_MS = 3000;
+const BELOW_FOLD_DELAY_MS = 600;
 
 const scheduleBelowFold = (callback: () => void) => {
   let done = false;
   let firstFrame = 0;
   let secondFrame = 0;
-  let timeoutHandle = 0;
+  let idleHandle: number | null = null;
+  let timeoutHandle: number | null = null;
 
   const reveal = () => {
     if (done) return;
@@ -58,7 +57,11 @@ const scheduleBelowFold = (callback: () => void) => {
 
   firstFrame = window.requestAnimationFrame(() => {
     secondFrame = window.requestAnimationFrame(() => {
-      timeoutHandle = window.setTimeout(reveal, BELOW_FOLD_DELAY_MS);
+      if (typeof window.requestIdleCallback === "function") {
+        idleHandle = window.requestIdleCallback(reveal, { timeout: BELOW_FOLD_DELAY_MS });
+      } else {
+        timeoutHandle = window.setTimeout(reveal, BELOW_FOLD_DELAY_MS);
+      }
     });
   });
 
@@ -69,7 +72,12 @@ const scheduleBelowFold = (callback: () => void) => {
     });
     window.cancelAnimationFrame(firstFrame);
     window.cancelAnimationFrame(secondFrame);
-    window.clearTimeout(timeoutHandle);
+    if (idleHandle !== null && typeof window.cancelIdleCallback === "function") {
+      window.cancelIdleCallback(idleHandle);
+    }
+    if (timeoutHandle !== null) {
+      window.clearTimeout(timeoutHandle);
+    }
   };
 };
 
@@ -93,7 +101,6 @@ const HomeBelowFold = () => {
       <TestimonialsSection />
       <MapSection />
       <FooterSection />
-      <WhatsAppButton />
     </Suspense>
   );
 };

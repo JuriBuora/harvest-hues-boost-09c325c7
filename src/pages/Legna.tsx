@@ -25,7 +25,7 @@ const legnaFaq: FAQItem[] = [
   },
   {
     q: "La legna è già tagliata e pronta da bruciare?",
-    a: "Sì. La legna viene consegnata già tagliata e stagionata. Tagli disponibili da 25 a 50 cm, in base alle esigenze di stufa, camino o forno.",
+    a: "Sì. La legna viene consegnata già tagliata e stagionata. I tagli disponibili sono stufa 25/28 cm, stufone 30/33 cm, camino 40/45 cm, oltre a pizza corta e pizza lunga per forni a legna.",
   },
   {
     q: "Quanto tempo serve per ricevere la consegna?",
@@ -41,7 +41,7 @@ const features = [
   { icon: Truck, title: "Consegna nel Ferrarese", desc: "Consegna a domicilio entro 50 km da Bando di Argenta: Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara e dintorni." },
   { icon: Package, title: "Sempre Disponibile", desc: "Il nostro magazzino è sempre rifornito per soddisfare ogni richiesta, in ogni stagione." },
   { icon: TreeDeciduous, title: "Essenze Selezionate", desc: "Faggio per una fiamma regolare, cerro per una resa prolungata e carpino per un fuoco vivo e consistente nel riscaldamento domestico." },
-  { icon: Ruler, title: "Taglio su Misura", desc: "Legna tagliata nelle dimensioni più adatte alle vostre esigenze: da 25 a 50 cm." },
+  { icon: Ruler, title: "Tagli Stufa, Stufone e Camino", desc: "Disponibili taglio stufa 25/28 cm, stufone 30/33 cm e camino 40/45 cm, oltre a pizza corta e pizza lunga per forni a legna." },
   { icon: ThermometerSun, title: "Stagionatura Naturale", desc: "La nostra legna viene stagionata all'aria aperta, garantendo bassa umidità e resa elevata." },
 ];
 
@@ -62,7 +62,7 @@ const Legna = () => {
     <div className="min-h-screen bg-background">
       <PageSEO
         title="Legna da Ardere a Ferrara — Consegna a Domicilio"
-        description="Legna da ardere stagionata di faggio, cerro e carpino. Consegna a domicilio entro 50 km da Bando di Argenta: Ferrara, Portomaggiore, Argenta, Comacchio. Ordine minimo 200-250 €."
+        description="Legna da ardere stagionata di faggio, cerro e carpino, disponibile nei tagli stufa, stufone, camino, pizza corta e pizza lunga. Consegna entro 50 km da Bando di Argenta."
         path="/legna"
       />
       <Navbar />
@@ -75,7 +75,7 @@ const Legna = () => {
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Legna da Ardere a Ferrara e Provincia</h1>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg mb-8">
               Legna selezionata di faggio, cerro e carpino, stagionata e pronta all'uso.
-              Consegna a domicilio entro 50 km da Bando di Argenta (FE).
+              Disponibile nei tagli stufa, stufone, camino, pizza corta e pizza lunga, con consegna a domicilio entro 50 km da Bando di Argenta (FE).
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" variant="secondary" className="font-sans" asChild>
@@ -152,6 +152,13 @@ const Legna = () => {
                     inviate un <strong className="text-foreground">messaggio WhatsApp</strong> e concorderemo
                     quantità, taglio e data di consegna.
                   </p>
+                  <p>
+                    Sono disponibili taglio <strong className="text-foreground">stufa 25/28 cm</strong>,
+                    <strong className="text-foreground"> stufone 30/33 cm</strong>,
+                    <strong className="text-foreground"> camino 40/45 cm</strong>, oltre a
+                    <strong className="text-foreground"> pizza corta</strong> e
+                    <strong className="text-foreground"> pizza lunga</strong> per forni a legna.
+                  </p>
                   <div className="bg-card border border-border rounded-xl p-5 space-y-3">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Ordine minimo</span>
@@ -165,9 +172,9 @@ const Legna = () => {
                       <span className="text-muted-foreground">Disponibilità</span>
                       <span className="font-semibold text-foreground">Tutto l'anno</span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between gap-4 text-sm">
                       <span className="text-muted-foreground">Tagli disponibili</span>
-                      <span className="font-semibold text-foreground">25 – 50 cm</span>
+                      <span className="font-semibold text-foreground text-right">Stufa 25/28 cm · Stufone 30/33 cm · Camino 40/45 cm · Pizza corta/lunga</span>
                     </div>
                   </div>
                 </div>

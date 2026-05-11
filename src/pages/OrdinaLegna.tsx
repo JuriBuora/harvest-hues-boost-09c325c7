@@ -27,6 +27,15 @@ const quantityOptions = [
   "Da concordare",
 ];
 
+const cutOptions = [
+  "Stufa 25/28 cm",
+  "Stufone 30/33 cm",
+  "Camino 40/45 cm",
+  "Pizza corta",
+  "Pizza lunga",
+  "Da concordare",
+];
+
 const provinceOptions = ["FE", "RA", "BO", "RO"];
 
 const orderRequestSchema = z.object({
@@ -47,6 +56,7 @@ const orderRequestSchema = z.object({
   cap: z.string().trim().regex(/^\d{5}$/, "Inserisci un CAP di 5 cifre."),
   province: z.string().trim().regex(/^[A-Z]{2}$/, "Inserisci una sigla provincia valida."),
   requestedQuantity: z.string().min(1, "Seleziona la quantità richiesta."),
+  requestedCut: z.string().min(1, "Seleziona il taglio richiesto."),
   preferredDeliveryDate: z.string().min(1, "Indica una data preferita."),
   deliveryNotes: z.string().trim().max(800, "Le note non possono superare 800 caratteri.").optional(),
   privacyAccepted: z.boolean().refine((accepted) => accepted, {
@@ -65,6 +75,7 @@ const defaultValues: OrderRequestValues = {
   cap: "",
   province: "FE",
   requestedQuantity: "",
+  requestedCut: "",
   preferredDeliveryDate: "",
   deliveryNotes: "",
   privacyAccepted: false,
@@ -90,6 +101,14 @@ const jsonLd = {
   },
   areaServed: ["Ferrara", "Argenta", "Portomaggiore", "Comacchio", "Ostellato"],
   serviceType: "Consegna legna da ardere a domicilio",
+  offers: {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Product",
+      name: "Legna da ardere stagionata",
+      description: "Tagli disponibili: stufa 25/28 cm, stufone 30/33 cm, camino 40/45 cm, pizza corta e pizza lunga.",
+    },
+  },
 };
 
 function getErrorMessage(error?: { message?: string }) {
@@ -124,6 +143,7 @@ const OrdinaLegna = () => {
     formData.set("cap", values.cap);
     formData.set("provincia", values.province);
     formData.set("quantita_richiesta", values.requestedQuantity);
+    formData.set("taglio_richiesto", values.requestedCut);
     formData.set("data_preferita_consegna", values.preferredDeliveryDate);
     formData.set("note_consegna", values.deliveryNotes ?? "");
     formData.set("privacy_accettata", "Sì");
@@ -175,7 +195,7 @@ const OrdinaLegna = () => {
     <div className="min-h-screen bg-background">
       <PageSEO
         title="Legna da ardere a Ferrara e provincia"
-        description="Richiedi la consegna di legna da ardere stagionata a Ferrara e provincia. Azienda Agricola Farina conferma disponibilità, prezzo finale, costo consegna e istruzioni di pagamento prima dell'ordine."
+        description="Richiedi legna da ardere stagionata a Ferrara e provincia nei tagli stufa 25/28 cm, stufone 30/33 cm, camino 40/45 cm, pizza corta e pizza lunga."
         path={pagePath}
         jsonLd={jsonLd}
       />
@@ -193,7 +213,8 @@ const OrdinaLegna = () => {
                   Legna da ardere a Ferrara e provincia
                 </h1>
                 <p className="text-primary-foreground/82 text-lg leading-relaxed max-w-2xl">
-                  Richiedi legna stagionata per stufe, camini e forni a legna. Serviamo Ferrara,
+                  Richiedi legna stagionata per stufe, camini e forni a legna, disponibile nei tagli stufa 25/28 cm,
+                  stufone 30/33 cm, camino 40/45 cm, pizza corta e pizza lunga. Serviamo Ferrara,
                   Argenta, Portomaggiore, Comacchio, Ostellato e comuni limitrofi in base alla disponibilità.
                 </p>
                 <div className="mt-8 grid sm:grid-cols-3 gap-3 text-sm">
@@ -329,7 +350,7 @@ const OrdinaLegna = () => {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-5">
+                  <div className="grid md:grid-cols-3 gap-5">
                     <div>
                       <label htmlFor="requestedQuantity" className="block text-sm font-medium text-foreground mb-1.5">
                         Quantità richiesta *
@@ -347,6 +368,24 @@ const OrdinaLegna = () => {
                         ))}
                       </select>
                       {getErrorMessage(errors.requestedQuantity)}
+                    </div>
+                    <div>
+                      <label htmlFor="requestedCut" className="block text-sm font-medium text-foreground mb-1.5">
+                        Taglio richiesto *
+                      </label>
+                      <select
+                        id="requestedCut"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                        {...register("requestedCut")}
+                      >
+                        <option value="">Seleziona un taglio</option>
+                        {cutOptions.map((cut) => (
+                          <option key={cut} value={cut}>
+                            {cut}
+                          </option>
+                        ))}
+                      </select>
+                      {getErrorMessage(errors.requestedCut)}
                     </div>
                     <div>
                       <label htmlFor="preferredDeliveryDate" className="block text-sm font-medium text-foreground mb-1.5">
