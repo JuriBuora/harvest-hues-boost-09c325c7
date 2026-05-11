@@ -40,9 +40,12 @@ jobs:
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
 =======
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
       - name: Ensure CNAME exists in build output

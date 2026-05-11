@@ -1,6 +1,7 @@
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 # Farina Farm Website
 
 Production marketing website for [www.cucurbitacee.com](https://www.cucurbitacee.com), built with Vite, React, TypeScript, Tailwind, and deployed to GitHub Pages.
@@ -31,6 +32,11 @@ This project is built with Vite and deployed to GitHub Pages.
 
 This project is built with Vite and deployed to GitHub Pages.
 >>>>>>> theirs
+=======
+# Società Agricola Farina 2.0 website
+
+This project is built with Vite and deployed to GitHub Pages.
+>>>>>>> theirs
 
 ## Local development
 
@@ -39,6 +45,7 @@ npm ci
 npm run dev
 ```
 
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -83,6 +90,8 @@ The Facebook embed loads only after user interaction. The contact page uses Form
 >>>>>>> theirs
 =======
 >>>>>>> theirs
+=======
+>>>>>>> theirs
 ## Production build
 
 ```bash
@@ -100,8 +109,13 @@ compiled Vite output.
 
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 This repository now deploys the compiled `dist/` folder to a dedicated `gh-pages`
 branch using GitHub Actions at:
+=======
+This repository deploys the compiled `dist/` folder through the GitHub Pages Actions
+artifact flow at:
+>>>>>>> theirs
 =======
 This repository deploys the compiled `dist/` folder through the GitHub Pages Actions
 artifact flow at:
@@ -118,11 +132,14 @@ artifact flow at:
 1. Open **GitHub repository → Settings → Pages**.
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 2. Under **Build and deployment**, set **Source = Deploy from a branch**.
 3. Select branch **`gh-pages`** and folder **`/ (root)`**.
 4. In **Custom domain**, set: `www.cucurbitacee.com`.
 5. Enable **Enforce HTTPS** when available.
 =======
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 2. Under **Build and deployment**, set **Source = GitHub Actions**.
@@ -133,6 +150,22 @@ artifact flow at:
 You do **not** need to select a `gh-pages` branch for this setup. The workflow uploads
 `dist/` directly as the GitHub Pages artifact.
 
+<<<<<<< ours
+=======
+### One-command setup script
+
+If you want the repo to do the GitHub Pages setup for you, run:
+
+```bash
+./scripts/setup-github-pages.sh
+```
+
+The script checks your GitHub CLI login, builds the Vite site, verifies that the built
+HTML does not reference `/src/main.tsx`, commits deployment config changes if needed,
+pushes the current branch, configures GitHub Pages for Actions deployment, triggers
+`deploy.yml`, and watches the workflow run.
+
+>>>>>>> theirs
 ### GitHub CLI setup (alternative to clicking in GitHub)
 
 If you are already logged in with `gh auth status`, you can configure Pages from your
@@ -158,6 +191,9 @@ gh run watch --repo OWNER/REPO
 If the first command says the Pages site does not exist yet, open **Settings → Pages**
 once, choose **Source = GitHub Actions**, save it, and then rerun the commands above.
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
@@ -172,10 +208,13 @@ once, choose **Source = GitHub Actions**, save it, and then rerun the commands a
 
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 The custom domain is committed in `public/CNAME`, and each deploy also sets
 `www.cucurbitacee.com` on the published `gh-pages` output.
 >>>>>>> theirs
 =======
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 The custom domain is committed in `public/CNAME`, so each deploy keeps
@@ -196,6 +235,9 @@ That is expected when the preferred canonical address is:
 Those redirected variants should not be indexed separately. The sitemap, robots file,
 static HTML canonicals, and app default site URL all point to the `https://www` version.
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
