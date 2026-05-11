@@ -13,6 +13,8 @@ export interface SiteImageSource {
   src: string;
   webp?: string;
   avif?: string;
+  webpSrcSet?: string;
+  avifSrcSet?: string;
 }
 
 function normalizeFileName(fileName: string) {
@@ -21,6 +23,17 @@ function normalizeFileName(fileName: string) {
 
 function stripExtension(fileName: string) {
   return fileName.replace(/\.[^./]+$/, "");
+}
+
+function createSourceSet(baseName: string, extension: "avif" | "webp") {
+  const variants = [480, 800, 1200, 1600]
+    .map((width) => {
+      const src = generatedImages[`../assets/generated/${baseName}-${width}.${extension}`];
+      return src ? `${src} ${width}w` : null;
+    })
+    .filter(Boolean);
+
+  return variants.length > 0 ? variants.join(", ") : undefined;
 }
 
 export function getSiteImage(fileName: string): SiteImageSource {
@@ -33,11 +46,15 @@ export function getSiteImage(fileName: string): SiteImageSource {
   }
 
   const baseName = stripExtension(normalizedFileName);
+  const webp = generatedImages[`../assets/generated/${baseName}.webp`];
+  const avif = generatedImages[`../assets/generated/${baseName}.avif`];
 
   return {
     fileName: normalizedFileName,
     src: originalSrc,
-    webp: generatedImages[`../assets/generated/${baseName}.webp`],
-    avif: generatedImages[`../assets/generated/${baseName}.avif`],
+    webp,
+    avif,
+    webpSrcSet: createSourceSet(baseName, "webp"),
+    avifSrcSet: createSourceSet(baseName, "avif"),
   };
 }

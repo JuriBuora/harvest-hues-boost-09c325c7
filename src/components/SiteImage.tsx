@@ -7,7 +7,7 @@ type SiteImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt"> &
   imageName?: string;
 };
 
-export default function SiteImage({ alt, image, imageName, fetchPriority, ...imgProps }: SiteImageProps) {
+export default function SiteImage({ alt, image, imageName, fetchPriority, sizes = "100vw", ...imgProps }: SiteImageProps) {
   const resolvedImage = image ?? (imageName ? getSiteImage(imageName) : undefined);
 
   if (!resolvedImage) {
@@ -16,11 +16,16 @@ export default function SiteImage({ alt, image, imageName, fetchPriority, ...img
 
   return (
     <picture>
-      {resolvedImage.avif ? <source srcSet={resolvedImage.avif} type="image/avif" /> : null}
-      {resolvedImage.webp ? <source srcSet={resolvedImage.webp} type="image/webp" /> : null}
+      {resolvedImage.avif ? (
+        <source srcSet={resolvedImage.avifSrcSet ?? resolvedImage.avif} type="image/avif" sizes={sizes} />
+      ) : null}
+      {resolvedImage.webp ? (
+        <source srcSet={resolvedImage.webpSrcSet ?? resolvedImage.webp} type="image/webp" sizes={sizes} />
+      ) : null}
       <img
         src={resolvedImage.src}
         alt={alt}
+        sizes={sizes}
         {...(fetchPriority ? { fetchpriority: fetchPriority } : {})}
         {...imgProps}
       />

@@ -14,19 +14,20 @@ const HeroSection = () => (
       loading="eager"
       fetchPriority="high"
       decoding="async"
+      sizes="100vw"
     />
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
     <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-      <p className="text-primary-foreground/80 font-sans text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in">
+      <p className="text-primary-foreground/80 font-sans text-sm tracking-[0.3em] uppercase mb-4">
         Bando di Argenta · vicino Portomaggiore · Ferrara
       </p>
-      <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
+      <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6">
         Azienda Agricola Farina
       </h1>
-      <p className="text-primary-foreground/90 text-lg md:text-xl font-light mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+      <p className="text-primary-foreground/90 text-lg md:text-xl font-light mb-8">
         Angurie, meloni e zucche all'ingrosso · legna da ardere con consegna nel ferrarese — dal 1975
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-sans text-base px-8" asChild>
           <Link to="/prodotti">Scopri i Prodotti</Link>
         </Button>

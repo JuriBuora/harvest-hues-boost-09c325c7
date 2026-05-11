@@ -6,8 +6,9 @@ const sourceDir = path.resolve(process.cwd(), "src/assets");
 const outputDir = path.join(sourceDir, "generated");
 const supportedExtensions = new Set([".jpg", ".jpeg", ".png"]);
 const maxWidth = 1600;
-const webpQuality = 78;
-const avifQuality = 55;
+const responsiveWidths = [480, 800, 1200, 1600];
+const webpQuality = 74;
+const avifQuality = 44;
 
 async function collectSourceImages(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -42,6 +43,11 @@ function getOutputPaths(filePath) {
   return {
     webp: `${outputBasePath}.webp`,
     avif: `${outputBasePath}.avif`,
+    variants: responsiveWidths.map((width) => ({
+      width,
+      webp: `${outputBasePath}-${width}.webp`,
+      avif: `${outputBasePath}-${width}.avif`,
+    })),
   };
 }
 
@@ -50,7 +56,7 @@ async function ensureOutputDirectory(filePath) {
 }
 
 async function transformImage(filePath) {
-  const { webp, avif } = getOutputPaths(filePath);
+  const { webp, avif, variants } = getOutputPaths(filePath);
   await ensureOutputDirectory(webp);
 
   const image = sharp(filePath).rotate();
@@ -62,6 +68,16 @@ async function transformImage(filePath) {
   await Promise.all([
     pipeline.clone().webp({ quality: webpQuality, effort: 6, alphaQuality: 100 }).toFile(webp),
     pipeline.clone().avif({ quality: avifQuality, effort: 5 }).toFile(avif),
+    ...variants
+      .filter(({ width }) => !metadata.width || metadata.width >= width)
+      .flatMap(({ width, webp: variantWebp, avif: variantAvif }) => {
+        const resized = image.clone().resize({ width, withoutEnlargement: true });
+
+        return [
+          resized.clone().webp({ quality: webpQuality, effort: 6, alphaQuality: 100 }).toFile(variantWebp),
+          resized.clone().avif({ quality: avifQuality, effort: 5 }).toFile(variantAvif),
+        ];
+      }),
   ]);
 }
 

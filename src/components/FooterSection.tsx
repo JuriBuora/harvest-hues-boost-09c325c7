@@ -32,7 +32,7 @@ const FooterSection = () => (
               className="h-14 w-auto"
             />
           </div>
-          <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
+          <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
             Coltiviamo angurie, meloni e zucche all'ingrosso e forniamo legna da ardere
             con consegna nel ferrarese, tra Argenta e Portomaggiore. Dal 1975.
           </p>
@@ -51,8 +51,8 @@ const FooterSection = () => (
 
         {/* Contacts */}
         <div>
-          <h4 className="font-serif text-lg font-semibold mb-4">Contatti</h4>
-          <ul className="space-y-3 text-sm text-primary-foreground/70">
+          <h2 className="font-serif text-lg font-semibold mb-4">Contatti</h2>
+          <ul className="space-y-3 text-sm text-primary-foreground/80">
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-secondary" />
               <a href="https://maps.google.com/?q=Via+Rangona+54/A+44015+Bando+di+Argenta+FE" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">Via Rangona, 54/A — 44015 Bando di Argenta (FE)</a>
@@ -74,8 +74,8 @@ const FooterSection = () => (
 
         {/* Hours */}
         <div>
-          <h4 className="font-serif text-lg font-semibold mb-4">Orari di Apertura</h4>
-          <ul className="space-y-2 text-sm text-primary-foreground/70">
+          <h2 className="font-serif text-lg font-semibold mb-4">Orari di Apertura</h2>
+          <ul className="space-y-2 text-sm text-primary-foreground/80">
             <li className="flex justify-between"><span>Lunedì - Venerdì</span><span>08:30 – 12:00 / 13:30 – 18:00</span></li>
             <li className="flex justify-between"><span>Sabato</span><span>08:00 – 12:00</span></li>
             <li className="flex justify-between"><span>Domenica</span><span className="text-accent">Chiuso</span></li>
@@ -84,7 +84,7 @@ const FooterSection = () => (
       </div>
 
       {/* Legal block */}
-      <div className="border-t border-primary-foreground/10 pt-6 space-y-3 text-xs text-primary-foreground/60">
+      <div className="border-t border-primary-foreground/10 pt-6 space-y-3 text-xs text-primary-foreground/80">
         <p className="leading-relaxed">
           <strong className="text-primary-foreground/80">Società Agricola Farina 2.0</strong> · Via Rangona 54/A, 44015 Bando di Argenta (FE) ·
           P.IVA 02179460387 · Tel. +39 0532 814411 · Email: soc.agr.farina@gmail.com

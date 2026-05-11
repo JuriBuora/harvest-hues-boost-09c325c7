@@ -129,7 +129,7 @@ const ChiSiamo = () => {
                   <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-5">
                     <m.icon className="w-5 h-5 text-secondary" />
                   </div>
-                  <h4 className="font-serif text-lg font-semibold text-foreground mb-3">{m.title}</h4>
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{m.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{m.desc}</p>
                 </div>
               </ScrollReveal>
