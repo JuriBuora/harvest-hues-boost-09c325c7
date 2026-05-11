@@ -1,7 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoAvif128 from "@/assets/generated/logo-farina-128.avif";
-import logoWebp128 from "@/assets/generated/logo-farina-128.webp";
 import logoFallback from "@/assets/logo-farina.png";
 
 const FacebookIcon = ({ className }: { className?: string }) => (
@@ -24,22 +22,15 @@ const FooterSection = () => (
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
-          <div className="bg-white rounded-full p-2 w-fit mb-4">
-            <picture>
-              <source srcSet={logoAvif128} type="image/avif" />
-              <source srcSet={logoWebp128} type="image/webp" />
-              <img
-                src={logoFallback}
-                alt="Logo Azienda Agricola Farina"
-                width={80}
-                height={60}
-                sizes="80px"
-                decoding="async"
-                loading="lazy"
-                className="h-14 w-20 rounded-full object-cover"
-              />
-            </picture>
-          </div>
+          <img
+            src={logoFallback}
+            alt="Logo Azienda Agricola Farina"
+            width={256}
+            height={185}
+            decoding="async"
+            loading="lazy"
+            className="h-14 w-auto object-contain mb-4"
+          />
           <p className="text-primary-foreground text-sm leading-relaxed mb-6">
             Coltiviamo angurie, meloni e zucche per vendita all’ingrosso e al dettaglio
             e forniamo legna da ardere con consegna nel ferrarese, tra Argenta e Portomaggiore. Dal 1975.
