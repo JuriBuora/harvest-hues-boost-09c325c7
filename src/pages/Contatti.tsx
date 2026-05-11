@@ -205,7 +205,7 @@ const Contatti = () => {
                   <div className="bg-card rounded-xl p-5 border border-border space-y-2 text-sm">
                     <div className="flex justify-between"><span className="text-muted-foreground">Lunedì - Venerdì</span><span className="font-medium text-foreground">08:30 – 12:00 / 13:30 – 18:00</span></div>
                     <div className="flex justify-between"><span className="text-muted-foreground">Sabato</span><span className="font-medium text-foreground">08:00 – 12:00</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Domenica</span><span className="font-medium text-accent">Chiuso</span></div>
+                    <div className="flex justify-between"><span className="text-muted-foreground">Domenica</span><span className="font-medium text-primary">Chiuso</span></div>
                   </div>
                 </div>
 
