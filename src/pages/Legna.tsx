@@ -38,7 +38,7 @@ const legnaFaq: FAQItem[] = [
 ];
 const features = [
   { icon: Flame, title: "Faggio, Cerro e Carpino", desc: "Tre essenze stagionate selezionate per una combustione efficiente, calore costante e ottima resa in stufe, camini e forni a legna." },
-  { icon: Truck, title: "Consegna nel Ferrarese", desc: "Consegna a domicilio entro 50 km da Bando di Argenta: Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara e dintorni." },
+  { icon: Truck, title: "Consegna nel Ferrarese e Basso Ravennate", desc: "Consegna a domicilio entro 50 km da Bando di Argenta: Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara, basso ravennate e dintorni." },
   { icon: Package, title: "Sempre Disponibile", desc: "Il nostro magazzino è sempre rifornito per soddisfare ogni richiesta, in ogni stagione." },
   { icon: TreeDeciduous, title: "Essenze Selezionate", desc: "Faggio per una fiamma regolare, cerro per una resa prolungata e carpino per un fuoco vivo e consistente nel riscaldamento domestico." },
   { icon: Ruler, title: "Tagli Stufa, Stufone e Camino", desc: "Disponibili taglio stufa 25/28 cm, stufone 30/33 cm e camino 40/45 cm, oltre a pizza corta e pizza lunga per forni a legna." },

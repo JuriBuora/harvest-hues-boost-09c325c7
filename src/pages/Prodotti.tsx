@@ -26,9 +26,10 @@ const products = [
       { icon: Leaf, label: "Coltivazione", value: "Metodi tradizionali" },
     ],
     varieties: [
-      { name: "Crimson Sweet", desc: "Classica anguria a polpa rossa, molto dolce e croccante. Buccia verde chiaro con striature scure." },
-      { name: "Sugar Baby", desc: "Formato più piccolo e rotondo, ideale per famiglie. Polpa intensa e semi ridotti." },
-      { name: "Dumara", desc: "Anguria allungata dalla polpa compatta e zuccherina, adatta sia alla fornitura all’ingrosso sia alla vendita diretta in azienda." },
+      { name: "Sentinel", desc: "Anguria selezionata per dolcezza, consistenza e buona tenuta, adatta alla vendita diretta e alle forniture all’ingrosso." },
+      { name: "Barello", desc: "Varietà apprezzata per polpa rossa, gusto fresco e pezzatura adatta alle esigenze di mercato." },
+      { name: "Baraka", desc: "Anguria dalla polpa zuccherina e succosa, coltivata per offrire qualità costante durante la stagione." },
+      { name: "Topgun", desc: "Varietà vigorosa e produttiva, con frutti uniformi e polpa croccante dal sapore intenso." },
     ],
     gallery: ["anguria-bilancia.jpg", "meloni-angurie.jpg", "angurie-cassone.jpg", "anguria-gigante.jpg"],
   },
@@ -47,8 +48,8 @@ const products = [
       { icon: Leaf, label: "Terreno", value: "Fertile pianura padana" },
     ],
     varieties: [
-      { name: "Melone liscio", desc: "Buccia liscia, polpa succosa e profumo delicato. Una varietà apprezzata per freschezza e dolcezza." },
-      { name: "Melone retato", desc: "Il classico melone con buccia reticolata e polpa arancione, dolce e profumato." },
+      { name: "Melone liscio", desc: "Buccia liscia, polpa succosa e profumo delicato. Coltiviamo anche la varietà Saphir, apprezzata per freschezza e dolcezza." },
+      { name: "Melone retato", desc: "Il classico melone con buccia reticolata e polpa arancione, dolce e profumato. Tra le varietà proposte c'è Graffio." },
     ],
     gallery: ["meloni-originale2.jpg", "meloni-originale.jpg", "meloni-lisci-cassetta.jpg", "meloni-retati-cassetta.jpg"],
   },
@@ -72,6 +73,7 @@ const products = [
       { name: "Butternut rugosa", desc: "Varietà dalla buccia più rustica e polpa dolce, adatta a ricette autunnali e cucina tradizionale." },
       { name: "Halloween", desc: "Zucca arancione decorativa e scenografica, richiesta soprattutto nel periodo autunnale." },
       { name: "Musquée de Provence", desc: "Zucca costoluta di origine provenzale, profumata e saporita, indicata per cucina e trasformazione." },
+      { name: "Lunga di Napoli", desc: "Zucca allungata dalla polpa arancione, compatta e saporita, ideale per preparazioni tradizionali, vellutate e conserve." },
     ],
     gallery: ["zucche-mantovane.jpg", "zucche-arancioni.jpg", "zucche-halloween.jpg", "zucche-mantovane-scatola.jpg"],
   },
@@ -103,8 +105,8 @@ const prodottiFaq: FAQItem[] = [
     a: "Sì, il ritiro e l’acquisto diretto in azienda in Via Rangona 54/A a Bando di Argenta (FE) sono possibili in base alla disponibilità stagionale. Concordiamo orario e modalità al telefono.",
   },
   {
-    q: "Posso ordinare varietà o calibri specifici (es. anguria Crimson Sweet, melone retato)?",
-    a: "Sì, coltiviamo diverse varietà di angurie, melone liscio e melone retato, oltre a zucche Delica, Butternut liscia, Butternut rugosa, Halloween e Musquée de Provence. Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
+    q: "Posso ordinare varietà o calibri specifici (es. anguria Sentinel, melone retato)?",
+    a: "Sì, coltiviamo diverse varietà di angurie, tra cui Sentinel, Barello, Baraka e Topgun, melone liscio Saphir e melone retato Graffio, oltre a zucche Delica, Butternut liscia, Butternut rugosa, Halloween, Musquée de Provence e Lunga di Napoli. Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
   },
   {
     q: "Come si richiede un preventivo per una fornitura?",

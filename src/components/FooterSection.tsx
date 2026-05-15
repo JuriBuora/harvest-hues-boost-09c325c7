@@ -33,7 +33,7 @@ const FooterSection = () => (
           />
           <p className="text-primary-foreground text-sm leading-relaxed mb-6">
             Coltiviamo angurie, meloni e zucche per vendita all’ingrosso e al dettaglio
-            e forniamo legna da ardere con consegna nel ferrarese, tra Argenta e Portomaggiore. Dal 1975.
+            e forniamo legna da ardere con consegna nel ferrarese e nel basso ravennate. Dal 1975.
           </p>
           <div className="flex gap-3">
             <a href="https://facebook.com/Azienda-Agricola-Farina-Roberto-100057542707078" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">

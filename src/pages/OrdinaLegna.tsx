@@ -84,7 +84,7 @@ const defaultValues: OrderRequestValues = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Legna da ardere a Ferrara e provincia",
+  name: "Legna da ardere a Ferrara, provincia e basso ravennate",
   provider: {
     "@type": "LocalBusiness",
     name: "Società Agricola Farina 2.0",
@@ -99,7 +99,7 @@ const jsonLd = {
       addressCountry: "IT",
     },
   },
-  areaServed: ["Ferrara", "Argenta", "Portomaggiore", "Comacchio", "Ostellato"],
+  areaServed: ["Ferrara", "Argenta", "Portomaggiore", "Comacchio", "Ostellato", "Basso ravennate"],
   serviceType: "Consegna legna da ardere a domicilio",
   offers: {
     "@type": "Offer",
@@ -194,8 +194,8 @@ const OrdinaLegna = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
-        title="Legna da ardere a Ferrara e provincia"
-        description="Richiedi legna da ardere stagionata a Ferrara e provincia nei tagli stufa 25/28 cm, stufone 30/33 cm, camino 40/45 cm, pizza corta e pizza lunga."
+        title="Legna da ardere a Ferrara, provincia e basso ravennate"
+        description="Richiedi legna da ardere stagionata a Ferrara, provincia e basso ravennate nei tagli stufa 25/28 cm, stufone 30/33 cm, camino 40/45 cm, pizza corta e pizza lunga."
         path={pagePath}
         jsonLd={jsonLd}
       />
@@ -210,12 +210,12 @@ const OrdinaLegna = () => {
                   Consegna a domicilio
                 </p>
                 <h1 className="font-serif text-4xl md:text-5xl font-bold mb-5">
-                  Legna da ardere a Ferrara e provincia
+                  Legna da ardere a Ferrara, provincia e basso ravennate
                 </h1>
                 <p className="text-primary-foreground/82 text-lg leading-relaxed max-w-2xl">
                   Richiedi legna stagionata per stufe, camini e forni a legna, disponibile nei tagli stufa 25/28 cm,
                   stufone 30/33 cm, camino 40/45 cm, pizza corta e pizza lunga. Serviamo Ferrara,
-                  Argenta, Portomaggiore, Comacchio, Ostellato e comuni limitrofi in base alla disponibilità.
+                  Argenta, Portomaggiore, Comacchio, Ostellato, il basso ravennate e comuni limitrofi in base alla disponibilità.
                 </p>
                 <div className="mt-8 grid sm:grid-cols-3 gap-3 text-sm">
                   {["Nessun pagamento online", "Prezzo confermato prima", "Consegna da concordare"].map((item) => (

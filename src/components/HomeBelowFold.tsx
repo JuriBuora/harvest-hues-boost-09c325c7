@@ -27,7 +27,7 @@ const homeFaq: FAQItem[] = [
   },
   {
     q: "In che zona consegnate la legna da ardere?",
-    a: "Consegniamo legna da ardere a domicilio entro 50 km da Bando di Argenta, coprendo Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara città e i comuni limitrofi della provincia. Ordine minimo indicativo 200-250 €.",
+    a: "Consegniamo legna da ardere a domicilio entro 50 km da Bando di Argenta, coprendo Argenta, Portomaggiore, Ostellato, Comacchio, Ferrara città, il basso ravennate e i comuni limitrofi della provincia. Ordine minimo indicativo 200-250 €.",
   },
   {
     q: "Quali essenze di legna da ardere proponete?",

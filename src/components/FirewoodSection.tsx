@@ -5,7 +5,7 @@ import ScrollReveal from "./ScrollReveal";
 
 const features = [
   { icon: Flame, title: "Faggio, Cerro, Carpino", desc: "Legna stagionata di faggio, cerro e carpino: calore costante, buona durata della brace e ottima resa per stufe, camini e forni." },
-  { icon: Truck, title: "Consegna a Domicilio", desc: "Consegna nel ferrarese entro 50 km da Bando di Argenta. Ordine minimo indicativo 200-250 €." },
+  { icon: Truck, title: "Consegna a Domicilio", desc: "Consegna nel ferrarese e nel basso ravennate entro 50 km da Bando di Argenta. Ordine minimo indicativo 200-250 €." },
   { icon: Package, title: "Sempre Disponibile", desc: "Magazzino sempre rifornito per soddisfare le richieste in ogni stagione." },
 ];
 
@@ -35,7 +35,7 @@ const FirewoodSection = () => (
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Forniamo legna da ardere stagionata di faggio, cerro e carpino, con consegna a domicilio
               entro 50 km da Bando di Argenta (FE) — copriamo Argenta, Portomaggiore, Ostellato,
-              Comacchio, Ferrara città e i comuni limitrofi.
+              Comacchio, Ferrara città, il basso ravennate e i comuni limitrofi.
             </p>
             <div className="space-y-6 mb-8">
               {features.map((f) => (
