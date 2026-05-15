@@ -5,7 +5,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import PageSEO from "@/components/PageSEO";
-import FacebookPageTimeline from "@/components/FacebookPageTimeline";
+import InstagramProfileCard from "@/components/InstagramProfileCard";
 import SiteImage from "@/components/SiteImage";
 
 const categories = ["Tutte", "Angurie", "Meloni", "Zucche", "Legna", "Azienda"] as const;
@@ -149,7 +149,7 @@ const Galleria = () => {
         </div>
       </section>
 
-      {/* Grid + Facebook */}
+      {/* Grid + Instagram */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-8">
@@ -185,9 +185,9 @@ const Galleria = () => {
 
             <aside className="mt-10 lg:mt-0">
               <div className="lg:sticky lg:top-24">
-                <FacebookPageTimeline
-                  pageUrl="https://www.facebook.com/Azienda-Agricola-Farina-Roberto-100057542707078"
-                  pageName="Società Agricola Farina 2.0"
+                <InstagramProfileCard
+                  profileUrl="https://instagram.com/soc.agr.farina_2.0"
+                  profileName="Società Agricola Farina 2.0"
                 />
               </div>
             </aside>

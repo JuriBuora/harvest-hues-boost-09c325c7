@@ -4,7 +4,7 @@ import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PageSEO from "@/components/PageSEO";
 
-const LAST_UPDATED = "8 maggio 2026";
+const LAST_UPDATED = "15 maggio 2026";
 
 const PrivacyPolicy = () => {
   React.useEffect(() => {
@@ -62,9 +62,9 @@ const PrivacyPolicy = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Alcune pagine possono incorporare contenuti di terze parti (ad es. <strong className="text-foreground">Google Maps</strong>{" "}
-              nella pagina Contatti e, su richiesta dell'utente, il plugin <strong className="text-foreground">Facebook</strong>{" "}nella pagina Galleria).
+              nella pagina Contatti). La pagina Galleria include inoltre un link esterno al profilo Instagram aziendale.
               In questi casi, i fornitori terzi possono ricevere dati tecnici di navigazione (es. indirizzo IP, user agent)
-              necessari a fornire il servizio incorporato.
+              quando l'utente apre il servizio esterno o visualizza il contenuto incorporato.
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Finalità e Base Giuridica</h2>
@@ -121,10 +121,10 @@ const PrivacyPolicy = () => {
               Il sito incorpora una mappa di Google Maps nella pagina Contatti. La consultazione della mappa
               comporta l'invio dell'indirizzo IP dell'utente ai server di Google secondo la
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> privacy policy di Google</a>.
-              La pagina Galleria può inoltre incorporare, su richiesta dell'utente, contenuti della pagina Facebook tramite plugin ufficiale di Meta
-              (con possibili trattamenti secondo la
-              <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> privacy policy di Meta/Facebook</a>).
-              Il sito non utilizza Google Analytics, pixel di Meta, né altri strumenti di tracciamento pubblicitario.
+              La pagina Galleria contiene un link al profilo Instagram aziendale: aprendo il link, l'utente lascia il sito
+              e naviga su una piattaforma gestita da Meta, secondo la
+              <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> privacy policy di Instagram</a>.
+              Il sito non utilizza pixel di Meta né altri strumenti di tracciamento pubblicitario.
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Modifiche</h2>

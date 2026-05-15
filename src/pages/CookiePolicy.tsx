@@ -13,7 +13,7 @@ import {
   trackPageView,
 } from "@/lib/analytics";
 
-const LAST_UPDATED = "8 maggio 2026";
+const LAST_UPDATED = "15 maggio 2026";
 
 const AnalyticsConsentControls = () => {
   const [consent, setConsent] = React.useState<"accepted" | "declined" | null>(() => {
@@ -145,17 +145,15 @@ const CookiePolicy = () => {
               > {" "}cookie policy di Google</a>.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              La pagina <strong className="text-foreground">Galleria</strong> può mostrare (su richiesta dell'utente)
-              gli ultimi post della pagina <strong className="text-foreground">Facebook</strong> tramite il plugin
-              ufficiale di Meta. Il contenuto viene caricato solo dopo aver cliccato “Carica i post” e può
-              comportare l'uso di cookie e tecnologie di tracciamento di terze parti. Per maggiori informazioni
-              si rimanda alla
+              La pagina <strong className="text-foreground">Galleria</strong> include un link al profilo Instagram
+              aziendale. Il sito non carica automaticamente contenuti o cookie di Instagram: eventuali cookie di Meta
+              possono essere impostati solo dopo l'apertura del link esterno. Per maggiori informazioni si rimanda alla
               <a
-                href="https://www.facebook.com/policies/cookies/"
+                href="https://privacycenter.instagram.com/policies/cookies/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
-              > {" "}cookie policy di Meta/Facebook</a>.
+              > {" "}cookie policy di Instagram</a>.
             </p>
 
             <h2 className="font-serif text-2xl font-semibold">Come gestire i cookie</h2>

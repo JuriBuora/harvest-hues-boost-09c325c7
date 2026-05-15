@@ -90,7 +90,7 @@ const prodottiFaq: FAQItem[] = [
   },
   {
     q: "Qual è la quantità minima d'ordine per angurie, meloni e zucche?",
-    a: "Per le forniture all’ingrosso vendiamo generalmente alla rinfusa o a cassone. Per la vendita al dettaglio direttamente in azienda le quantità dipendono dalla disponibilità del prodotto fresco di stagione.",
+    a: "Per le forniture all’ingrosso vendiamo generalmente alla rinfusa o in cassone. Per la vendita al dettaglio direttamente in azienda le quantità dipendono dalla disponibilità del prodotto fresco di stagione.",
   },
   {
     q: "In quali periodi dell'anno sono disponibili i vostri prodotti?",
@@ -98,7 +98,7 @@ const prodottiFaq: FAQItem[] = [
   },
   {
     q: "Come avviene la consegna ai rivenditori?",
-    a: "Disponiamo di mezzi propri per la consegna nel ferrarese e nelle province limitrofe. Per destinazioni più lontane organizziamo il trasporto su gomma in accordo con il cliente. La merce viene consegnata a cassoni, già pronta per la rivendita.",
+    a: "Disponiamo di mezzi propri per la consegna nel ferrarese e nelle province limitrofe. Per destinazioni più lontane organizziamo il trasporto su gomma in accordo con il cliente. La merce viene consegnata in cassoni, già pronta per la rivendita.",
   },
   {
     q: "Posso ritirare direttamente in azienda a Bando di Argenta?",
