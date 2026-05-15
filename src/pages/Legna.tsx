@@ -28,6 +28,14 @@ const legnaFaq: FAQItem[] = [
     a: "Sì. La legna viene consegnata già tagliata e stagionata. I tagli disponibili sono stufa 25/28 cm, stufone 30/33 cm, camino 40/45 cm, oltre a pizza corta e pizza lunga per forni a legna.",
   },
   {
+    q: "Vendete anche sacchi di legna da ritirare in azienda?",
+    a: "Sì, in azienda sono disponibili sacchi di legna da circa 15 kg. I sacchi possono essere acquistati anche singolarmente, oppure nella quantità desiderata, ma sono disponibili solo con ritiro in sede: non effettuiamo consegna a domicilio per i sacchi.",
+  },
+  {
+    q: "Quali tagli sono disponibili nei sacchi di legna?",
+    a: "Nei sacchi di legna sono disponibili i tagli stufa, stufone e griglia. Il taglio camino, più grande, non è disponibile nei sacchi: per esigenze specifiche consigliamo di contattarci prima del ritiro.",
+  },
+  {
     q: "Quanto tempo serve per ricevere la consegna?",
     a: "I tempi variano in base al periodo dell'anno e alla disponibilità. Generalmente riusciamo a consegnare entro pochi giorni lavorativi dall'ordine. Contattaci per verificare la disponibilità.",
   },
