@@ -18,7 +18,7 @@ const products = [
     imageName: "angurie-originale.jpg",
     alt: "Coltivazione angurie - Azienda Agricola Farina",
     description:
-      "Le nostre angurie sono il frutto di una coltivazione attenta e appassionata, che unisce tradizione e innovazione. Cresciute nei fertili terreni di Portomaggiore, vengono raccolte al punto perfetto di maturazione per garantire dolcezza, croccantezza e succosità.",
+      "Coltiviamo angurie selezionate per pezzatura, dolcezza e tenuta del frutto. La raccolta avviene al giusto grado di maturazione, per offrire polpa rossa, croccante e succosa sia nella vendita diretta sia nelle forniture all’ingrosso.",
     details: [
       { icon: Sun, label: "Stagione", value: "Giugno – Settembre" },
       { icon: Scale, label: "Peso medio", value: "8 – 15 kg" },
@@ -26,10 +26,10 @@ const products = [
       { icon: Leaf, label: "Coltivazione", value: "Metodi tradizionali" },
     ],
     varieties: [
-      { name: "Sentinel", desc: "Anguria selezionata per dolcezza, consistenza e buona tenuta, adatta alla vendita diretta e alle forniture all’ingrosso." },
-      { name: "Barello", desc: "Varietà apprezzata per polpa rossa, gusto fresco e pezzatura adatta alle esigenze di mercato." },
-      { name: "Baraka", desc: "Anguria dalla polpa zuccherina e succosa, coltivata per offrire qualità costante durante la stagione." },
-      { name: "Topgun", desc: "Varietà vigorosa e produttiva, con frutti uniformi e polpa croccante dal sapore intenso." },
+      { name: "Sentinel", slug: "sentinel", desc: "Anguria allungata a buccia striata, con pezzatura importante intorno ai 15-16 kg. Polpa rosso intenso, croccante, molto zuccherina e con buona tenuta in campo." },
+      { name: "Barello", slug: "barello", desc: "Varietà tradizionale con semi, precoce e produttiva. Frutto oblungo a buccia Crimson, polpa rosso brillante, dolce e adatta alle produzioni di inizio estate." },
+      { name: "Baraka", slug: "baraka", desc: "Anguria Crimson con semi, di forma tondo-ovale e pezzatura tradizionale fino a 15-16 kg. Polpa croccante, rosso intenso, con buona tolleranza alle scottature." },
+      { name: "Topgun", slug: "topgun", desc: "Varietà tondo-ovale uniforme, con buccia ben striata e polpa compatta di colore rosso vivo. Apprezzata per elevato grado zuccherino e ottima conservabilità." },
     ],
     gallery: ["anguria-bilancia.jpg", "meloni-angurie.jpg", "angurie-cassone.jpg", "anguria-gigante.jpg"],
   },
@@ -40,7 +40,7 @@ const products = [
     imageName: "meloni-originale2.jpg",
     alt: "Meloni freschi dell'Azienda Agricola Farina",
     description:
-      "I nostri meloni vengono coltivati con la massima cura, seguendo il ciclo naturale delle stagioni. La raccolta avviene solo quando il frutto raggiunge la maturazione ideale, garantendo un aroma intenso e un sapore inconfondibile che richiama la tradizione della pianura ferrarese.",
+      "I meloni vengono coltivati seguendo il ritmo della stagione e raccolti quando profumo, colore e consistenza raggiungono il punto ideale. Proponiamo tipologie lisce e retate, scelte per dolcezza, aroma e buona conservabilità.",
     details: [
       { icon: Sun, label: "Stagione", value: "Giugno – Agosto" },
       { icon: Scale, label: "Peso medio", value: "1 – 3 kg" },
@@ -48,8 +48,8 @@ const products = [
       { icon: Leaf, label: "Terreno", value: "Fertile pianura padana" },
     ],
     varieties: [
-      { name: "Melone liscio", desc: "Buccia liscia, polpa succosa e profumo delicato. Coltiviamo anche la varietà Saphir, apprezzata per freschezza e dolcezza." },
-      { name: "Melone retato", desc: "Il classico melone con buccia reticolata e polpa arancione, dolce e profumato. Tra le varietà proposte c'è Graffio." },
+      { name: "Saphir F1", slug: "saphir-f1", desc: "Melone liscio tipo Bacir, rotondo leggermente ovale. Polpa molto dolce, aromatica e profumata, con conservabilità lunga e buona adattabilità in campo." },
+      { name: "Graffio F1", slug: "graffio-f1", desc: "Melone retato precoce, con fette ben marcate e colore giallo con sutura verde. Alto grado Brix, aroma gradevole e qualità che si conserva." },
     ],
     gallery: ["meloni-originale2.jpg", "meloni-originale.jpg", "meloni-lisci-cassetta.jpg", "meloni-retati-cassetta.jpg"],
   },
@@ -60,20 +60,20 @@ const products = [
     imageName: "zucche-originale2.jpg",
     alt: "Zucche coltivate dall'Azienda Agricola Farina",
     description:
-      "Le nostre zucche rappresentano l'eccellenza della produzione autunnale dell'azienda. Coltivate con passione nei campi di Portomaggiore, offrono polpa compatta e saporita, ideale per tortelli, risotti, vellutate e dolci della tradizione emiliana.",
+      "Le zucche sono una delle produzioni autunnali più riconoscibili dell’azienda. Coltiviamo varietà da cucina e da decorazione, con polpe dolci, compatte e adatte a risotti, vellutate, forno, trasformazione e ricette della tradizione.",
     details: [
       { icon: Sun, label: "Stagione", value: "Settembre – Marzo" },
-      { icon: Scale, label: "Peso medio", value: "2 – 10 kg" },
+      { icon: Scale, label: "Peso medio", value: "2 – 20+ kg" },
       { icon: Truck, label: "Distribuzione", value: "Mercati ortofrutticoli" },
       { icon: Leaf, label: "Conservazione", value: "Lunga durata naturale" },
     ],
     varieties: [
-      { name: "Delica", desc: "Polpa compatta, sapore dolce e consistenza asciutta. Ideale per risotti, tortelli e cotture al forno." },
-      { name: "Butternut liscia", desc: "Forma allungata, buccia liscia e polpa morbida dal gusto delicato. Ottima per vellutate e preparazioni al forno." },
-      { name: "Butternut rugosa", desc: "Varietà dalla buccia più rustica e polpa dolce, adatta a ricette autunnali e cucina tradizionale." },
-      { name: "Halloween", desc: "Zucca arancione decorativa e scenografica, richiesta soprattutto nel periodo autunnale." },
-      { name: "Musquée de Provence", desc: "Zucca costoluta di origine provenzale, profumata e saporita, indicata per cucina e trasformazione." },
-      { name: "Lunga di Napoli", desc: "Zucca allungata dalla polpa arancione, compatta e saporita, ideale per preparazioni tradizionali, vellutate e conserve." },
+      { name: "Delica", slug: "delica", desc: "Zucca dalla polpa compatta, dolce e asciutta, molto apprezzata per risotti, tortelli e cotture al forno." },
+      { name: "Butternut Ines F1", slug: "butternut-ines-f1", desc: "Butternut allungata da 3-5 kg, con collo lungo, cavità ridotta e polpa arancione. Buon contenuto zuccherino e ottima conservabilità." },
+      { name: "Butternut rugosa", slug: "butternut-rugosa", desc: "Varietà dalla buccia più rustica e dalla polpa dolce, adatta a ricette autunnali, vellutate e cucina tradizionale." },
+      { name: "Halloween", slug: "halloween", desc: "Zucca arancione decorativa e scenografica, richiesta soprattutto nel periodo autunnale per esposizioni, vendita diretta e allestimenti." },
+      { name: "Musquée de Provence", slug: "musquee-de-provence", desc: "Zucca costoluta e appiattita, con buccia marrone mattone e polpa spessa arancione. Pezzatura importante e ottima conservabilità." },
+      { name: "Lunga piena di Napoli", slug: "lunga-piena-di-napoli", desc: "Zucca cilindrica di grande pezzatura, con buccia verde scuro striata e polpa arancione fine. Saporita, versatile e molto conservabile." },
     ],
     gallery: ["zucche-mantovane.jpg", "zucche-arancioni.jpg", "zucche-halloween.jpg", "zucche-mantovane-scatola.jpg"],
   },
@@ -106,7 +106,7 @@ const prodottiFaq: FAQItem[] = [
   },
   {
     q: "Posso ordinare varietà o calibri specifici (es. anguria Sentinel, melone retato)?",
-    a: "Sì, coltiviamo diverse varietà di angurie, tra cui Sentinel, Barello, Baraka e Topgun, melone liscio Saphir e melone retato Graffio, oltre a zucche Delica, Butternut liscia, Butternut rugosa, Halloween, Musquée de Provence e Lunga di Napoli. Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
+    a: "Sì, coltiviamo diverse varietà di angurie, tra cui Sentinel, Barello, Baraka e Topgun, melone liscio Saphir F1 e melone retato Graffio F1, oltre a zucche Delica, Butternut Ines F1, Butternut rugosa, Halloween, Musquée de Provence e Lunga piena di Napoli. Comunicaci in fase d'ordine la varietà e la pezzatura desiderata: verifichiamo la disponibilità stagionale.",
   },
   {
     q: "Come si richiede un preventivo per una fornitura?",
@@ -214,10 +214,25 @@ const Prodotti = () => {
 
                 {/* Varieties */}
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-4">Le nostre varietà</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {p.varieties.map((v) => (
+                    <a
+                      key={v.name}
+                      href={`#${v.slug}`}
+                      className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {v.name}
+                    </a>
+                  ))}
+                </div>
                 <div className="space-y-3">
                   {p.varieties.map((v) => (
-                    <div key={v.name} className="p-4 rounded-lg bg-card border border-border/50">
-                      <h4 className="font-sans font-semibold text-foreground text-sm mb-1">{v.name}</h4>
+                    <div key={v.name} id={v.slug} className="scroll-mt-24 p-4 rounded-lg bg-card border border-border/50">
+                      <h4 className="font-sans font-semibold text-foreground text-sm mb-1">
+                        <a href={`#${v.slug}`} className="hover:text-primary">
+                          {v.name}
+                        </a>
+                      </h4>
                       <p className="text-muted-foreground text-sm">{v.desc}</p>
                     </div>
                   ))}

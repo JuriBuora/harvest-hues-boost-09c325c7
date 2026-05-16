@@ -5,21 +5,21 @@ import ScrollReveal from "./ScrollReveal";
 const products = [
   {
     title: "Angurie",
-    desc: "Angurie dolci e succose, coltivate con cura seguendo metodi tradizionali e sostenibili per garantire il massimo della freschezza.",
+    desc: "Angurie selezionate per dolcezza, croccantezza e tenuta, con varietà adatte sia alla vendita diretta sia alle forniture all’ingrosso.",
     imageName: "angurie-originale.jpg",
     alt: "Coltivazione angurie - Azienda Agricola Farina",
     link: "/prodotti#angurie",
   },
   {
     title: "Zucche",
-    desc: "Zucche selezionate di diverse varietà, perfette per la cucina tradizionale e ideali per i mercati ortofrutticoli.",
+    desc: "Zucche da cucina e da decorazione, con polpe compatte e saporite ideali per forno, vellutate, risotti e ricette tradizionali.",
     imageName: "zucche-originale.jpg",
     alt: "Zucche dell'Azienda Agricola Farina",
     link: "/prodotti#zucche",
   },
   {
     title: "Meloni",
-    desc: "Meloni profumati e maturi al punto giusto, risultato di un'attenta lavorazione in campo e selezione accurata.",
+    desc: "Meloni lisci e retati, raccolti al giusto grado di maturazione per offrire profumo, dolcezza e buona conservabilità.",
     imageName: "meloni-originale.jpg",
     alt: "Meloni freschi dell'Azienda Agricola Farina",
     link: "/prodotti#meloni",

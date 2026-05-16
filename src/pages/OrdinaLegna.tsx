@@ -20,10 +20,10 @@ const pagePath = "/ordina-legna-da-ardere";
 const pageUrl = "https://www.cucurbitacee.com/ordina-legna-da-ardere";
 
 const quantityOptions = [
-  "Circa 2-3 quintali",
-  "Circa 5 quintali",
   "Circa 10 quintali",
-  "Oltre 10 quintali",
+  "Circa 20 quintali",
+  "Circa 30 quintali",
+  "Oltre 30 quintali",
   "Da concordare",
 ];
 
